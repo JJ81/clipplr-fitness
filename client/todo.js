@@ -1,38 +1,3 @@
-Tasks = new Mongo.Collection('tasks');
-
-// private method related DB is called from client-side code like shown below.
-Meteor.methods({
-    addTask: function (text) {
-        // Make sure the user is logged in before inserting a task
-        if (! Meteor.userId()) {
-            throw new Meteor.Error("not-authorized");
-        }
-
-        Tasks.insert({
-            text: text,
-            createdAt: new Date(),
-            owner: Meteor.userId(),
-            username: Meteor.user().username
-        });
-    },
-    deleteTask: function (taskId) {
-        Tasks.remove(taskId);
-    },
-    setChecked: function (taskId, setChecked) {
-        Tasks.update(taskId, { $set: { checked: setChecked} });
-    },
-    setPrivate: function (taskId, setToPrivate) {
-        var task = Tasks.findOne(taskId);
-
-        // Make sure only the task owner can make a task private
-        if (task.owner !== Meteor.userId()) {
-            throw new Meteor.Error("not-authorized");
-        }
-
-        Tasks.update(taskId, { $set: { private: setToPrivate } });
-    }
-});
-
 if (Meteor.isClient) {
 
     Meteor.subscribe("tasks");
@@ -61,7 +26,7 @@ if (Meteor.isClient) {
 
     // body는 무엇을 의미하는가?
     // todo에 바인딩이 되지 않는 이유는 무엇인가?
-    Template.body.events({
+    Template.todo.events({
         'submit .new-task': function (event) {
             event.preventDefault();
             var text = event.target.text.value;
@@ -93,15 +58,4 @@ if (Meteor.isClient) {
         passwordSignupFields: "USERNAME_ONLY"
     });
 
-}
-
-
-if (Meteor.isServer) {
-    Meteor.startup(function () {
-        // code to run on server at startup
-    });
-
-    Meteor.publish("tasks", function () {
-        return Tasks.find();
-    });
 }
