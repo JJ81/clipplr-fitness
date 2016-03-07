@@ -2,7 +2,6 @@
  * Created by yijaejun on 2016. 3. 7..
  */
 Router.configure({
-    path: 'templates',
     layoutTemplate: 'layout'
 });
 
