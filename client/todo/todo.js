@@ -62,4 +62,14 @@ if (Meteor.isClient) {
         passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
     });
 
+
+    /**
+     * 로그인이 되었는지 여부를 알 수 있음
+     */
+    Template.content.helpers({
+        isLogin: function(owner) {
+            return (owner === Meteor.userId());
+        }
+    });
+
 }

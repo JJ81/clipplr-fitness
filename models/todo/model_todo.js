@@ -4,7 +4,7 @@ Tasks = new Mongo.Collection('tasks');
 Meteor.methods({
     addTask: function (text) {
         // Make sure the user is logged in before inserting a task
-        if (! Meteor.userId()) {
+        if (!Meteor.userId()) {
             throw new Meteor.Error("not-authorized");
         }
 
@@ -19,7 +19,7 @@ Meteor.methods({
         Tasks.remove(taskId);
     },
     setChecked: function (taskId, setChecked) {
-        Tasks.update(taskId, { $set: { checked: setChecked} });
+        Tasks.update(taskId, {$set: {checked: setChecked}});
     },
     setPrivate: function (taskId, setToPrivate) {
         var task = Tasks.findOne(taskId);
@@ -29,6 +29,7 @@ Meteor.methods({
             throw new Meteor.Error("not-authorized");
         }
 
-        Tasks.update(taskId, { $set: { private: setToPrivate } });
+        Tasks.update(taskId, {$set: {private: setToPrivate}});
     }
 });
+

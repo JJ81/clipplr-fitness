@@ -5,6 +5,7 @@ Router.configure({
     layoutTemplate: 'layout'
 });
 
+
 Router.route('/', function () {
     this.render('todo', {
         data: function () {
@@ -14,28 +15,43 @@ Router.route('/', function () {
 });
 
 /**
+ * TODO 로그인 필요할 경우 페이지 이동 없이 바로 로그인 모달창이 뜬다.
+ */
+
+
+/**
  * 랜딩 페이지
  * 클립 불러오기
- * TODO todo앱을 클립 불러오는 앱으로 변경해보자
+ *
  * offset : 시작지점
  * size : 크기
  */
 Router.route('/list/:_size/:_offset', function () {
+    var size = parseInt(this.params._size);
+    var offset = parseInt(this.params._offset);
+
     this.render('list', {
-        data: function () {
-            return null;
+        data : function (){
+            return {
+                list : Tasks.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
+            }
         }
     });
 });
+
 
 /**
  * 클립보기
  * TODO 1. 로그인을 하고 해당 콘텐츠의 소유자일 경우 수정하기 버튼이 노출된다.
  */
 Router.route('/content/:_id', function () {
+    var id = this.params._id;
+
     this.render('content', {
         data: function () {
-            return null;
+            return {
+                content : Tasks.find({_id : id})
+            };
         }
     });
 });

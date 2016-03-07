@@ -74,6 +74,8 @@ oauth1@1.1.5
 oauth2@1.1.5
 observe-sequence@1.0.7
 ordered-dict@1.0.4
+peerlibrary:blocking@0.4.3
+peerlibrary:xml2js@0.4.4_3
 promise@0.5.1
 random@1.0.5
 rate-limit@1.0.0
@@ -82,11 +84,16 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
+semencovroman34:accounts-pinterest@1.0.0
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
+spectrum:accounts-kakao@0.0.2
+spectrum:accounts-naver@0.0.1
+spectrum:kakao@0.0.4
+spectrum:naver@0.0.1
 srp@1.0.4
 standard-minifiers@1.0.2
 templating@1.1.5

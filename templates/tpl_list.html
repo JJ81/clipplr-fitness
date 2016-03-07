@@ -1,0 +1,9 @@
+<Template name="list">
+    <div class="listWrapper">
+    {{#each list}}
+        <div data-uid="{{_id}}">
+            <a href="/content/{{_id}}">{{text}} // {{username}}</a>
+        </div>
+    {{/each}}
+    </div>
+</Template>
