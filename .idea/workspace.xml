@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c10331d-e663-409c-bfe9-03e02b54c842" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/info.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/tpl_content.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/tpl_list.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/model_todo.js" afterPath="$PROJECT_DIR$/models/todo/model_todo.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/todo/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/todo/todo.js" afterPath="$PROJECT_DIR$/client/todo/todo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routes.js" afterPath="$PROJECT_DIR$/routes/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout/layout.html" afterPath="$PROJECT_DIR$/templates/layout/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/todo/tpl_todo.html" afterPath="$PROJECT_DIR$/templates/todo/tpl_todo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/info.md" afterPath="$PROJECT_DIR$/docs/info.md" />
     </list>
     <ignored path="meteor-todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +45,8 @@
                   </provider>
                   <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
                     <state split_layout="FIRST">
-                      <first_editor vertical-scroll-proportion="0.3368984">
-                        <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+                      <first_editor vertical-scroll-proportion="0.62566847">
+                        <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
                         <folding />
                       </first_editor>
                       <second_editor />
@@ -459,7 +447,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457338939824</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Set router for list and content page using todo data. It is just mockup">
+      <created>1457359844085</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1457359844085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -498,7 +492,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit test with webStorm" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit test with webStorm" />
+    <MESSAGE value="Set router for list and content page using todo data. It is just mockup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set router for list and content page using todo data. It is just mockup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -580,14 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/todo/todo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4090909">
@@ -606,14 +593,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/todo/todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/info.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.3368984">
-            <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <first_editor vertical-scroll-proportion="0.62566847">
+            <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
             <folding />
           </first_editor>
           <second_editor />

@@ -13,10 +13,29 @@
 
 6. 쿼리가 외부로 노출이 될 수 있기 때문에 보안을 위한 신경을 써야할 것 같다. 어떻게 해야 하는가?
 
-7. Handlebars.js를 연결하여 데이터 바인딩을 해보자.
+7. Handlebars.js를 연결하여 데이터 바인딩을 해보자. deprecated되었고, meteor에 기본으로 탑재되어 있는 것 같다.
 
 8. 로그인이 되어 있는지 여부를 알 수 있는 공통 로직은 어떻게 관리할 수 있는가?
 
 9. SEO를 위한 메타 데이터 설정 등은 어떻게 처리헤야하는가?
 
-10. 
+10. meteor에서 webpack을 연결하면 어떤 장점이 있는가? 이미 자동으로 모든 걸 해주고 있기 때문에 불필요할 수도 있다.
+단지 빌드 버전에 어떤 형태로 되어 있는지 확인이 필요하다.
+아래 정보를 검토하고 웹팩을 설치해보자(반드시 별도의 브랜치로 진행할 것)
+https://atmospherejs.com/webpack/webpack
+
+11. 웹 스크랩 기능 설정한 후에 텍스트 깨짐을 해결해주는가와 데이터를 제대로 가져오는가 등을 확인해보자
+https://atmospherejs.com/anonyfox/scrape
+
+12. 이전에 설정했던 에디터 froala는 99달러 유료이다. 이 외에 무료인 것들도 있으니 사용해보고 결정하자.
+TinyMCE를 설정해보자
+모바일에서 글을 쓸 수 있는 방법을 제공해주어도 좋지만 처음부터 그럴 필요는 없다.
+마크다운을 설정해주는 것이 좋은지 검토해보자.
+
+
+13. test-runner velocity를 사용해보자.
+
+14. animation 연결해볼 것 User Interaction
+
+15. flux dispatcher를 도입해보자. 
+https://atmospherejs.com/meteorflux/dispatcher
