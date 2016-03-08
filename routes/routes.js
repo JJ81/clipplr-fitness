@@ -56,16 +56,18 @@ Router.route('/content/:_id', function () {
     });
 });
 
+
+
 /**
  * 클립 쓰기
  * TODO 1. 로그인을 해야 클립쓰기에 접근할 수 있다.
  */
 Router.route('/editor', function () {
-    this.render('editor', {
-        data: function () {
-            return null;
-        }
-    });
+    if (!Meteor.userId()) {
+        this.redirect('/login');
+    }else{
+        this.render('editor');
+    }
 });
 
 /**
@@ -93,3 +95,15 @@ Router.route('/editor/:_id/delete', function () {
     });
 });
 
+/**
+ * login
+ * TODO 로그인이 된 후에는 어디서 로그인을 했는지 확인하고 해당 경로로 다시 보내야(redirect) 한다.
+ * TODO 세션에 저장하여 확인하는가?
+ */
+Router.route('/login', function () {
+    if(Meteor.userId){
+
+    }
+    this.render('login');
+
+});

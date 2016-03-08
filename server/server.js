@@ -13,6 +13,12 @@ if (Meteor.isServer) {
         return Tasks.find({}, {sort: {createdAt: -1}});
     });
 
+    Meteor.publish('clips', function (){
+        return Boards.find({}, {sort: {createdAt: -1}});
+    });
+
+
+
     //Meteor.Allow({
     //
     //});
