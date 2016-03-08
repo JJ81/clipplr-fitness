@@ -38,13 +38,13 @@ Meteor.methods({
             images: '',
             title: '',
             description: '',
-            creator: Meteor.userId(),
             content: [], // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
-            createdAt: new Date()
+            createdAt: new Date(),
+            hash_tags: [],
+            creator: Meteor.userId()
             //publisher: 'clipplr',
             //clipboard_id: '',
             //clipbook_id: '',
-            //hash_tags: [],
             //isOpen: true // 초반에는 기본으로 true로 해두지만 이후에 옵션을 넣게 되면 false를 기본값으로 한다
         });
     },
@@ -60,13 +60,13 @@ Meteor.methods({
             images: '',
             title: '',
             description: '',
-            creator: Meteor.userId(),
-            content: [],
-            createdAt: new Date()
+            content: [], // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
+            createdAt: new Date(),
+            hash_tags: [],
+            creator: Meteor.userId()
             //publisher: 'clipplr',
             //clipboard_id: '',
             //clipbook_id: '',
-            //hash_tags: [],
             //isOpen: true // 초반에는 기본으로 true로 해두지만 이후에 옵션을 넣게 되면 false를 기본값으로 한다
         });
     },

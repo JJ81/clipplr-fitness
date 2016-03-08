@@ -41,3 +41,17 @@ TinyMCE를 설정해보자
 https://atmospherejs.com/meteorflux/dispatcher
 
 16. 각 페이지는 공통영역이 아니라 별개로 헤더를 가지고 있는 편이 더 좋을 것 같다.
+
+17. find and by bootstrap theme or skin
+
+18. 일단 모바일에서는 에디터를 사용할 수 없도록 한다
+PC에서만 에디터를 이용해서 콘텐츠를 만들고 모바일에서 확인해볼 수 있도록 한다
+ 
+19. 서비스 스킨 후보
+http://codecanyon.net/item/candystrap-fresh-sweet-modern-bootstrap-skin/full_screen_preview/11004037
+http://kvelle.brunomatthys.com/
+
+20. 백오피스 스킨 후보
+http://codecanyon.net/item/creative-bootstrap-skin/full_screen_preview/9601049
+
+21. 

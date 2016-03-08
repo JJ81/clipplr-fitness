@@ -25,6 +25,7 @@ Router.route('/', function () {
  *
  * offset : 시작지점
  * size : 크기
+ * TODO default값 설정을 어떻게 해야 하는가?
  */
 Router.route('/list/:_size/:_offset', function () {
     var size = parseInt(this.params._size);
