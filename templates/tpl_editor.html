@@ -1,4 +1,4 @@
-<Template name="editor">
+<template name="editor">
     <form class="new-board" autocomplete="off">
         TODO list<br />
         1. item image <br />
@@ -7,6 +7,21 @@
         4. content by editor <br />
         5. hashtag <br />
         6. if user try to escape this page, pop up confirm dialog window and then let them decide yes or no.<br />
-        7.
+        7. ... ?
+
+        <hr />
+        <br /><br />
+        <!-- 이미지 부분은 업로드를 구현하기 전까지는 이미지 URL을 넣는 방식으로 한다. -->
+        image url: <input type="text" name="images" class="image" placeholder="Insert image URL" /><br />
+        title: <input type="text" name="title" class="title" placeholder="Insert title" /><br />
+        keyword: <input type="text" name="hash_tags" class="hashtag" placeholder="Insert keyword" /><br />
+        description:  <textarea name="description" class="description" cols="30" rows="3" placeholder="Insert content's description"></textarea><br /><br />
+        <div>
+            text editor area<br />
+            markdown을 연결할 것인가 아니면 일반 tinymce와 같은 에디터를 연결할 것인가?
+
+        </div>
+
+        <input type="submit" value="Save" class="btn btn-primary" />
     </form>
-</Template>
+</template>

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c10331d-e663-409c-bfe9-03e02b54c842" name="Default" comment="add todo list and organize some code for login and editor view.">
+    <list default="true" id="1c10331d-e663-409c-bfe9-03e02b54c842" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/board/editor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/boards.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/board/board.js" afterPath="$PROJECT_DIR$/client/board/board.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/todo/todo.js" afterPath="$PROJECT_DIR$/client/todo/todo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/info.md" afterPath="$PROJECT_DIR$/docs/info.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/board/model_board.js" afterPath="$PROJECT_DIR$/models/board/model_board.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routes.js" afterPath="$PROJECT_DIR$/routes/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout/layout.html" afterPath="$PROJECT_DIR$/templates/layout/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl_content.html" afterPath="$PROJECT_DIR$/templates/tpl_content.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl_editor.html" afterPath="$PROJECT_DIR$/templates/tpl_editor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tpl_list.html" afterPath="$PROJECT_DIR$/templates/tpl_list.html" />
     </list>
     <ignored path="meteor-todo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +34,16 @@
     <favorites_list name="meteor-todo" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6313504">
+    <splitter split-orientation="horizontal" split-proportion="0.6096396">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.47108603">
+        <splitter split-orientation="horizontal" split-proportion="0.47271487">
           <split-first>
             <leaf>
               <file leaf-file-name="todo.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/todo/todo.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state vertical-scroll-proportion="0.0">
-                      <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+                      <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
                       <folding />
                     </state>
                   </provider>
@@ -46,9 +52,11 @@
               <file leaf-file-name="tpl_login.html" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/templates/tpl_login.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="-0.625">
-                      <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-                      <folding />
+                    <state vertical-scroll-proportion="-1.25">
+                      <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+                      <folding>
+                        <marker date="1457479557000" expanded="true" signature="22:87" placeholder="..." />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -60,11 +68,23 @@
                   </provider>
                   <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
                     <state split_layout="FIRST">
-                      <first_editor vertical-scroll-proportion="0.9836066">
-                        <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+                      <first_editor vertical-scroll-proportion="0.9414226">
+                        <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
                         <folding />
                       </first_editor>
                       <second_editor />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="model_board.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/models/board/model_board.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                      <folding>
+                        <element signature="e#0#46#0" expanded="false" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -76,8 +96,28 @@
               <file leaf-file-name="tpl_list.html" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/templates/tpl_list.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="-4.375">
-                      <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+                    <state vertical-scroll-proportion="-6.25">
+                      <caret line="10" column="43" selection-start-line="5" selection-start-column="16" selection-end-line="10" selection-end-column="43" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="todo.css" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/styles/todo.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-23.375">
+                      <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="boards.css" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/styles/boards.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-2.5">
+                      <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
                       <folding />
                     </state>
                   </provider>
@@ -87,42 +127,50 @@
                 <entry file="file://$PROJECT_DIR$/server/server.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state vertical-scroll-proportion="0.0">
-                      <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                      <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="tpl_content.html" pinned="false" current-in-tab="false">
+              <file leaf-file-name="tpl_content.html" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/templates/tpl_content.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="-3.125">
-                      <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+                    <state vertical-scroll-proportion="0.21276596">
+                      <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
                       <folding>
-                        <marker date="1457441362000" expanded="true" signature="24:193" placeholder="..." />
+                        <element signature="n#style#0;n#div#0;n#Template#0;n#!!top" expanded="true" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="board.js" pinned="false" current-in-tab="true">
+              <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/board/board.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.2653302">
-                      <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="model_board.js" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/models/board/model_board.js">
+              <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/templates/index.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-4.375">
+                      <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="editor.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/board/editor.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state vertical-scroll-proportion="0.0">
-                      <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-                      <folding>
-                        <element signature="e#0#46#0" expanded="false" />
-                      </folding>
+                      <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -137,17 +185,17 @@
             <entry file="file://$PROJECT_DIR$/models/todo/model_todo.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="23" column="14" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+                  <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/layout/layout.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.875">
-                  <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.15197569">
+                  <caret line="10" column="52" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="52" />
                   <folding />
                 </state>
               </provider>
@@ -156,18 +204,18 @@
           <file leaf-file-name="tpl_todo.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/todo/tpl_todo.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.5">
-                  <caret line="12" column="54" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="54" />
+                <state vertical-scroll-proportion="-8.75">
+                  <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/routes/routes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2653302">
-                  <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#46#0" expanded="false" />
                   </folding>
@@ -178,8 +226,8 @@
           <file leaf-file-name="tpl_editor.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/tpl_editor.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0">
-                  <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+                <state vertical-scroll-proportion="-15.0">
+                  <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -192,8 +240,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -219,7 +268,6 @@
         <option value="$PROJECT_DIR$/client/tpl_todo.html" />
         <option value="$PROJECT_DIR$/layout.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/tpl_todo.html" />
         <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
@@ -227,19 +275,22 @@
         <option value="$PROJECT_DIR$/todo.js" />
         <option value="$PROJECT_DIR$/model_todo.js" />
         <option value="$PROJECT_DIR$/client/todo.js" />
-        <option value="$PROJECT_DIR$/models/todo/model_todo.js" />
         <option value="$PROJECT_DIR$/templates/todo/tpl_todo.html" />
-        <option value="$PROJECT_DIR$/templates/tpl_content.html" />
-        <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/client/todo/todo.js" />
-        <option value="$PROJECT_DIR$/templates/tpl_list.html" />
+        <option value="$PROJECT_DIR$/models/todo/model_todo.js" />
         <option value="$PROJECT_DIR$/templates/tpl_login.html" />
-        <option value="$PROJECT_DIR$/templates/layout/layout.html" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/client/board/editor.js" />
+        <option value="$PROJECT_DIR$/templates/tpl_list.html" />
+        <option value="$PROJECT_DIR$/styles/boards.css" />
         <option value="$PROJECT_DIR$/routes/routes.js" />
-        <option value="$PROJECT_DIR$/models/board/model_board.js" />
-        <option value="$PROJECT_DIR$/docs/info.md" />
+        <option value="$PROJECT_DIR$/client/todo/todo.js" />
         <option value="$PROJECT_DIR$/templates/tpl_editor.html" />
+        <option value="$PROJECT_DIR$/models/board/model_board.js" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/client/board/board.js" />
+        <option value="$PROJECT_DIR$/templates/layout/layout.html" />
+        <option value="$PROJECT_DIR$/templates/tpl_content.html" />
+        <option value="$PROJECT_DIR$/docs/info.md" />
       </list>
     </option>
   </component>
@@ -358,6 +409,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteor-todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteor-todo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -450,6 +515,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -540,7 +606,19 @@
       <option name="project" value="LOCAL" />
       <updated>1457445669898</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add todo list and organize some code for login and editor view.">
+      <created>1457450560299</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1457450560299</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Apply for login module on the editor.&#10;if without login, user can not access editor page.">
+      <created>1457512901223</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1457512901223</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="5">
@@ -554,17 +632,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="24" width="2559" height="1398" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09259259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20750383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24042879" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17993875" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15360127" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2166922" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20444104" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -591,21 +669,14 @@
     <MESSAGE value="Set router for list and content page using todo data. It is just mockup" />
     <MESSAGE value="Set editor view and router and add bootstrap package." />
     <MESSAGE value="add todo list and organize some code for login and editor view." />
-    <option name="LAST_COMMIT_MESSAGE" value="add todo list and organize some code for login and editor view." />
+    <MESSAGE value="Apply for login module on the editor.&#10;if without login, user can not access editor page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Apply for login module on the editor.&#10;if without login, user can not access editor page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/todo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51592356">
-          <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021306818">
@@ -622,28 +693,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/tpl_login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13975155">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tpl_content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding>
-            <marker date="1457441362000" expanded="true" signature="24:193" placeholder="..." />
+            <marker date="1457479557000" expanded="true" signature="22:87" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/todo/model_todo.js">
+    <entry file="file://$PROJECT_DIR$/templates/todo/tpl_todo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="14" />
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -651,15 +714,55 @@
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tpl_login.html">
+    <entry file="file://$PROJECT_DIR$/models/todo/model_todo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/board/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/todo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.375">
+          <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/boards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tpl_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="43" selection-start-line="5" selection-start-column="16" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tpl_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -667,15 +770,51 @@
     <entry file="file://$PROJECT_DIR$/client/todo/todo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/todo/tpl_todo.html">
+    <entry file="file://$PROJECT_DIR$/models/board/model_board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="12" column="54" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/board/board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15197569">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -686,62 +825,20 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.9836066">
-            <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <first_editor vertical-scroll-proportion="0.9414226">
+            <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tpl_editor.html">
+    <entry file="file://$PROJECT_DIR$/templates/tpl_content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tpl_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/board/model_board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.21276596">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/board/board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2653302">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2653302">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#Template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

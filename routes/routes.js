@@ -34,7 +34,8 @@ Router.route('/list/:_size/:_offset', function () {
     this.render('list', {
         data : function (){
             return {
-                list : Tasks.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
+                //list : Tasks.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
+                list : Boards.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
             }
         }
     });
@@ -51,7 +52,7 @@ Router.route('/content/:_id', function () {
     this.render('content', {
         data: function () {
             return {
-                content : Tasks.find({_id : id})
+                content : Boards.find({_id : id})
             };
         }
     });
@@ -63,10 +64,26 @@ Router.route('/content/:_id', function () {
  * 클립 쓰기
  * TODO 1. 로그인을 해야 클립쓰기에 접근할 수 있다.
  */
-Router.route('/editor', function () {
-    if (!Meteor.userId()) {
-        this.redirect('/login');
-    }else{
+Router.route('/editor', {
+    //waitOn: function () {
+    //    if (Meteor.user()) {
+    //         //Meteor.subscribe('users');
+    //    } else {
+    //        this.next();
+    //    }
+    //},
+    //onStop: function () {
+    //    Session.set('prevPage', this.location['path']);
+    //},
+    onBeforeAction: function () {
+        if (!Meteor.userId()) {
+            var currentPath = Iron.Location.get().path;
+            Session.set('prevPage', currentPath);
+            this.redirect('/login');
+        }
+    },
+
+    data: function () {
         this.render('editor');
     }
 });
@@ -101,10 +118,17 @@ Router.route('/editor/:_id/delete', function () {
  * TODO 로그인이 된 후에는 어디서 로그인을 했는지 확인하고 해당 경로로 다시 보내야(redirect) 한다.
  * TODO 세션에 저장하여 확인하는가?
  */
-Router.route('/login', function () {
-    if(Meteor.userId){
+Router.route('/login', {
+    onBeforeAction: function () {
+        if(Meteor.userId()){
+            this.redirect('/list/10/0');
+        }else{
+            this.next();
+        }
+    },
 
+    data: function () {
+       this.render('login');
     }
-    this.render('login');
 
 });

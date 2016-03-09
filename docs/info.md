@@ -54,4 +54,8 @@ http://kvelle.brunomatthys.com/
 20. 백오피스 스킨 후보
 http://codecanyon.net/item/creative-bootstrap-skin/full_screen_preview/9601049
 
-21. 
+21. 로그인 세션 아웃 설정은 어떻게 하는가?
+
+22. 각 페이지마다 별도로 header를 관리하는 편이 유지보수에 수월할 것이다. 너무나 많은 분기점이 가능하기 때문이다.
+
+23. ?

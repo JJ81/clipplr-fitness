@@ -2,7 +2,14 @@
     <div class="listWrapper">
     {{#each list}}
         <div data-uid="{{_id}}">
-            <a href="/content/{{_id}}">{{text}} // {{username}}</a>
+            <a href="/content/{{_id}}" class="list_display">
+                image : {{images}} <br />>
+                title: {{title}} <br />
+                description: {{description}} <br />
+                hash_tags: {{hash_tags}} <br />
+                createdAt: {{createdAt}} <br />
+                creator: {{creator}} <br />
+            </a>
         </div>
     {{/each}}
     </div>

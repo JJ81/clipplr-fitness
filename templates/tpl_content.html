@@ -1,6 +1,15 @@
 <Template name="content">
     {{#each content}}
-        <div>{{#if isLogin owner}}<a href="#">Modify</a>{{/if}}</div>
-        title : {{text}} / username : {{username}}
+        <div style="text-align:right">
+            {{#if isLogin creator}}<a href="#" class="btn btn-info">Modify</a>{{/if}}
+        </div>
+
+        image : {{images}} <br />>
+        title: {{title}} <br />
+        description: {{description}} <br />
+        hash_tags: {{hash_tags}} <br />
+        createdAt: {{createdAt}} <br />
+        creator: {{creator}} <br />
+
     {{/each}}
 </Template>
