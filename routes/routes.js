@@ -63,10 +63,26 @@ Router.route('/content/:_id', function () {
  * 클립 쓰기
  * TODO 1. 로그인을 해야 클립쓰기에 접근할 수 있다.
  */
-Router.route('/editor', function () {
-    if (!Meteor.userId()) {
-        this.redirect('/login');
-    }else{
+Router.route('/editor', {
+    //waitOn: function () {
+    //    if (Meteor.user()) {
+    //         //Meteor.subscribe('users');
+    //    } else {
+    //        this.next();
+    //    }
+    //},
+    //onStop: function () {
+    //    Session.set('prevPage', this.location['path']);
+    //},
+    onBeforeAction: function () {
+        if (!Meteor.userId()) {
+            var currentPath = Iron.Location.get().path;
+            Session.set('prevPage', currentPath);
+            this.redirect('/login');
+        }
+    },
+
+    data: function () {
         this.render('editor');
     }
 });
@@ -101,10 +117,19 @@ Router.route('/editor/:_id/delete', function () {
  * TODO 로그인이 된 후에는 어디서 로그인을 했는지 확인하고 해당 경로로 다시 보내야(redirect) 한다.
  * TODO 세션에 저장하여 확인하는가?
  */
-Router.route('/login', function () {
-    if(Meteor.userId){
+Router.route('/login', {
+    onBeforeAction: function () {
+        if(Meteor.userId()){
+            //this.redirect(Session.get('prevPage'));
+            this.redirect('/list/10/0');
+            // window.history.back(-1);
+        }else{
+            this.next();
+        }
+    },
 
+    data: function () {
+       this.render('login');
     }
-    this.render('login');
 
 });

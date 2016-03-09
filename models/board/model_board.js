@@ -3,6 +3,7 @@
  */
 Boards = new Mongo.Collection('clips');
 
+
 Meteor.methods({
     // 일정 개수의 콘텐츠를 읽어오는 부분을 이곳에 작성할 수 있다면 어떤 방법이 있을까
     //queryBoard: function () {

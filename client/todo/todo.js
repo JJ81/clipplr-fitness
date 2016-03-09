@@ -66,6 +66,8 @@ if (Meteor.isClient) {
 
     /**
      * 로그인이 되었는지 여부를 알 수 있음
+     * 로그인과 소유 일치 여부를 확인한다
+     * 단순히 로그인만 알려면 Meteor.loggingIn()
      */
     Template.content.helpers({
         isLogin: function(owner) {
