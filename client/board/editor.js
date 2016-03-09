@@ -13,7 +13,7 @@ if(Meteor.isClient){
             var hashtag = form.hash_tags.value;
             var desc = form.description.value;
 
-            console.info(images + title + hashtag + desc);
+            //console.info(images + title + hashtag + desc);
             //Meteor.call("addTask", text);
             //event.target.text.value = "";
             /*
@@ -35,4 +35,6 @@ if(Meteor.isClient){
         }
     });
 
+
 }
+
