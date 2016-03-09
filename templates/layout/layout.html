@@ -8,18 +8,17 @@
 
             <h1 class="center-block logo-navbar-middle"><a class="navbar-brand" href="/">Clipping Board</a></h1>
 
-            <a href="/editor" class="btn btn-default pull-right">Write</a>
-
-            <!-- header의 모든 경우의 수만큼 분기를 주게 되면 문제가 될 수 있으니 매 페이지마다 다른 설정을 주는 것이 유지보수면에서 편할 것이다. -->
             {{#if comparePage '/login'}}
                 <span class="">{{> loginButtons align="left"}}</span>
             {{/if}}
 
+            <a href="/editor" class="btn btn-default pull-right">Write</a>
+
+            <span class="">{{> loginButtons align="left"}}</span>
         </div>
     </nav>
 
     <div class="container">
         {{> yield}}
     </div>
-
 </template>
