@@ -1,12 +1,14 @@
 <template name="editor">
-    <form class="new-board" autocomplete="off">
 
+    <form class="{{#if isEqual content null}}new-board{{else}}modify-board{{/if}}" autocomplete="off">
         <div class="btnArea">
             <div class="pull-left">
                 <!-- 수정하기 버튼을 누르고 들어올 경우만 노출될 수 있도록 한다 -->
-                <button type="button" class="btn btn-default">
-                    <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> 삭제
-                </button>
+                {{#if isEqual content null}}{{else}}
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> 삭제
+                    </button>
+                {{/if}}
 
                 <button type="reset" class="btn btn-warning">
                     <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> 다시
@@ -30,48 +32,79 @@
 
         <hr />
 
-        <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon2">
-                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-            </span>
-            <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" />
-        </div>
+        {{#if isEqual content null}}
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">
+                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                </span>
+                <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" />
+            </div>
 
-        <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon2">
-                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-            </span>
-            <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" />
-        </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">
+                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                </span>
+                <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" />
+            </div>
 
-        <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon2">
-                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-            </span>
-            <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" />
-        </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">
+                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                </span>
+                <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" />
+            </div>
 
-        <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon2">
-                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-            </span>
-            <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2 /">
-        </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">
+                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                </span>
+                <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2 /">
+            </div>
 
-        <hr />
+            <hr />
 
-        <div class="editorArea">
-            Editor Area
-        </div>
+            <div class="editorArea">
+                Editor Area
+            </div>
+        {{else}} <!-- 수정을 위한 뷰 제공 -->
+            {{#each content}}
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">
+                        <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                    </span>
+                    <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" value="{{title}}" />
+                </div>
 
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">
+                        <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                    </span>
+                    <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" value="{{images}}" />
+                </div>
 
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">
+                        <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                    </span>
+                    <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" value="{{hash_tags}}" />
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">
+                        <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                    </span>
+                    <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2" value="{{description}}" />
+                </div>
+                <input type="hidden" value="{{_id}}" name="id" />
+            {{/each}}
+        {{/if}}
     </form>
 </template>
 
 <!--
 
     TODO list<br />
-    4. integrated with text editor <br />
+    4. integrated with certain text editor <br />
     5. collection keywords <br />
     6. upload image
     7. 취소 button is to delete data save temporary.

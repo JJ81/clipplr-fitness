@@ -84,7 +84,12 @@ https://www.youtube.com/watch?v=_mu6BWsnaPM&list=LL3fBiJrFFMhKlsWM46AsAYw&index=
 
 33. 모바일에서 미리보기 기능을 제공해야 하나 나중에 주어도 된다.
 
-34. 
+34. 각 페이지가 실시간으로 사라지게 되면 바로 메인으로 페이지가 이동될 수 있도록 한다,
+데이터가 null이면 메인으로 가기 버튼을 준다.(editor/id/modify or content/id)
+  
+35. list page : modifyedAt이 우선 정렬하고 그 중에 createdAt으로 재정렬하여 보여준다.
+
+36. 
 
 
 

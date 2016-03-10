@@ -90,9 +90,12 @@ Router.route('/editor', {
  * TODO 2.로그인을 하지 않은 상태로 URL에 접속을 하려고 했을 때 list페이지로 리다이렉트 시킨다
  */
 Router.route('/editor/:_id/modify', function () {
+    var id = this.params._id;
     this.render('editor', {
         data: function () {
-            return null;
+            return {
+                content : Boards.find({_id : id})
+            };
         }
     });
 });
