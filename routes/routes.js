@@ -30,8 +30,7 @@ Router.route('/list/:_size/:_offset', function () {
     this.render('list', {
         data : function (){
             return {
-                //list : Tasks.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
-                list : Boards.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
+                list : Boards.find({},{sort:{modifiedAt:-1, createdAt:-1}, skip: offset, limit: size})
             }
         }
     });

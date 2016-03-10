@@ -76,6 +76,19 @@ if(Meteor.isClient){
                 hash_tags: hashtag,
                 content: null
             });
+        },
+
+        'click .deleteBoardBtn': function () {
+            Meteor.call('removeBoard', $('.modify-board #id').val());
+            Router.go('/list/10/0');
+        },
+
+        'click .cancelModifyBtn': function () {
+            Router.go('/list/10/0');
+        },
+
+        'click .memoryBoardBtn': function () {
+            alert('중간저장!!');
         }
     });
 

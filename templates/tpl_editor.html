@@ -5,7 +5,7 @@
             <div class="pull-left">
                 <!-- 수정하기 버튼을 누르고 들어올 경우만 노출될 수 있도록 한다 -->
                 {{#if isEqual content null}}{{else}}
-                    <button type="button" class="btn btn-default">
+                    <button type="button" class="btn btn-default deleteBoardBtn">
                         <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> 삭제
                     </button>
                 {{/if}}
@@ -14,13 +14,13 @@
                     <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> 다시
                 </button>
 
-                <button type="button" class="btn btn-danger">
+                <button type="button" class="btn btn-danger cancelModifyBtn">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 취소
                 </button>
             </div>
 
             <div class="pull-right">
-                <button type="button" class="btn btn-info">
+                <button type="button" class="btn btn-info memoryBoardBtn">
                     <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> 기억
                 </button>
 
@@ -95,7 +95,7 @@
                     </span>
                     <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2" value="{{description}}" />
                 </div>
-                <input type="hidden" value="{{_id}}" name="id" />
+                <input type="hidden" value="{{_id}}" name="id" id="id" />
             {{/each}}
         {{/if}}
     </form>
