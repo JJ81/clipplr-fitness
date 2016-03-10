@@ -66,8 +66,25 @@ http://stackoverflow.com/questions/7317273/warn-user-before-leaving-web-page-wit
 25. SPA형식으로 동작하는 걸로 봐서는 form페이지에서 뒤로가기 등 페이지를 벗어날 경우 얼럿을 띄우는 게 가능한지 모르겠다.
 포럼에 문의중임 : https://forums.meteor.com
 
-26. 
+26. 앵귤러와 미티어 연결하면 어떤 점이 좋은지 알아보자  http://angularjs.meteor.com/
+https://www.youtube.com/watch?v=_mu6BWsnaPM&list=LL3fBiJrFFMhKlsWM46AsAYw&index=2
++ agnular-server
 
+27. Browser-policy, ...
+
+28. UI Component 사용하는 방법을 알아볼 것
+
+29. large meteor pass directory structure
+
+30. 여러 데이터 포맷을 쉽게 지정학 위한 모멘트를 사용해볼 것
+
+31. list/content/editor view에서 이미지 로딩 에러시 대체 이미지 표시 처리하기
+ 
+32. 모바일에서는 글쓰기 기능을 초반에는 제공하지 말자. 어차피 PC의 사양이 아니라면 글쓰기가 불편할 것이다.
+
+33. 모바일에서 미리보기 기능을 제공해야 하나 나중에 주어도 된다.
+
+34. 
 
 
 

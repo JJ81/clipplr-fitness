@@ -1,27 +1,80 @@
 <template name="editor">
     <form class="new-board" autocomplete="off">
-        TODO list<br />
-        1. item image <br />
-        2. title <br />
-        3. description <br />
-        4. content by editor <br />
-        5. hashtag <br />
-        6. if user try to escape this page, pop up confirm dialog window and then let them decide yes or no.<br />
-        7. ... ?
 
-        <hr />
-        <br /><br />
-        <!-- 이미지 부분은 업로드를 구현하기 전까지는 이미지 URL을 넣는 방식으로 한다. -->
-        image url: <input type="text" name="images" class="image" placeholder="Insert image URL" /><br />
-        title: <input type="text" name="title" class="title" placeholder="Insert title" /><br />
-        keyword: <input type="text" name="hash_tags" class="hashtag" placeholder="Insert keyword" /><br />
-        description:  <textarea name="description" class="description" cols="30" rows="3" placeholder="Insert content's description"></textarea><br /><br />
-        <div>
-            text editor area<br />
-            markdown을 연결할 것인가 아니면 일반 tinymce와 같은 에디터를 연결할 것인가?
+        <div class="btnArea">
+            <div class="pull-left">
+                <!-- 수정하기 버튼을 누르고 들어올 경우만 노출될 수 있도록 한다 -->
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> 삭제
+                </button>
 
+                <button type="reset" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> 다시
+                </button>
+
+                <button type="button" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 취소
+                </button>
+            </div>
+
+            <div class="pull-right">
+                <button type="button" class="btn btn-info">
+                    <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> 기억
+                </button>
+
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> 전송
+                </button>
+            </div>
         </div>
 
-        <input type="submit" value="Save" class="btn btn-primary" />
+        <hr />
+
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">
+                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+            </span>
+            <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" />
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">
+                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+            </span>
+            <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" />
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">
+                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+            </span>
+            <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" />
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">
+                <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+            </span>
+            <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2 /">
+        </div>
+
+        <hr />
+
+        <div class="editorArea">
+            Editor Area
+        </div>
+
+
     </form>
 </template>
+
+<!--
+
+    TODO list<br />
+    4. integrated with text editor <br />
+    5. collection keywords <br />
+    6. upload image
+    7. 취소 button is to delete data save temporary.
+    8. 기억 button is to save data when user wants.
+
+-->

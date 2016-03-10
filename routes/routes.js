@@ -7,11 +7,7 @@ Router.configure({
 
 
 Router.route('/', function () {
-    this.render('todo', {
-        data: function () {
-            return null;
-        }
-    });
+    this.redirect('/list/10/0');
 });
 
 /**

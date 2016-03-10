@@ -1,9 +1,6 @@
 body {
-    font-family: sans-serif;
-    background-color: #315481;
-    background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-    background-attachment: fixed;
-
+    font-family: Arial, sans-serif;
+    background-color: #fff;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -16,37 +13,44 @@ body {
     font-size: 14px;
 }
 
-.container {
-    margin: 0 auto;
-    background: white;
+/* layout */
+.fluid-limit{
+    max-width:1024px;
 }
 
-.list_display{
-    display:block;
-    border:1px solid #eee;
-    margin-bottom:20px;
+.navbar{
+    border-top:2px solid #02b875;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background: #fff;
 }
 
 .login-signal{
     position: absolute;
     right:17px;
-    top:17px;
+    top:2px;
 }
 
 .writeBtn{
     position:fixed;
     bottom:10px;
     right:10px;
-    font-size:20px
+    font-size:20px;
+    z-index:1000;
 }
 
 .backBtn{
     position:absolute;
     left:0;
-    top:0;
+    top:-12px;
     display:inline-block;
     padding:10px;
     font-size:20px;
+    color:#02b875;
 }
 
 .backBtn .glyphicon{
@@ -55,12 +59,81 @@ body {
 
 .logo{
     font-size:20px;
-    color:#888888;
+    color:rgba(0,0,0,0.8);
     background:#fff;
+    font-weight:bold;
+}
+
+.logo:hover{
+    color:#02b875;
+    text-decoration: none;
 }
 
 .logo-wrapper{
     text-align:center;
     margin-top:12px;
     font-size:20px;
+}
+
+.new-board{
+    padding:10px;
+}
+
+.btnArea:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.input-group{
+    margin-bottom:10px;
+}
+
+.clip-logo{
+    font-size:15px;
+    margin-right:5px;
+}
+
+.item-thumbnail{
+    display:block;
+}
+
+.preview-img{
+    width:100%;
+    display:block;
+    background:#eee;
+    border-radius:5px;
+}
+
+.bullet_default{
+    font-size:17px;
+}
+
+.contentPage{
+    background:#fff;
+    padding:10px;
+}
+
+.thumbnail{
+    border:2px solid #eee;
+}
+.thumbnail:hover{
+    border:2px solid #02b875;
+}
+
+.container-fluid{
+    position:relative;
+    top:65px;
+}
+
+.header-wrapper{
+    position:relative;
+}
+
+.accounts-dialog{
+    z-index:1000;
+}
+
+.writeBtn{
+    border-radius:100%;
 }

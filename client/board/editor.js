@@ -24,6 +24,20 @@ if(Meteor.isClient){
             *
             * */
 
+            if(title === ''){
+                alert('제목을 입력해주세요');
+                return false;
+            }else if(images === ''){
+                alert('이미지 주소를 입력해주세요');
+                return false;
+            }else if(hashtag === ''){
+                alert('키워드를 입력해주세요');
+                return false;
+            }else if(desc === ''){
+                alert('설명을 입력해주세요');
+                return false;
+            }
+
             Meteor.call('createBoard', {
                 images: images,
                 title: title,
