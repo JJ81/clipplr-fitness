@@ -101,22 +101,15 @@
     </form>
 
     <!-- 스크랩 테스트를 위함 -->
-    <form class="webscrap">
+    <form class="webscrap" autocomplete="off">
         <div class="input-group">
                 <span class="input-group-addon" id="sizing-addon2">
                     <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
                 </span>
-            <input type="text" name="addr" class="form-control" placeholder="스크랩할 주소를 입력해주세요." aria-describedby="sizing-addon2 /">
+            <input type="text" name="addr" class="form-control" placeholder="스크랩할 주소를 입력해주세요." aria-describedby="sizing-addon2"  />
         </div>
     </form>
 
-    <!--{{#with getScrapResult}}-->
-        <!--title : {{title}} <br />-->
-        <!--desc : {{description}} <br />-->
-        <!--url : {{url}} <br />-->
-        <!--domain: {{domain}} <br />-->
-        <!--favicon: {{favicon}} <br />-->
-    <!--{{/with}}-->
 
     {{#each addEditorData}}
         title : {{title}} <br />

@@ -94,9 +94,7 @@ if(Meteor.isClient){
         // 웹 스크래핑
         'submit .webscrap': function (event) {
             event.preventDefault();
-            var addr = event.target.addr.value;
-
-            Meteor.call('webScrape', addr, function (error, result) {
+            Meteor.call('webScrape', event.target.addr.value, function (error, result) {
 
                 if(error) {
                     // todo 스크랩 주소를 다시 확인할 수 있도록 한다
@@ -120,13 +118,14 @@ if(Meteor.isClient){
                     }
 
                     // Add new data
-                    if(result)
+                    if(result.title !== undefined)
                         data.push(result);
 
                     // update data in the session.
                     Session.set('editor_data', data);
                 }
             });
+            event.target.addr.value = '';
         }
 
         // TODO 필요없는 데이터를 수정할 수 있도록 한다.
@@ -137,7 +136,11 @@ if(Meteor.isClient){
         // TODO 수정하기로 들어올 경우 불러온 데이터중 에디터부분을 세션에 임시 저장한다
         // 만약 브라우저가 꺼지거나 페이지를 이탈하게 되었을 경우는 어떠해야 하는가?
         // 페이지를 이탈하게 될 경우 데이터를 제거할 수 있는 방법이 있는가? beforeunload?
-        //
+        // 웹스크랩으로 수집된 데이터중 일부를 수정하거나 지울 수 있는 기능을 넣어주자
+        // 수정하거나 에디터를 사용하고자 진입할 때 사용했던 세션을 비워야 한다
+
+
+
 
 
     });
