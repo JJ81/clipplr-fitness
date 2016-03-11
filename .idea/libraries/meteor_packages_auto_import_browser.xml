@@ -73,6 +73,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/spectrum_accounts-naver/0.0.1/web.browser/packages/spectrum_accounts-naver.js" />
         <item url="file://$USER_HOME$/.meteor/packages/spectrum_naver/0.0.1/web.browser/packages/spectrum_naver.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_controller/1.0.12/web.browser/lib/controller.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/nefiltari_yaki/0.1.81/web.browser/packages/nefiltari_yaki.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_controller/1.0.12/web.browser/lib/wait_list.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_controller/1.0.12/web.browser/lib/controller_client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_core/1.0.11/web.browser/lib/version_conflict_error.js" />
@@ -91,6 +92,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/spectrum_accounts-kakao/0.0.2/web.browser/packages/spectrum_accounts-kakao/kakao_login_button.css" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_middleware-stack/1.0.11/web.browser/lib/handler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_middleware-stack/1.0.11/web.browser/lib/middleware_stack.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/froatsnook_request/2.53.3/web.browser/packages/froatsnook:request.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/web.browser/lib/route_controller.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/web.browser/lib/plugins.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/web.browser/lib/router.js" />
@@ -117,6 +119,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/exceptions.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/attrs.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/backcompat.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/digilord_sugarjs/1.4.1/web.browser/packages/digilord:sugarjs.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/events.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/lookup.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/builtins.js" />
@@ -139,6 +142,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/client_convenience.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/id_map.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/random_stream.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/anonyfox_scrape/0.0.10/web.browser/packages/anonyfox_scrape.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/method_invocation.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/namespace.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/utils.js" />
@@ -150,6 +154,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/export_globals.js" />
         <item url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/import_globals.js" />
         <item url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/console.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/wizonesolutions_underscore-string/1.0.0/web.browser/packages/wizonesolutions:underscore-string.js" />
         <item url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/.npm/package/node_modules/es5-shim/es5-sham.js" />
         <item url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/.npm/package/node_modules/es5-shim/es5-shim.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.7/web.browser/pre.js" />
@@ -270,6 +275,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/spectrum_accounts-naver/0.0.1/web.browser/packages/spectrum_accounts-naver.js" />
       <root url="file://$USER_HOME$/.meteor/packages/spectrum_naver/0.0.1/web.browser/packages/spectrum_naver.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_controller/1.0.12/web.browser/lib/controller.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/nefiltari_yaki/0.1.81/web.browser/packages/nefiltari_yaki.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_controller/1.0.12/web.browser/lib/wait_list.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_controller/1.0.12/web.browser/lib/controller_client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_core/1.0.11/web.browser/lib/version_conflict_error.js" />
@@ -288,6 +294,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/spectrum_accounts-kakao/0.0.2/web.browser/packages/spectrum_accounts-kakao/kakao_login_button.css" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_middleware-stack/1.0.11/web.browser/lib/handler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_middleware-stack/1.0.11/web.browser/lib/middleware_stack.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/froatsnook_request/2.53.3/web.browser/packages/froatsnook:request.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/web.browser/lib/route_controller.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/web.browser/lib/plugins.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/web.browser/lib/router.js" />
@@ -314,6 +321,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/exceptions.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/attrs.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/backcompat.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/digilord_sugarjs/1.4.1/web.browser/packages/digilord:sugarjs.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/events.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/lookup.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/builtins.js" />
@@ -336,6 +344,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/client_convenience.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/id_map.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/random_stream.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/anonyfox_scrape/0.0.10/web.browser/packages/anonyfox_scrape.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/method_invocation.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/namespace.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/utils.js" />
@@ -347,6 +356,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/export_globals.js" />
       <root url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/import_globals.js" />
       <root url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/console.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/wizonesolutions_underscore-string/1.0.0/web.browser/packages/wizonesolutions:underscore-string.js" />
       <root url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/.npm/package/node_modules/es5-shim/es5-sham.js" />
       <root url="file://$USER_HOME$/.meteor/packages/es5-shim/4.1.14/web.browser/.npm/package/node_modules/es5-shim/es5-shim.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.7/web.browser/pre.js" />

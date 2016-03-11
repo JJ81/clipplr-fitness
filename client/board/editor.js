@@ -89,14 +89,75 @@ if(Meteor.isClient){
 
         'click .memoryBoardBtn': function () {
             alert('중간저장!!');
+        },
+
+        // 웹 스크래핑
+        'submit .webscrap': function (event) {
+            event.preventDefault();
+            var addr = event.target.addr.value;
+
+            Meteor.call('webScrape', addr, function (error, result) {
+
+                if(error) {
+                    // todo 스크랩 주소를 다시 확인할 수 있도록 한다
+                    console.error('Web Scrapping error');
+                }else {
+                    console.log(result);
+                    //Session.set('scrap_result', data);
+
+                    var data = [];
+
+                    if(!Session.get('editor_data')){
+                        console.log('에디어 데이터가 없다');
+                        console.log(Session.get('editor_data'));
+                         // Session.set('editor_data', data);
+                    }else{
+                        if(Session.get('editor_data') !== undefined)
+                            console.log('에디터에 데이터가 있다');
+                            console.log(Session.get('editor_data'));
+                            data = Session.get('editor_data');
+                            console.info(data);
+                    }
+
+                    // Add new data
+                    if(result)
+                        data.push(result);
+
+                    // update data in the session.
+                    Session.set('editor_data', data);
+                }
+            });
         }
+
+        // TODO 필요없는 데이터를 수정할 수 있도록 한다.
+        // Session에 있는 데이터를 reload를 통해서도 휴발되지 않는다.
+        // 이러한 경우 Sesssion을 통해서만 데이터 관리를 해야 하는 것인지 확인해보자.
+        // 로그아웃을 하고 다시 로그인을 해도 사라지지 않는다.
+        // TODO 다시, 취소, 저장이 되었을 경우 해당 세션 데이터를 지우도록 한다.
+        // TODO 수정하기로 들어올 경우 불러온 데이터중 에디터부분을 세션에 임시 저장한다
+        // 만약 브라우저가 꺼지거나 페이지를 이탈하게 되었을 경우는 어떠해야 하는가?
+        // 페이지를 이탈하게 될 경우 데이터를 제거할 수 있는 방법이 있는가? beforeunload?
+        //
+
+
     });
 
+
+
     Template.editor.helpers({
+
         isEqual: function (a,b) {
             return (a === b);
+        },
+
+        //getScrapResult: function () {
+        //    return Session.get('scrap_result');
+        //    // delete Session.keys.scrap_result;
+        //},
+
+        addEditorData: function () {
+            return Session.get('editor_data');
         }
     });
 
 }
-

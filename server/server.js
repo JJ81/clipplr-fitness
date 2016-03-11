@@ -18,6 +18,12 @@ if (Meteor.isServer) {
     });
 
 
+    Meteor.methods ({
+        webScrape: function(addr) {
+            return Scrape.website(addr);
+        }
+    });
+
 
     //Meteor.Allow({
     //
