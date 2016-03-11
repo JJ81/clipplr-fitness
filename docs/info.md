@@ -89,7 +89,10 @@ https://www.youtube.com/watch?v=_mu6BWsnaPM&list=LL3fBiJrFFMhKlsWM46AsAYw&index=
   
 35. list page : modifyedAt이 우선 정렬하고 그 중에 createdAt으로 재정렬하여 보여준다.
 
-36. 
+36. .bashrc를 매번 적용하기 귀찮으면 홈디렉터리로 가서 .bash_profile에 아래와 같이 적어준다. 만약 해당 파일이 없다면 만들어준다
+source $HOME/.bashrc
+
+37. _
 
 
 
