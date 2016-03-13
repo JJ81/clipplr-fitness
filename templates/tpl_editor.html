@@ -10,7 +10,7 @@
                     </button>
                 {{/if}}
 
-                <button type="reset" class="btn btn-warning">
+                <button type="reset" class="btn btn-warning resetBtn">
                     <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> 다시
                 </button>
 
@@ -61,11 +61,19 @@
                 <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2 /">
             </div>
 
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="..." id="open" name="open" checked />
+                </span>
+                <label for="open" class="form-control" aria-label="...">이 글을 바로 게시할까요?</label>
+            </div>
+
             <hr />
 
             <div class="editorArea">
                 Editor Area
             </div>
+
         {{else}} <!-- 수정을 위한 뷰 제공 -->
             {{#each content}}
                 <div class="input-group">
@@ -95,6 +103,20 @@
                     </span>
                     <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2" value="{{description}}" />
                 </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" aria-label="..." id="open" name="open" checked />
+                    </span>
+                    <label for="open" class="form-control" aria-label="...">이 글을 바로 게시할까요?</label>
+                </div>
+
+                <hr />
+
+                <div class="editorArea">
+                    Editor Area
+                </div>
+
                 <input type="hidden" value="{{_id}}" name="id" id="id" />
             {{/each}}
         {{/if}}
@@ -110,15 +132,31 @@
         </div>
     </form>
 
+    <hr />
 
-    {{#each addEditorData}}
-        title : {{title}} <br />
-        desc : {{description}} <br />
-        url : {{url}} <br />
-        domain: {{domain}} <br />
-        favicon: {{favicon}} <br />
-        <hr />
-    {{/each}}
+    <!--
+        여기서부터 두 가지 형태로 템플릿이 구성되어야 한다
+        첫째는 데이터를 스크랩한 경우
+        두번째는 에디터를 열어서 사용한 경우
+        이 두가지 타입이 순차적으로 나열 될 수 있도록 하면 하단에 바인딩될 수 있도록 한다.
+     -->
+
+    {{#if addEditorData}}
+        {{#each addEditorData}}
+            <dl class="scrapBox" data-type="scrap">
+                <dt class="scrap_part_image">
+                    <a href="{{url}}}" target="_blank" class="scrap_img_link">
+                        <img src="{{favicon}}" alt="{{title}}" class="scrap_image" />
+                    </a>
+                </dt>
+                <dd class="scrap_part_description">
+                    <a href="{{url}}" target="_blank" class="scrap_title">{{title}}</a>
+                    <a href="{{url}}" target="_blank" class="scrap_caption">{{description}}</a>
+                    <a href="#" target="_blank" class="scrap_domain">{{domain}}</a>
+                </dd>
+            </dl>
+        {{/each}}
+    {{/if}}
 
 </template>
 
@@ -128,7 +166,6 @@
     4. integrated with certain text editor <br />
     5. collection keywords <br />
     6. upload image
-    7. 취소 button is to delete data save temporary.
     8. 기억 button is to save data when user wants.
 
 -->

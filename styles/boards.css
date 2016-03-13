@@ -137,3 +137,26 @@ body {
 .writeBtn{
     border-radius:100%;
 }
+
+/* editor */
+.scrapBox{
+    position:relative;
+    padding-left:40px;
+    border:1px solid #efefef;
+    border-radius:5px; /* 함수만들것 */
+}
+
+.scrap_part_image{
+    position: absolute;
+    top:5px;
+    left:5px;
+    border:1px solid #f00;
+}
+
+.scrap_part_description{
+    border:1px solid #f00;
+}
+
+.scrap_image{
+    width:100%;
+}
