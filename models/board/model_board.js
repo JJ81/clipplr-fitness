@@ -3,7 +3,7 @@
  */
 Boards = new Mongo.Collection('clips');
 
-
+// 이를 모두 서버쪽으로 옮겨보자
 Meteor.methods({
     // 일정 개수의 콘텐츠를 읽어오는 부분을 이곳에 작성할 수 있다면 어떤 방법이 있을까
     //queryBoard: function () {
@@ -49,7 +49,9 @@ Meteor.methods({
             content: data.content, // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
             hash_tags: data.hash_tags,
             creator: Meteor.userId(),
+            isOpen: data.open,
             createdAt: new Date()
+
             //publisher: 'clipplr',
             //clipboard_id: '',
             //clipbook_id: '',
@@ -65,19 +67,30 @@ Meteor.methods({
     },
 
     // 에디터를 통해서 콘텐츠를 수정한다.
-    updateBoard: function (id, content) {
-        if (!Meteor.userId()) {
-            // 로그인이 되지 않을 상태일 때는 로그인 모달이 뜬다.
-            throw new Meteor.Error("not-authorized");
-        }
+    updateBoard: function (id, data) {
+        //if (!Meteor.userId()) {
+        //    // 로그인이 되지 않을 상태일 때는 로그인 모달이 뜬다.
+        //    throw new Meteor.Error("not-authorized");
+        //}
 
+        // 필요한 부분만 업데이트할 수가 없나?
         Boards.update(id, {
-            images: '',
-            title: '',
-            description: '',
-            content: [], // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
-            modifiedAt: new Date(),
-            hash_tags: []
+            $set : {
+                images: data.images,
+                title: data.title,
+                description: data.description,
+                content: data.content, // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
+                hash_tags: data.hash_tags,
+                isOpen: data.open,
+                modifiedAt: new Date()
+            }
+        }, function (err){
+            if(err){
+                alert('error ocurred!');
+            }else{
+                alert('save successfully');
+                Router.go('/content/' + id);
+            }
         });
     },
 
@@ -90,4 +103,6 @@ Meteor.methods({
 
         Boards.remove(id);
     }
+
 });
+

@@ -1,16 +1,33 @@
 <Template name="list">
     <div class="listWrapper">
-    {{#each list}}
-        <div data-uid="{{_id}}">
-            <a href="/content/{{_id}}" class="list_display">
-                image : {{images}} <br />>
-                title: {{title}} <br />
-                description: {{description}} <br />
-                hash_tags: {{hash_tags}} <br />
-                createdAt: {{createdAt}} <br />
-                creator: {{creator}} <br />
-            </a>
-        </div>
-    {{/each}}
+    <!--{{#each list}}-->
+        <!--<div data-uid="{{_id}}">-->
+            <!--<a href="/content/{{_id}}" class="list_display">-->
+                <!--image : {{images}} <br />>-->
+                <!--title: {{title}} <br />-->
+                <!--description: {{description}} <br />-->
+                <!--hash_tags: {{hash_tags}} <br />-->
+                <!--createdAt: {{createdAt}} <br />-->
+                <!--creator: {{creator}} <br />-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--{{/each}}-->
+
+
+        {{#each list}}
+        <a class="row item-thumbnail" href="/content/{{_id}}">
+            <div class="col-xs-12">
+                <div class="thumbnail">
+                    <img src="{{images}}" alt="{{title}}" class="preview-img" />
+                    <div class="caption">
+                        <h3>{{title}}</h3>
+                        <p>{{description}}</p>
+                        <p>#{{hash_tags}}</p>
+                        <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{/each}}
     </div>
 </Template>

@@ -18,6 +18,18 @@ if (Meteor.isServer) {
     });
 
 
+    Meteor.methods ({
+        webScrape: function(addr) {
+            return Scrape.website(addr);
+        },
+        removeSessionForEditor: function (sessionName) {
+            if(Session.get(sessionName))
+                delete Session.keys.editor_data;
+        }
+    });
+
+
+
 
     //Meteor.Allow({
     //

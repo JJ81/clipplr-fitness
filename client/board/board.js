@@ -17,27 +17,23 @@ if(Meteor.isClient){
          * @returns {boolean}
          */
         comparePage: function (current) {
-            console.log(Iron.Location.get().path);
+            // console.log(Iron.Location.get().path);
             return !(Iron.Location.get().path.indexOf(current) !== -1 );
         }
     });
 
     Template.layout.events({
-        // Go history back when content view
-        // TODO 뒤로 가기 이벤트를 공통으로 사용할 수 있도록 하고 특정 페이지에서 필요할 때만 보일 수 있도록 한다?
-        // 웹모바일이 먼저이기 때문에 상관없다.
-        'click .history-back-btn': function () {
+        'click .backBtn': function () {
             window.history.back(-1);
+        },
+
+        'click .writeBtn': function () {
+            if(Session.get('editor_data'))
+                delete Session.keys.editor_data;
+            //Meteor.call('removeSessionForEditor', 'editor_data');
         }
     });
 
-    Template.editor.helpers({
-
-    });
-
-    Template.editor.events({
-
-    });
 
     /**
      * TODO 1. account-ui-unstyle로 변경할 것
