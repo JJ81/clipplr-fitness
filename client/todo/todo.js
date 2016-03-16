@@ -53,9 +53,5 @@ if (Meteor.isClient) {
     Meteor.startup(function () {
        $('.new-task input[name=text]').focus();
     });
-
-    Accounts.ui.config({
-        passwordSignupFields: "USERNAME_ONLY"
-    });
-
+    
 }
