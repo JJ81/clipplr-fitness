@@ -1,4 +1,5 @@
 # TODO LIST
+
 1. route 소스와 model소스가 외부로 공개되지 않도록 하는 것이 좋지 않을까? server소스라고 판단되는 곳을 
 제외하고는 모두 노출되는 것으로 처리되고 있다. 아니면 빌드버전으로 배포가 될 경우 난독화가 이루어지거나 혹은 
 해당 파일들이 제거되고 배포가 된다면 관계가 없을 것 같다.
@@ -32,12 +33,11 @@ TinyMCE를 설정해보자
 모바일에서 글을 쓸 수 있는 방법을 제공해주어도 좋지만 처음부터 그럴 필요는 없다.
 마크다운을 설정해주는 것이 좋은지 검토해보자.
 
-
 13. test-runner velocity를 사용해보자.
 
 14. animation 연결해볼 것 User Interaction
 
-15. flux dispatcher를 도입해보자. 
+15. flux dispatcher를 도입해보자.
 https://atmospherejs.com/meteorflux/dispatcher
 
 16. 각 페이지는 공통영역이 아니라 별개로 헤더를 가지고 있는 편이 더 좋을 것 같다. (checked)
@@ -105,7 +105,7 @@ source $HOME/.bashrc
 isServer블록에서는 Session이 undefined로 출력이 되는 이유는 무엇인가?
 
 42. 중복 로그인 방지하기
-중복 로그인을 할 경우 디비에 정보가  입력되지 않는다.
+중복 로그인을 할 경우 디비에 정보가 입력되지 않는다.
 
 43. 
 

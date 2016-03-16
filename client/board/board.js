@@ -36,6 +36,7 @@ if(Meteor.isClient){
 
 
     /**
+     * @ 로그인 설정 파트
      * TODO 1. account-ui-unstyle로 변경할 것
      * TODO 2. 각 계정을 id, secret키를 설정하는 방법을 알아볼 것
      * TODO 3. 이 코드는 이곳에 있는 것이 맞나? 공통으로 사용할 모듈을 외부로 빼야할 것이다
