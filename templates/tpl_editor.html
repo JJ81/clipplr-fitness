@@ -1,107 +1,80 @@
 <template name="editor">
 
-    <form class="{{#if isEqual content null}}new-board{{else}}modify-board{{/if}}" autocomplete="off">
-        <div class="btnArea">
-            <div class="pull-left">
-                <!-- 수정하기 버튼을 누르고 들어올 경우만 노출될 수 있도록 한다 -->
-                {{#if isEqual content null}}{{else}}
-                    <button type="button" class="btn btn-default deleteBoardBtn">
-                        <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> 삭제
-                    </button>
-                {{/if}}
+    <nav class="navbar">
+        <div class="header-wrapper">
 
-                <button type="reset" class="btn btn-warning resetBtn">
-                    <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> 다시
-                </button>
+            <h1 class="center-block logo-navbar-middle logo-wrapper">
+                <a class="logo" href="/">
+                    <span class="glyphicon glyphicon-paperclip clip-logo"></span>Clipplr
+                </a>
+            </h1>
 
-                <button type="button" class="btn btn-danger cancelModifyBtn">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 취소
-                </button>
-            </div>
-
-            <div class="pull-right">
-                <button type="button" class="btn btn-info memoryBoardBtn">
-                    <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> 기억
-                </button>
-
-                <button type="submit" class="btn btn-success">
-                    <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> 전송
-                </button>
-            </div>
         </div>
 
-        <hr />
+    </nav>
 
-        {{#if isEqual content null}}
-            <div class="input-group">
-                <span class="input-group-addon" id="sizing-addon2">
-                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-                </span>
-                <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" />
-            </div>
+    <hr />
 
-            <div class="input-group">
-                <span class="input-group-addon" id="sizing-addon2">
-                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-                </span>
-                <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" />
-            </div>
+    <div class="container-fluid fluid-limit">
+        <form class="{{#if isEqual content null}}new-board{{else}}modify-board{{/if}}" autocomplete="off">
+            <div class="btnArea">
+                <div class="pull-left">
+                    <!-- 수정하기 버튼을 누르고 들어올 경우만 노출될 수 있도록 한다 -->
+                    {{#if isEqual content null}}{{else}}
+                        <button type="button" class="btn btn-default deleteBoardBtn">
+                            <span class="glyphicon glyphicon-erase" aria-hidden="true"></span> 삭제
+                        </button>
+                    {{/if}}
 
-            <div class="input-group">
-                <span class="input-group-addon" id="sizing-addon2">
-                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-                </span>
-                <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" />
-            </div>
+                    <button type="reset" class="btn btn-warning resetBtn">
+                        <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> 다시
+                    </button>
 
-            <div class="input-group">
-                <span class="input-group-addon" id="sizing-addon2">
-                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-                </span>
-                <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2 /">
-            </div>
+                    <button type="button" class="btn btn-danger cancelModifyBtn">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 취소
+                    </button>
+                </div>
 
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" aria-label="..." id="open" name="open" checked />
-                </span>
-                <label for="open" class="form-control" aria-label="...">이 글을 바로 게시할까요?</label>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-info memoryBoardBtn">
+                        <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> 기억
+                    </button>
+
+                    <button type="submit" class="btn btn-success">
+                        <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> 전송
+                    </button>
+                </div>
             </div>
 
             <hr />
 
-            <div class="editorArea">
-                Editor Area
-            </div>
-
-        {{else}} <!-- 수정을 위한 뷰 제공 -->
-            {{#each content}}
+            {{#if isEqual content null}}
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">
                         <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
                     </span>
-                    <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" value="{{title}}" />
+                    <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" />
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">
                         <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
                     </span>
-                    <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" value="{{images}}" />
+                    <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" />
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">
                         <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
                     </span>
-                    <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" value="{{hash_tags}}" />
+                    <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" />
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">
                         <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
                     </span>
-                    <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2" value="{{description}}" />
+                    <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2 /">
                 </div>
 
                 <div class="input-group">
@@ -117,47 +90,90 @@
                     Editor Area
                 </div>
 
-                <input type="hidden" value="{{_id}}" name="id" id="id" />
+            {{else}} <!-- 수정을 위한 뷰 제공 -->
+                {{#each content}}
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">
+                            <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                        </span>
+                        <input type="text" name="title" class="form-control" placeholder="제목을 입력해주세요." aria-describedby="sizing-addon2" autocomplete="off" value="{{title}}" />
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">
+                            <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                        </span>
+                        <input type="text" name="images" class="form-control" placeholder="첨부할 이미지 주소를 입력해주세요" aria-describedby="sizing-addon2" value="{{images}}" />
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">
+                            <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                        </span>
+                        <input type="text" name="hash_tags" class="form-control" placeholder="키워드를 입력해주세요." aria-describedby="sizing-addon2" value="{{hash_tags}}" />
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">
+                            <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                        </span>
+                        <input type="text" name="description" class="form-control" placeholder="간략한 설명을 넣어주세요." aria-describedby="sizing-addon2" value="{{description}}" />
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" aria-label="..." id="open" name="open" checked />
+                        </span>
+                        <label for="open" class="form-control" aria-label="...">이 글을 바로 게시할까요?</label>
+                    </div>
+
+                    <hr />
+
+                    <div class="editorArea">
+                        Editor Area
+                    </div>
+
+                    <input type="hidden" value="{{_id}}" name="id" id="id" />
+                {{/each}}
+            {{/if}}
+        </form>
+
+        <!-- 스크랩 테스트를 위함 -->
+        <form class="webscrap" autocomplete="off">
+            <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">
+                        <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
+                    </span>
+                <input type="text" name="addr" class="form-control" placeholder="스크랩할 주소를 입력해주세요." aria-describedby="sizing-addon2"  />
+            </div>
+        </form>
+
+        <hr />
+
+        <!--
+            여기서부터 두 가지 형태로 템플릿이 구성되어야 한다
+            첫째는 데이터를 스크랩한 경우
+            두번째는 에디터를 열어서 사용한 경우
+            이 두가지 타입이 순차적으로 나열 될 수 있도록 하면 하단에 바인딩될 수 있도록 한다.
+         -->
+
+        {{#if addEditorData}}
+            {{#each addEditorData}}
+                <dl class="scrapBox" data-type="scrap">
+                    <dt class="scrap_part_image">
+                        <a href="{{url}}}" target="_blank" class="scrap_img_link">
+                            <img src="{{favicon}}" alt="{{title}}" class="scrap_image" />
+                        </a>
+                    </dt>
+                    <dd class="scrap_part_description">
+                        <a href="{{url}}" target="_blank" class="scrap_title">{{title}}</a>
+                        <a href="{{url}}" target="_blank" class="scrap_caption">{{description}}</a>
+                        <a href="#" target="_blank" class="scrap_domain">{{domain}}</a>
+                    </dd>
+                </dl>
             {{/each}}
         {{/if}}
-    </form>
-
-    <!-- 스크랩 테스트를 위함 -->
-    <form class="webscrap" autocomplete="off">
-        <div class="input-group">
-                <span class="input-group-addon" id="sizing-addon2">
-                    <span class="glyphicon glyphicon-ok-circle bullet_default" aria-hidden="true"></span>
-                </span>
-            <input type="text" name="addr" class="form-control" placeholder="스크랩할 주소를 입력해주세요." aria-describedby="sizing-addon2"  />
-        </div>
-    </form>
-
-    <hr />
-
-    <!--
-        여기서부터 두 가지 형태로 템플릿이 구성되어야 한다
-        첫째는 데이터를 스크랩한 경우
-        두번째는 에디터를 열어서 사용한 경우
-        이 두가지 타입이 순차적으로 나열 될 수 있도록 하면 하단에 바인딩될 수 있도록 한다.
-     -->
-
-    {{#if addEditorData}}
-        {{#each addEditorData}}
-            <dl class="scrapBox" data-type="scrap">
-                <dt class="scrap_part_image">
-                    <a href="{{url}}}" target="_blank" class="scrap_img_link">
-                        <img src="{{favicon}}" alt="{{title}}" class="scrap_image" />
-                    </a>
-                </dt>
-                <dd class="scrap_part_description">
-                    <a href="{{url}}" target="_blank" class="scrap_title">{{title}}</a>
-                    <a href="{{url}}" target="_blank" class="scrap_caption">{{description}}</a>
-                    <a href="#" target="_blank" class="scrap_domain">{{domain}}</a>
-                </dd>
-            </dl>
-        {{/each}}
-    {{/if}}
-
+    </div>
 </template>
 
 <!--

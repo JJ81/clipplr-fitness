@@ -31,9 +31,24 @@ if(Meteor.isClient){
             if(Session.get('editor_data'))
                 delete Session.keys.editor_data;
             //Meteor.call('removeSessionForEditor', 'editor_data');
+        },
+
+        'click .closeLeftMenu': function () {
+            $('.leftMenu').hide(100);
+            $('.bg_layer').hide(100);
+        },
+
+        'click .homeBtn': function () {
+            $('.leftMenu').show(100);
+            $('.bg_layer').show(100);
         }
     });
 
+    // it works like onload event
+    Template.login.rendered = function () {
+        console.log('test');
+        $('.login-link-text').trigger('click');
+    };
 
     /**
      * @ 로그인 설정 파트

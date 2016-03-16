@@ -107,8 +107,17 @@ isServer블록에서는 Session이 undefined로 출력이 되는 이유는 무�
 42. 중복 로그인 방지하기
 중복 로그인을 할 경우 디비에 정보가 입력되지 않는다.
 
-43. 
+43. meteor add materialize:materialize
+좌측 슬라이딩 메뉴 구현 
 
+44. materialize 를 사용할 거라면 bootstrap를 제거하는 것이 좋겠다
+모든 뷰를 모바일버전으로 구현하되 에디터만 PC용에 최적화할 수 있도록 하자.
+
+45. 로그아웃 혹은 로그인을 했을 경우 bg_layer나 leftMenu를 자동으로 닫을 수 있으려면?
+
+46. client js파일 뷰별로 모두 분리하여 작업할 것
+_ 
+47. 
 
 
 

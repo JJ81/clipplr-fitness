@@ -1,31 +1,20 @@
 <template name="layout">
-    <nav class="navbar">
-        <div class="header-wrapper">
+    {{> yield}}
 
-            <a href="#" class="backBtn">
-                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-            </a>
-            
+    <!-- 여기서부터 공통 모듈 -->
 
-            <h1 class="center-block logo-navbar-middle logo-wrapper">
-                <a class="logo" href="/">
-                    <span class="glyphicon glyphicon-paperclip clip-logo"></span>Clipplr
-                </a>
-            </h1>
+    <!-- 로그인 페이지에서는 해당 메뉴 노출을 제외시킬 것 -->
+    <!-- Home Button -->
+    <a href="#" class="btn btn-success homeBtn">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </a>
 
-            {{#if comparePage '/login'}}
-                <span class="login-signal">{{> loginButtons align="right"}}</span>
-            {{/if}}
+    <!-- Pop Menu (left or not) -->
+    <ul class="leftMenu">
+        <li>{{> loginButtons align="left"}}</li>
+        <li><a href="#" class="closeLeftMenu">닫기</a></li>
+    </ul>
 
-            <a href="/editor" class="btn btn-success pull-right writeBtn">
-                <span class="glyphicon glyphicon-pencil"></span>
-            </a>
-        </div>
+    <div class="bg_layer"></div>
 
-    </nav>
-
-    <div class="container-fluid fluid-limit">
-
-        {{> yield}}
-    </div>
 </template>
