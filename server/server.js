@@ -1,8 +1,8 @@
 /**
  * Created by yijaejun on 2016. 3. 7..
  */
-
 if (Meteor.isServer) {
+
     Meteor.startup(function () {
         // code to run on server at startup
     });
@@ -12,6 +12,12 @@ if (Meteor.isServer) {
     Meteor.publish("tasks", function() {
         return Tasks.find({}, {sort: {createdAt: -1}});
     });
+
+    Meteor.publish('clips', function (){
+        return Boards.find({}, {sort: {createdAt: -1}});
+    });
+
+
 
     //Meteor.Allow({
     //

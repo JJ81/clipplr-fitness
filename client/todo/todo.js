@@ -53,23 +53,5 @@ if (Meteor.isClient) {
     Meteor.startup(function () {
        $('.new-task input[name=text]').focus();
     });
-
-    /**
-     * TODO 1. account-ui-unstyle로 변경할 것
-     * TODO 2. 각 계정을 id, secret키를 설정하는 방법을 알아볼 것
-     */
-    Accounts.ui.config({
-        passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
-    });
-
-
-    /**
-     * 로그인이 되었는지 여부를 알 수 있음
-     */
-    Template.content.helpers({
-        isLogin: function(owner) {
-            return (owner === Meteor.userId());
-        }
-    });
-
+    
 }

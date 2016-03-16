@@ -7,11 +7,7 @@ Router.configure({
 
 
 Router.route('/', function () {
-    this.render('todo', {
-        data: function () {
-            return null;
-        }
-    });
+    this.redirect('/list/10/0');
 });
 
 /**
@@ -25,6 +21,7 @@ Router.route('/', function () {
  *
  * offset : 시작지점
  * size : 크기
+ * TODO default값 설정을 어떻게 해야 하는가?
  */
 Router.route('/list/:_size/:_offset', function () {
     var size = parseInt(this.params._size);
@@ -33,7 +30,7 @@ Router.route('/list/:_size/:_offset', function () {
     this.render('list', {
         data : function (){
             return {
-                list : Tasks.find({},{sort:{createdAt:-1}, skip: offset, limit: size})
+                list : Boards.find({},{sort:{modifiedAt:-1, createdAt:-1}, skip: offset, limit: size})
             }
         }
     });
@@ -50,22 +47,40 @@ Router.route('/content/:_id', function () {
     this.render('content', {
         data: function () {
             return {
-                content : Tasks.find({_id : id})
+                content : Boards.find({_id : id})
             };
         }
     });
 });
 
+
+
 /**
  * 클립 쓰기
  * TODO 1. 로그인을 해야 클립쓰기에 접근할 수 있다.
  */
-Router.route('/editor', function () {
-    this.render('editor', {
-        data: function () {
-            return null;
+Router.route('/editor', {
+    //waitOn: function () {
+    //    if (Meteor.user()) {
+    //         //Meteor.subscribe('users');
+    //    } else {
+    //        this.next();
+    //    }
+    //},
+    //onStop: function () {
+    //    Session.set('prevPage', this.location['path']);
+    //},
+    onBeforeAction: function () {
+        if (!Meteor.userId()) {
+            var currentPath = Iron.Location.get().path;
+            Session.set('prevPage', currentPath);
+            this.redirect('/login');
         }
-    });
+    },
+
+    data: function () {
+        this.render('editor');
+    }
 });
 
 /**
@@ -74,9 +89,12 @@ Router.route('/editor', function () {
  * TODO 2.로그인을 하지 않은 상태로 URL에 접속을 하려고 했을 때 list페이지로 리다이렉트 시킨다
  */
 Router.route('/editor/:_id/modify', function () {
+    var id = this.params._id;
     this.render('editor', {
         data: function () {
-            return null;
+            return {
+                content : Boards.find({_id : id})
+            };
         }
     });
 });
@@ -93,3 +111,22 @@ Router.route('/editor/:_id/delete', function () {
     });
 });
 
+/**
+ * login
+ * TODO 로그인이 된 후에는 어디서 로그인을 했는지 확인하고 해당 경로로 다시 보내야(redirect) 한다.
+ * TODO 세션에 저장하여 확인하는가?
+ */
+Router.route('/login', {
+    onBeforeAction: function () {
+        if(Meteor.userId()){
+            this.redirect('/list/10/0');
+        }else{
+            this.next();
+        }
+    },
+
+    data: function () {
+       this.render('login');
+    }
+
+});

@@ -1,13 +1,31 @@
-<Template name="layout">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                {{> loginButtons align="left"}}
-            </div>
+<template name="layout">
+
+    <nav class="navbar">
+
+        <div class="header-wrapper">
+            <a href="#" class="backBtn">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </a>
+
+            <h1 class="center-block logo-navbar-middle logo-wrapper">
+                <a class="logo" href="/">
+                    <span class="glyphicon glyphicon-paperclip clip-logo"></span>Clipplr
+                </a>
+            </h1>
+
+            {{#if comparePage '/login'}}
+                <span class="login-signal">{{> loginButtons align="right"}}</span>
+            {{/if}}
+
+            <a href="/editor" class="btn btn-success pull-right writeBtn">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
         </div>
+
     </nav>
 
-    <div class="container">
+    <div class="container-fluid fluid-limit">
         {{> yield}}
     </div>
-</Template>
+
+</template>
