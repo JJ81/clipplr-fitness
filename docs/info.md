@@ -92,7 +92,22 @@ https://www.youtube.com/watch?v=_mu6BWsnaPM&list=LL3fBiJrFFMhKlsWM46AsAYw&index=
 36. .bashrc를 매번 적용하기 귀찮으면 홈디렉터리로 가서 .bash_profile에 아래와 같이 적어준다. 만약 해당 파일이 없다면 만들어준다
 source $HOME/.bashrc
 
-37. _
+37. Rective Meteor http://react-ive.meteor.com/
+
+38. 문의 게시판 질문 답변 UI 및 기능 구현
+
+39. 로그인 후 이메일 인증 달기
+
+40. 답변 달릴 경우 이메일 자동 발송되기 
+
+41. Meteor.methods를 작성하고 접근하는 위치에 대해서 좀 더 면밀하게 알아볼 것.
+공통으로 사용해야 할 메소드의 경우 어떤 방식으로 연결해줄 수 있는가?
+isServer블록에서는 Session이 undefined로 출력이 되는 이유는 무엇인가?
+
+42. 중복 로그인 방지하기
+중복 로그인을 할 경우 디비에 정보가  입력되지 않는다.
+
+43. 
 
 
 

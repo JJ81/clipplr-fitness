@@ -3,7 +3,7 @@
  */
 Boards = new Mongo.Collection('clips');
 
-
+// 이를 모두 서버쪽으로 옮겨보자
 Meteor.methods({
     // 일정 개수의 콘텐츠를 읽어오는 부분을 이곳에 작성할 수 있다면 어떤 방법이 있을까
     //queryBoard: function () {
@@ -49,7 +49,9 @@ Meteor.methods({
             content: data.content, // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
             hash_tags: data.hash_tags,
             creator: Meteor.userId(),
+            isOpen: data.open,
             createdAt: new Date()
+
             //publisher: 'clipplr',
             //clipboard_id: '',
             //clipbook_id: '',
@@ -79,6 +81,7 @@ Meteor.methods({
                 description: data.description,
                 content: data.content, // 콘텐츠 수집을 json타입으로 받아서 배열에 넣는다.
                 hash_tags: data.hash_tags,
+                isOpen: data.open,
                 modifiedAt: new Date()
             }
         }, function (err){
@@ -100,4 +103,6 @@ Meteor.methods({
 
         Boards.remove(id);
     }
+
 });
+

@@ -17,7 +17,7 @@ if(Meteor.isClient){
          * @returns {boolean}
          */
         comparePage: function (current) {
-            console.log(Iron.Location.get().path);
+            // console.log(Iron.Location.get().path);
             return !(Iron.Location.get().path.indexOf(current) !== -1 );
         }
     });
@@ -25,16 +25,15 @@ if(Meteor.isClient){
     Template.layout.events({
         'click .backBtn': function () {
             window.history.back(-1);
+        },
+
+        'click .writeBtn': function () {
+            if(Session.get('editor_data'))
+                delete Session.keys.editor_data;
+            //Meteor.call('removeSessionForEditor', 'editor_data');
         }
     });
 
-    Template.editor.helpers({
-
-    });
-
-    Template.editor.events({
-
-    });
 
     /**
      * TODO 1. account-ui-unstyle로 변경할 것
