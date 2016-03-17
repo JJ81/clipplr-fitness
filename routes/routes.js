@@ -32,7 +32,6 @@ Router.route('/list/:_size/:_offset', function () {
             return {
                 list : Boards.find(
                     {isOpen: true},
-                    //{},
                     {sort:{modifiedAt:-1, createdAt:-1},
                     skip: offset, limit: size})
             }
