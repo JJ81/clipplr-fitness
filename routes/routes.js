@@ -133,3 +133,14 @@ Router.route('/login', {
     }
 
 });
+
+/**
+ * free council
+ */
+Router.route('/health-check', function () {
+    this.render('program', {
+        data: function () {
+            return null;
+        }
+    });
+});

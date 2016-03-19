@@ -141,11 +141,12 @@ body {
   width: 100%; }
 
 .homeBtn {
-  position: absolute;
+  position: fixed;
   bottom: 60px;
   right: 10px;
   border-radius: 100%;
-  font-size: 20px; }
+  font-size: 20px;
+  opacity: 0.5; }
 
 /* home menu */
 .bg_layer {

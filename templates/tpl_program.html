@@ -1,0 +1,216 @@
+<template name="program">
+    <div class="container-fluid fluid-limit">
+        <div class="survey" style="border:1px solid #bebebe;padding:10px;">
+            <div>
+                운동은 사람의 몸과 운동했던 경력 그리고 목적 등 여러 요인에 따라서 달라질 수 있으므로 전문가의 진단이 필요합니다.<br />
+                하지만 몇 가지 간략에 정보를 통해서 운동법에 대한 정보를 제공해드릴 수 있습니다.<br />
+                아래의 내용을 천천히 따라가주세요. 원하시는 정보를 제공하기 위하여 최선의 노력을 다해보겠습니다.^^<br />
+            </div>
+
+            <hr />
+
+            <p>당신의 성별은?</p>
+            <input type="radio" name="sex" id="male" />
+            <label for="male">남성</label><br />
+
+            <input type="radio" name="sex" id="female" />
+            <label for="female">여성</label><br />
+
+            <hr />
+
+            <p>당신의 연령대는?</p>
+            <input type="radio" name="age" id="age-10" />
+            <label for="age-10">10대</label><br />
+
+            <input type="radio" name="age" id="age-20" />
+            <label for="age-20">20대</label><br />
+
+            <input type="radio" name="age" id="age-30" />
+            <label for="age-30">30대</label><br />
+
+            <input type="radio" name="age" id="age-40" />
+            <label for="age-40">40대</label><br />
+
+            <input type="radio" name="age" id="age-50" />
+            <label for="age-50">50대</label><br />
+
+            <input type="radio" name="age" id="age-60" />
+            <label for="age-60">60대</label><br />
+
+            <input type="radio" name="age" id="age-70" />
+            <label for="age-70">70대 이상</label><br />
+
+            <hr />
+
+            <p>당신은 왜 운동을 하고 싶으신가요?(운동의 목적)</p>
+            <input type="checkbox" name="purpose" id="fit-purpose-A" />
+            <label for="fit-purpose-A">몸짱</label><br />
+
+            <input type="checkbox" name="purpose" id="fit-purpose-B" />
+            <label for="fit-purpose-B">재활/치료</label><br />
+
+            <input type="checkbox" name="purpose" id="fit-purpose-C" />
+            <label for="fit-purpose-C">비만 치료(다이어트)</label><br />
+
+            <input type="checkbox" name="purpose" id="fit-purpose-D" />
+            <label for="fit-purpose-D">체중 증가</label><br />
+
+            <hr />
+
+            <p>당신의 현재 몸은 어떠신가요?</p>
+            <input type="radio" name="body-type" id="body-typeA" checked />
+            <label for="body-typeA">당신은 물만 먹어도 살이 찌는 내배엽 체질이신가요?</label><br />
+
+            <input type="radio" name="body-type" id="body-typeB" />
+            <label for="body-typeB">당신은 타고나서 숨만 쉬어도 근육이 잘 붙는 중배엽 체질이신가요?</label><br />
+
+            <input type="radio" name="body-type" id="body-typeC" />
+            <label for="body-typeC">당신은 뭘 먹어도 근육이나 살이 찌지 않는 외배엽 체질이신가요?</label><br />
+
+            <hr />
+
+            <!--<p>어떤 몸을 원하시나요?</p>-->
+            <!--<input type="checkbox" name="hope-body-type" id="hope-body-type-A" />-->
+            <!--<label for="hope-body-type-A">적절한 체중 감량</label><br />-->
+
+            <!--<input type="checkbox" name="hope-body-type" id="hope-body-type-B" />-->
+            <!--<label for="hope-body-type-B">적절한 근육질</label><br />-->
+
+            <!--<input type="checkbox" name="hope-body-type" id="hope-body-type-C" />-->
+            <!--<label for="hope-body-type-C">건강</label><br />-->
+
+            <!--<input type="checkbox" name="hope-body-type" id="hope-body-type-D" />-->
+            <!--<label for="hope-body-type-D">몸짱</label><br />-->
+
+            <hr />
+
+
+            <p>몸에 불편한 점이 있으신가요? 있다면 어느 부위인가요?</p>
+            <input type="checkbox" name="handicap" id="handicap-type-A" />
+            <label for="handicap-type-A">허리</label><br />
+
+            <input type="checkbox" name="handicap" id="handicap-type-B" />
+            <label for="handicap-type-B">목</label><br />
+
+            <input type="checkbox" name="handicap" id="handicap-type-C" />
+            <label for="handicap-type-C">어깨, 등</label><br />
+
+            <input type="checkbox" name="handicap" id="handicap-type-D" />
+            <label for="handicap-type-D">다리(발목, 발 등을 모두 포함)</label><br />
+
+            <input type="checkbox" name="handicap" id="handicap-type-E" />
+            <label for="handicap-type-E">팔(손가락, 손목 등 모두 포함)</label><br />
+
+            <input type="checkbox" name="handicap" id="handicap-type-F" />
+            <label for="handicap-type-F">복부</label><br />
+
+            <hr />
+
+            <p>당신의 운동 경력과 능력은 어느정도이신가요?</p>
+            <input type="radio" name="body-grade" id="body-grade-A" checked />
+            <label for="body-grade-A">운동이 처음이신 완전히 초급자이신가요?</label><br />
+
+            <input type="radio" name="body-grade" id="body-grade-B" />
+            <label for="body-grade-B">운동은 좀 해보았으나 목표 달성이 어려우셨나요?</label><br />
+
+            <input type="radio" name="body-grade" id="body-grade-C" />
+            <label for="body-grade-C">운동을 많이 해보았고 좀 더 성장을 위한 고급정보를 원하시나요?</label><br />
+
+            <hr />
+
+            <p>운동을 했었다면 실패한 요인은 무엇이었을까요?</p>
+
+            <hr />
+
+            <p>운동을 했었다면 성공한 요인은 무엇이었을까요?</p>
+
+            <hr />
+
+            <p>당신에게 지금 필요한 것은 무엇인가요?</p>
+
+            <hr />
+
+            <p>하루중 운동이 가능한 시간대는?</p>
+
+            <hr />
+
+            <p>일주일중 몇 일정도 운동이 가능하신가요?</p>
+
+        </div>
+
+        <hr />
+        <hr />
+
+        <div style="border:1px solid #f00;">
+            <!--내배엽이면서 초급자/중급자/고급자<br />-->
+            <!--외배엽이면서 초급자/중급자/고급자<br />-->
+            <!--중배엽이면서 초급자/중급자고급자<br />-->
+
+            성별에 따라서<br />
+            나이에 따라서<br />
+            목적을 추가하여<br />
+            체질에 따라서<br />
+            몸상태에 따라서<br />
+            이러한 몸상태가 된 요인이 무엇이라고 생각하는가?<br />
+            운동 경력<br />
+            주로 운동이 가능한 시간대<br />
+            일주일에 운동이 가능한 일수<br />
+
+            운동을 하려고 하나 막상 쉽지 않은 이유(그동안 실패 요인) <br />
+            위의 조건에 맞는 간략한 운동 프로그램을 만들어서 준다<br />
+            1/2/3/4/5일 분할 운동<br /><br />
+
+            <hr />
+
+            전문가와의 구체적인 상담을 위해서 이메일 문의 가능하게<br /><br />
+
+            혼자하기 어려워요 도와주세요 <br /><br />
+            일일 운동이 가능한 곳.<br />
+            일일 무료 PT가 가능한 곳<br />
+            무료 상담이 가능한 곳<br />
+            저렴한 헬스장 찾기<br />
+            프로모션 제공하는 헬스장 둘러보기<br />
+            현재 위치 추적하기<br />
+            현재 위치를 기반으로 주변 헬스장 정보 가져오기<br />
+            원하는 위치를 선택하여 주변 헬스장 정보 리스트 보여주기<br />
+
+            <hr />
+
+            이러한 정보는 직접 수집하거나 헬스장에 광고나 홍보를 직접 할 수 있도록 툴을 전달하여 홍보가 가능할 수 있도록 한다.
+            만약 이러한 것이 어렵다면 전화를 해서 일일이 확인을 해나가야 한다. 공짜로 광고해준다면 마다할 사람이 없을까?
+            트래픽을 확보하고 유저수를 확보할 수 있다면 충분히 홍보에 대해서 호의적일 것이다. 먼저 트래픽이나 유저수를 확보해야 한다.
+            <br />
+
+            위의 각 선택지에는 적절한 이미지를 추가해서 이해를 도울 수 있도록 해야 한다.
+            최종 결과를 전송하게 되면 디비에 저장할 수 있도록 한다.
+            저장한 데이터를 확인하고 수정이 가능하도록 한다.
+            수정한 데이터를 기반으로 다른 운동 프로그램을 추천받을 수 있어야 한다.
+
+            <hr />
+
+            구체적인 운동 방법이 어려운 경우, 누군가 나의 포즈와 자세를 알려주거나 코치해주었으면 한다고 하는 사람들에게
+            혹은 운동 방법을 잘 모르갰다고 하는 사람들을 위해서 일일 무료 PT를 이용할 수 있도록 해준다.
+            혹은 저렴함 PT가 가능한 곳을 소개해준다.
+            일정한 금액을 통해서 일일치의 PT비용을 들여서 코칭을 받을 수 있다.
+            한달 이용권을 이용하지 않고 하루치씩 비용을 결제하여 헬스장을 이용할 수 있다.
+            제휴헬스장의 경우 PG를 연결하여 진행할 수 있다.
+            어느 헬스장을 자유롭게 이용할 수 있게 한다.
+            하루치씩만 사용할 수 있도록 한다.(물론 이를 허용하는 헬스장에 대한 정보를 제공하고 그곳에서만 이용하게 한다.)
+            단체로 몇 명씩 묶어서 일일 이용권을 이용할 수 있도록 한다면 할인도 가능하도록 해준다.
+            일일 이용 쿠폰을 메일로 전달해주는 형식으로 계약을 체결한다.(이건 우리 비용으로 진행하게 될 수도 있다. 되도록 협조하여 해당 프로모션을 진행해는 것이 좋을 것 같다)
+
+            <br />
+
+            각 상황에 따른 운동 프로그램 및 처방에 대해서는 백오피스에서 다룰 수 있도록 한다.
+            각 고객별로 어떤 데이터를 내려주었는지 저장하고 고객은 항상 이 진단 내용을 살펴볼 수 있도록 한다.
+            이를 통해서 해당 서비스로 유도하고 꾸준히 데이터를 전달하고 메일을 전달한다. (이메일 수집 동의에 대해서 알아볼 것)
+
+            여러가지 상황에 따라서 운동 프로그램을 만들어보자. 이것들을 어떤 형식으로 백오피스에서 수정하고 저장할 것인지 생각해보자.
+            결과를 보기 전에 광고를 클릭할 수 있도록 유도한다.
+            광고를 누르고 광고를 본 후에 결과를 볼 수 있도록 한다.(광고를 선택했을 경우, 결과룰 출력할 수 있도록 할 수 있나?)
+
+
+        </div>
+
+    </div>
+</template>
