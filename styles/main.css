@@ -169,4 +169,9 @@ body {
   z-index: 1020;
   display: none; }
 
+.weight,
+.height {
+  width: 200px;
+  text-align: center; }
+
 /*# sourceMappingURL=main.css.map */

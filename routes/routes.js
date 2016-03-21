@@ -134,13 +134,50 @@ Router.route('/login', {
 
 });
 
-/**
- * free council
- */
-Router.route('/health-check', function () {
-    this.render('program', {
-        data: function () {
-            return null;
-        }
-    });
+/////// fitness test ///////////////////
+
+
+Router.route('/fitness/test/start', function () {
+    this.render('fitness-test-start');
 });
+
+Router.route('/fitness/test/step1', {
+    data: function () {
+        this.render('fitness-test-step1')
+    }
+});
+
+Router.route('/fitness/test/step2', {
+
+    //onBeforeAction: function() {
+    //    // Session.set("query", this.params.query);
+    //    console.log(Router.current().params.query);
+    //    this.next();
+    //},
+
+    data: function () {
+        this.render('fitness-test-step2');
+    }
+
+});
+
+Router.route('/fitness/test/step3', function () {
+    this.render('fitness-test-step3');
+});
+
+Router.route('/fitness/test/step4', function () {
+    this.render('fitness-test-step4');
+});
+
+Router.route('/fitness/test/step5', function () {
+    this.render('fitness-test-step5');
+});
+
+Router.route('/fitness/test/step6', function () {
+    this.render('fitness-test-step6');
+});
+
+Router.route('/fitness/test/result', function () {
+    this.render('fitness-test-result');
+});
+

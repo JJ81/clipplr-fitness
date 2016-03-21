@@ -119,6 +119,8 @@ isServer블록에서는 Session이 undefined로 출력이 되는 이유는 무�
 _ 
 47. ui-unstyled로 변경할 것
 
-48. 
+48. fitness 테스트 진행시 form을 이용하는 방식과 session을 이용하는 방식중 어느 것이 더 나은가?
+
+49. 
 
 
