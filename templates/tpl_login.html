@@ -1,4 +1,4 @@
-<template name="login">
+<template name="login_bak">
 
     <nav class="navbar">
         <div class="header-wrapper">
@@ -28,11 +28,34 @@
     </div>
 </template>
 
-<!--<template name="login">-->
-    <!--<h2>Log in</h2>-->
-    <!--<form>-->
-        <!--<input type="email" name="loginEmail" placeholder="Email">-->
-        <!--<input type="password" name="loginPassword" placeholder="Password">-->
-        <!--<input type="submit" value="Login">-->
-    <!--</form>-->
-<!--</template>-->
+<body>
+{{#if currentUser}}
+    {{> settings}}
+{{else}}
+    {{> signup}}
+    {{> login}}
+{{/if}}
+</body>
+
+<template name="signup">
+    <h2>Signup</h2>
+    <form>
+        <input type="email" name="signupEmail" placeholder="Email">
+        <input type="password" name="signupPassword" placeholder="Password">
+        <input type="submit" value="Signup">
+    </form>
+</template>
+
+<template name="login">
+    <h2>Log in</h2>
+    <form>
+        <input type="email" name="loginEmail" placeholder="Email">
+        <input type="password" name="loginPassword" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
+</template>
+
+<template name="settings">
+    <p>You're logged in!</p>
+    <p><a href="#" class="logout">Logout</a></p>
+</template>

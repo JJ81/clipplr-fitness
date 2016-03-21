@@ -120,16 +120,16 @@ Router.route('/editor/:_id/delete', function () {
  * TODO 세션에 저장하여 확인하는가?
  */
 Router.route('/login', {
-    onBeforeAction: function () {
-        if(Meteor.userId()){
-            this.redirect('/list/10/0');
-        }else{
-            this.next();
-        }
-    },
+    //onBeforeAction: function () {
+    //    if(Meteor.userId()){
+    //        this.redirect('/list/10/0');
+    //    }else{
+    //        this.next();
+    //    }
+    //},
 
-    data: function () {
-       this.render('login');
-    }
+    //data: function () {
+    //   this.render('login');
+    //}
 
 });

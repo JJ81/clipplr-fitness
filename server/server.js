@@ -17,7 +17,6 @@ if (Meteor.isServer) {
         return Boards.find({}, {sort: {createdAt: -1}});
     });
 
-
     Meteor.methods ({
         webScrape: function(addr) {
             return Scrape.website(addr);
