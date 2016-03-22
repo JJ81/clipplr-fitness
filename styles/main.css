@@ -170,8 +170,20 @@ body {
   display: none; }
 
 .weight,
-.height {
+.height,
+.waistAround,
+.hipAround {
   width: 200px;
   text-align: center; }
+
+.fitness-admin .table th {
+  text-align: center; }
+
+.fitness-admin .table td {
+  text-align: center;
+  vertical-align: middle; }
+
+.select_method {
+  font-size: 13px; }
 
 /*# sourceMappingURL=main.css.map */

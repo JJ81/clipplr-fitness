@@ -1,7 +1,9 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 .weight,
-.height{
+.height,
+.waistAround,
+.hipAround {
   width: 200px;
   text-align: center;
 }

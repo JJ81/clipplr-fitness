@@ -1,0 +1,20 @@
+<template name="admin_fitness_content">
+    <div class="container-fluid fluid-limit fitness-admin">
+        {{#if content}}
+            {{#each content}}
+        <a href="#" class="btn btn-default">뒤로</a>
+        <a href="/admin/fitness-test/list/10/0" class="btn btn-default">리스트로</a>
+        <a href="/admin/fitness-test/modify/{{_id}}" class="btn btn-default">수정</a>
+        <hr />
+
+
+                아이디: {{_id}}<br />
+                프로그램: {{program_title}}<br />
+                대상: {{customer_target}}<br />
+                생성일: {{createdAt}}<br />
+                상태: {{status}}<br />
+                생성자: {{creator}}
+            {{/each}}
+        {{/if}}
+    </div>
+</template>

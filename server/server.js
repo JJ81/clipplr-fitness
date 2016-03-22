@@ -1,6 +1,7 @@
 /**
  * Created by yijaejun on 2016. 3. 7..
  */
+
 if (Meteor.isServer) {
 
     Meteor.startup(function () {
@@ -17,6 +18,11 @@ if (Meteor.isServer) {
         return Boards.find({}, {sort: {createdAt: -1}});
     });
 
+    Meteor.publish('admin_create_program', function (){
+        return Programs.find({}, {sort: {createdAt: -1}});
+    });
+
+    // Editor에서 사용하는 메소드
     Meteor.methods ({
         webScrape: function(addr) {
             return Scrape.website(addr);
@@ -26,6 +32,8 @@ if (Meteor.isServer) {
                 delete Session.keys.editor_data;
         }
     });
+
+
 
 
 

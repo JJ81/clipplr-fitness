@@ -1,0 +1,42 @@
+<template name="admin_fitness_test">
+    <div class="container-fluid fluid-limit fitness-admin">
+
+        <h3 class="clearfix page-header">
+            운동 프로그램
+            <a href="/admin/fitness-test/create" class="btn btn-primary pull-right">생성하기</a>
+        </h3>
+
+        {{#if list}}
+        <table class="table table-bordered table-hover text-center table-condensed">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>프로그램</th>
+                <th>대상</th>
+                <th>날짜</th>
+                <th>상태</th>
+                <th>생성자</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each list}}
+            <tr>
+                <td>{{_id}}</td>
+                <td><a href="/admin/fitness-test/content/{{_id}}">{{program_title}}</a></td>
+                <td>{{customer_target}}</td>
+                <td>{{createdAt}}</td>
+                <td>
+                    <!--연결중 or 대기중-->
+                    {{status}}
+                </td>
+                <td>
+                    {{creator}}
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        {{/if}}
+    </div>
+</template>
+

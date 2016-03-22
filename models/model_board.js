@@ -60,7 +60,7 @@ Meteor.methods({
             if(err){
                 alert('error ocurred!');
             }else{
-                alert('save successfully');
+                alert('save successfully'); // alert is not defined 에러가 출력된다.
                 Router.go('/list/10/0');
             }
         });

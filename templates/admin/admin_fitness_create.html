@@ -1,0 +1,77 @@
+<template name="admin_fitness_create">
+    <div class="container-fluid fluid-limit fitness-admin">
+        <form class="form-group program-form" role="form">
+            <h3 class="page-header clearfix">
+                운동 프로그램 생성하기
+                <p class="pull-right">
+                    <a href="#" class="btn btn-danger">삭제</a>
+                    <!--<a href="#" class="btn btn-danger">수정</a>-->
+                    <a href="#" class="btn btn-warning">취소</a>
+                    <a href="#" class="btn btn-success">미리보기</a>
+                    <button type="submit" class="btn btn-primary">등록</button>
+                </p>
+            </h3>
+
+            <div class="fitness-program">
+                <div>
+                    <label for="program_title">프로그램 이름</label>
+                    <input type="text" name="program_title" id="program_title" class="form-control" value="" placeholder="한 번에 알아보기 쉽게 프로그램 이름을 등록해주세요." />
+                </div>
+
+                <div style="margin:25px 0 20px 0">
+                    <label for="program_target">프로그램 대상</label>
+                    <select name="target">
+                        <optgroup label="대상">
+                            <option value="">--대상선택--</option>
+                            <option value="초급자용">초급자용</option>
+                            <option value="중급자용">중급자용</option>
+                            <option value="고급자용">고급자용</option>
+                            <option value="운동선수용">운동선수용</option>
+                            <option value="체대입시용">체대입시용</option>
+                        </optgroup>
+                    </select>
+                    <a href="#" class="btn btn-success btn-xs">대상 추가</a>
+                </div>
+
+                <hr />
+
+                <!-- 여기서부터 프로그램을 하나씩 추가하는 영역이다 -->
+                <!-- 운동 프로그램의 최소 단위 -->
+                <div class="program-unit">
+                    <h4 class="clearfix page-header">
+                        <span>운동 프로그램을 입력해주세요.</span>
+                        <p class="pull-right select_method">
+                            <input type="radio" name="image" id="link_image" checked />
+                            <label for="link_image">링크 방식</label>
+
+                            <input type="radio" name="image" id="upload_image"/>
+                            <label for="upload_image">업로드 방식</label>
+                        </p>
+                    </h4>
+
+                    <!-- 업로드 방식일 경우, 업로드버튼이 나타나게 한다. -->
+                    <div class="form-group">
+                        <input type="text" name="body_pos" id="body_pos" class="form-control" placeholder="운동부위를 적어주세요." />
+                        <input type="text" name="exercise_title" id="exercise_title" class="form-control" placeholder="운동명을 적어주세요." />
+                        <input type="text" name="image_url" id="image_url" class="form-control" placeholder="수행할 운동을 나타낼 이미지 링크를 넣어주세요." />
+                        <input type="text" name="video_url" id="video_url" class="form-control" placeholder="운동에 대한 참고할만한 youtube ID를 넣어주세요." />
+                        <textarea class="form-control" rows="5" name="description" id="description" placeholder="운동에 대한 보충 설명을 자세히 입력해주세요."></textarea>
+                    </div>
+
+                    <a href="#" class="btn btn-default">삭제</a>
+                    <!--<a href="#" class="btn btn-info">수정</a>-->
+                    <!-- 완료를 눌렀을 경우 동적으로 디비에 생성한 리스트를 저장하고 상단에 리스트가 보인다. 생성된 리스트는 수정버튼이 있고 수정버튼을 누르면 수정을 할 수 있다. -->
+                    <a href="#" class="btn btn-success">완료</a>
+                    <a href="#" class="btn btn-primary pull-right">+추가</a>
+                </div>
+                <!-- // 운동 프로그램의 최소 단위(추가 버튼을 통해서 새로 생성해야 한다.) -->
+
+
+
+
+
+
+            </div>
+        </form>
+    </div>
+</template>
