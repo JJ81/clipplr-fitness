@@ -6,9 +6,12 @@ Boards = new Mongo.Collection('clips');
 // 이를 모두 서버쪽으로 옮겨보자
 Meteor.methods({
     // 일정 개수의 콘텐츠를 읽어오는 부분을 이곳에 작성할 수 있다면 어떤 방법이 있을까
-    //queryBoard: function () {
-    //
-    //},
+    queryBoard: function (offset, size) {
+        return Boards.find(
+            {isOpen: true},
+            {sort:{modifiedAt:-1, createdAt:-1},
+            skip: offset, limit: size})
+    },
 
     // 에디터를 통하여 콘텐츠를 작성한다.
     createBoard: function (data) {
@@ -38,7 +41,6 @@ Meteor.methods({
          */
 
         // 여기서부터 각 필드에 대해서 검사 시작
-
 
 
         //@ 최종 타당성&유효성 검사가 끝나고 나서 저장한다

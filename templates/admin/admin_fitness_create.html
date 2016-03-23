@@ -1,5 +1,126 @@
 <template name="admin_fitness_create">
     <div class="container-fluid fluid-limit fitness-admin">
+    <!-- Modify -->
+    {{#if content}}
+        {{#each content}}
+        <form class="form-group program-modify-form" role="form">
+            <h3 class="page-header clearfix">
+                운동 프로그램 생성하기
+                <p class="pull-right">
+                    <a href="#" class="btn btn-danger">삭제</a>
+                    <!--<a href="#" class="btn btn-danger">수정</a>-->
+                    <a href="#" class="btn btn-warning">취소</a>
+                    <a href="#" class="btn btn-success">미리보기</a>
+                    <button type="submit" class="btn btn-primary">등록</button>
+                </p>
+            </h3>
+
+            <div class="fitness-program">
+                <div>
+                    <label for="program_title">프로그램 이름</label>
+                    <input type="text" name="program_title" id="program_title" class="form-control" value="{{program_title}}" placeholder="한 번에 알아보기 쉽게 프로그램 이름을 등록해주세요." />
+                </div>
+
+                <div style="margin:25px 0 20px 0">
+                    <label for="program_target">프로그램 대상</label>
+
+                    <select name="target">
+                        <optgroup label="대상">
+                            <option value="">--대상선택--</option>
+                            {{#if isEqual customer_target '초급자용'}}
+                                <option value="초급자용" selected>초급자용</option>
+                            {{else}}
+                                <option value="초급자용">초급자용</option>
+                            {{/if}}
+                            {{#if isEqual customer_target '중급자용'}}
+                                <option value="중급자용" selected>중급자용</option>
+                            {{else}}
+                                <option value="중급자용">중급자용</option>
+                            {{/if}}
+                            {{#if isEqual customer_target '중급자용'}}
+                                <option value="고급자용" selected>고급자용</option>
+                            {{else}}
+                                <option value="고급자용">고급자용</option>
+                            {{/if}}
+                            {{#if isEqual customer_target '고급자용'}}
+                                <option value="운동선수용" selected>운동선수용</option>
+                            {{else}}
+                                <option value="운동선수용">운동선수용</option>
+                            {{/if}}
+                            {{#if isEqual customer_target '고급자용'}}
+                                <option value="체대입시용" selected>체대입시용</option>
+                            {{else}}
+                                <option value="체대입시용">체대입시용</option>
+                            {{/if}}
+                        </optgroup>
+                    </select>
+                    <a href="#" class="btn btn-success btn-xs">대상 추가</a>
+                </div>
+
+                <hr />
+                <!-- 일단 자동으로 혹은 수동으로 디비에 저장이 되는 순간 modify모드로 들어간다 -->
+                <div>
+                    {{#each program}}
+                        <div class="form-group">
+                            <input type="text" name="exercise_title" id="exercise_title" class="form-control" placeholder="운동명을 적어주세요." value="{{exercise_title}}" />
+                            <input type="text" name="body_pos" id="body_pos" class="form-control" placeholder="운동부위를 적어주세요." value="{{body_pos}}" />
+                            <input type="text" name="image_url" id="image_url" class="form-control" placeholder="수행할 운동을 나타낼 이미지 링크를 넣어주세요." value="{{image_url}}" />
+                            <input type="text" name="video_url" id="video_url" class="form-control" placeholder="운동에 대한 참고할만한 youtube ID를 넣어주세요." value="{{video_url}}" />
+                            <textarea class="form-control" rows="5" name="description" id="description" placeholder="운동에 대한 보충 설명을 자세히 입력해주세요.">{{description}}</textarea>
+                        </div>
+                    {{/each}}
+                    <!--
+                        수정버튼을 누르면 해당 데이터를 하단의 입력폼에 써주고 수정하고 완료버튼을 누르면 업데이트가 된다.
+                        최초로 운동 프로그램을 저장하고 modify모드로 redirect한다.
+                        완료버튼을 누르면 추가버튼이 활성화된다.
+                        TODO 수정 모드에서 추가 버튼을 누르면 빈 데이터를 집어 넣어서 필드가 하나 더 생성될 수 있도록 한다.
+                    -->
+                    <a href="#" class="btn btn-danger btn-ms">삭제</a>
+                </div>
+
+                <hr />
+
+                <!-- 여기서부터 프로그램을 하나씩 추가하는 영역이다 -->
+                <!-- 운동 프로그램의 최소 단위 -->
+                <div class="program-unit">
+                    <!--<h4 class="clearfix page-header">-->
+                        <!--<span>운동 프로그램을 입력해주세요.</span>-->
+                        <!--<p class="pull-right select_method">-->
+                            <!--<input type="radio" name="image" id="link_image" checked />-->
+                            <!--<label for="link_image">링크 방식</label>-->
+
+                            <!--<input type="radio" name="image" id="upload_image"/>-->
+                            <!--<label for="upload_image">업로드 방식</label>-->
+                        <!--</p>-->
+                    <!--</h4>-->
+
+                    <!-- 업로드 방식일 경우, 업로드버튼이 나타나게 한다. -->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" name="exercise_title" id="exercise_title" class="form-control" placeholder="운동명을 적어주세요." />-->
+                        <!--<input type="text" name="body_pos" id="body_pos" class="form-control" placeholder="운동부위를 적어주세요." />-->
+                        <!--<input type="text" name="image_url" id="image_url" class="form-control" placeholder="수행할 운동을 나타낼 이미지 링크를 넣어주세요." />-->
+                        <!--<input type="text" name="video_url" id="video_url" class="form-control" placeholder="운동에 대한 참고할만한 youtube ID를 넣어주세요." />-->
+                        <!--<textarea class="form-control" rows="5" name="description" id="description" placeholder="운동에 대한 보충 설명을 자세히 입력해주세요."></textarea>-->
+                    <!--</div>-->
+
+                    <!--<a href="#" class="btn btn-default">삭제</a>-->
+                    <!--<a href="#" class="btn btn-info">수정</a>-->
+                    <!-- 완료를 눌렀을 경우 동적으로 디비에 생성한 리스트를 저장하고 상단에 리스트가 보인다. 생성된 리스트는 수정버튼이 있고 수정버튼을 누르면 수정을 할 수 있다. -->
+                    <!--<a href="#" class="btn btn-success">완료</a>-->
+                    <a href="#" class="btn btn-primary pull-right">+추가</a>
+                </div>
+                <!-- // 운동 프로그램의 최소 단위(추가 버튼을 통해서 새로 생성해야 한다.) -->
+
+                <!--
+                    TODO 1. 수정이 바로 가능하다록 입력폼에 루프를 돌면서 데이터를 입력해준다. 수정 후에 최종 등록 버튼을 누르지 않으면 업데이트 되지 않는다.
+                    TODO 2. 그럼 내부에 별도의 수정 버튼이 필요가 없어진다. 대신 삭제버튼을 있어야 한다.
+                -->
+
+            </div>
+        </form>
+        {{/each}}
+        <!-- Create -->
+        {{else}}
         <form class="form-group program-form" role="form">
             <h3 class="page-header clearfix">
                 운동 프로그램 생성하기
@@ -20,20 +141,22 @@
 
                 <div style="margin:25px 0 20px 0">
                     <label for="program_target">프로그램 대상</label>
+
                     <select name="target">
                         <optgroup label="대상">
                             <option value="">--대상선택--</option>
-                            <option value="초급자용">초급자용</option>
-                            <option value="중급자용">중급자용</option>
-                            <option value="고급자용">고급자용</option>
-                            <option value="운동선수용">운동선수용</option>
-                            <option value="체대입시용">체대입시용</option>
+                                <option value="초급자용">초급자용</option>
+                                <option value="중급자용">중급자용</option>
+                                <option value="고급자용">고급자용</option>
+                                <option value="운동선수용">운동선수용</option>
+                                <option value="체대입시용">체대입시용</option>
                         </optgroup>
                     </select>
                     <a href="#" class="btn btn-success btn-xs">대상 추가</a>
                 </div>
 
                 <hr />
+                <!-- 일단 자동으로 혹은 수동으로 디비에 저장이 되는 순간 modify모드로 들어간다 -->
 
                 <!-- 여기서부터 프로그램을 하나씩 추가하는 영역이다 -->
                 <!-- 운동 프로그램의 최소 단위 -->
@@ -51,8 +174,8 @@
 
                     <!-- 업로드 방식일 경우, 업로드버튼이 나타나게 한다. -->
                     <div class="form-group">
-                        <input type="text" name="body_pos" id="body_pos" class="form-control" placeholder="운동부위를 적어주세요." />
                         <input type="text" name="exercise_title" id="exercise_title" class="form-control" placeholder="운동명을 적어주세요." />
+                        <input type="text" name="body_pos" id="body_pos" class="form-control" placeholder="운동부위를 적어주세요." />
                         <input type="text" name="image_url" id="image_url" class="form-control" placeholder="수행할 운동을 나타낼 이미지 링크를 넣어주세요." />
                         <input type="text" name="video_url" id="video_url" class="form-control" placeholder="운동에 대한 참고할만한 youtube ID를 넣어주세요." />
                         <textarea class="form-control" rows="5" name="description" id="description" placeholder="운동에 대한 보충 설명을 자세히 입력해주세요."></textarea>
@@ -67,11 +190,8 @@
                 <!-- // 운동 프로그램의 최소 단위(추가 버튼을 통해서 새로 생성해야 한다.) -->
 
 
-
-
-
-
             </div>
         </form>
+    {{/if}}
     </div>
 </template>

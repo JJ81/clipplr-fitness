@@ -23,9 +23,9 @@ Meteor.methods({
         });
     },
 
-    queryProgram: function (id) {
-
-    },
+    //queryProgram: function (id) {
+    //
+    //},
 
     updateProgram: function (id) {
 

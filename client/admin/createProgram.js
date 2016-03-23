@@ -3,7 +3,7 @@
  */
 if(Meteor.isClient){
     Meteor.subscribe('admin_create_program');
-    
+
     /*
     * TODO 각 input 필드에서 엔터 이벤트 방지할 것
     * TODO 프로그램 대상은 동적으로 생성하고 가져올 수 있어야 한다.
@@ -37,10 +37,15 @@ if(Meteor.isClient){
     });
 
     Template.admin_fitness_create.helpers({
-
+        // editor template에서 사용하고 있는 부분과 동일하여 공통으로 사용할 수 있도록 변경할 수 있어야 할 것이다
+        isEqual: function (a,b) {
+            return (a === b);
+        }
     });
 
     Template.admin_fitness_test.helpers({
 
     });
+
+
 }

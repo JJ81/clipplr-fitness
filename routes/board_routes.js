@@ -27,6 +27,12 @@ Router.route('/list/:_size/:_offset', function () {
     var size = parseInt(this.params._size);
     var offset = parseInt(this.params._offset);
 
+    // 라우터에서 이와같이 메소드를 호출하면 데이터가 넘어오지 않는다. 왜 그럴까?
+    //this.render('list', {
+    //    list: Meteor.call('queryBoard', offset, size)
+    //});
+
+
     this.render('list', {
         data : function (){
             return {
