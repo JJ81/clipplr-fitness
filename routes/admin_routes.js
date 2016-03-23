@@ -31,10 +31,10 @@ Router.route('/admin/fitness-test/list/:_size/:_offset', function () {
     });
 }); // {where: 'server'}를 사용할 경우 예상치 못한 에러가 발생한다.
 
-Router.route('/admin/fitness-test/create', {
-    data: function (req,res) {
-        this.render('admin_fitness_create');
-    }
+
+Router.route('/admin/fitness-test/create', function (){
+    this.layout('admin_layout');
+    this.render('admin_fitness_create');
 });
 
 //Router.route('/admin/fitness-test/content/:_id', function () {
@@ -49,6 +49,7 @@ Router.route('/admin/fitness-test/create', {
 //});
 
 Router.route('/admin/fitness-test/content/:_id', function () {
+    // override default layout
     this.layout('admin_layout'); // 이런 식으로 각 페이지의 레이아웃을 달리 설정할 수 있다.
     this.render('admin_fitness_content', {
         data: {

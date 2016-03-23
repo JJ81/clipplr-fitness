@@ -186,4 +186,20 @@ body {
 .select_method {
   font-size: 13px; }
 
+.program-unit {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px; }
+
+div.program-unit:nth(0) {
+  border-top: none; }
+
+.fitness-admin-program {
+  margin-bottom: 100px; }
+
+.add-program-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px; }
+
 /*# sourceMappingURL=main.css.map */

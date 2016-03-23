@@ -11,14 +11,14 @@ Meteor.methods({
             program_title: data.program_title,
             customer_target: data.customer_target,
             program: data.program,
-            status: '대기중',
+            status: data.status,
             createdAt: new Date(),
             creator: Meteor.userId()
         }, function (err) {
             if(err){
                 alert('Error Occurred.');
-            }else{
-                Router.go('/admin/fitness-test/list/10/0');
+                // 에러가 발생할 경우 뷰 처리는 어떻게 할 수 있는가.
+                // 에러를 콜백으로 받을 수 없는 듯 보인다. 테스트가 필요함.
             }
         });
     },
@@ -27,12 +27,27 @@ Meteor.methods({
     //
     //},
 
-    updateProgram: function (id) {
-
+    updateProgram: function (id, data) {
+        Programs.update(id,{
+            $set: {
+                program_title: data.program_title,
+                customer_target: data.customer_target,
+                program: data.program,
+                status: data.status
+            }
+        }, function (err) {
+            if(err){
+                alert('Error Occurred.');
+            }
+        });
     },
 
     deleteProgram: function (id) {
-
+        Programs.remove({_id: id}, function (err) {
+            if(err){
+                alert('Error Occurred.');
+            }
+        });
     }
 });
 

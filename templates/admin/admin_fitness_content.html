@@ -2,7 +2,7 @@
     <div class="container-fluid fluid-limit fitness-admin">
         {{#if content}}
             {{#each content}}
-        <a href="#" class="btn btn-default">뒤로</a>
+        <a href="#" class="btn btn-default back-btn">뒤로</a>
         <a href="/admin/fitness-test/list/10/0" class="btn btn-default">리스트로</a>
         <a href="/admin/fitness-test/modify/{{_id}}" class="btn btn-default">수정</a>
         <hr />
@@ -13,7 +13,19 @@
                 대상: {{customer_target}}<br />
                 생성일: {{createdAt}}<br />
                 상태: {{status}}<br />
-                생성자: {{creator}}
+                생성자: {{creator}}<br />
+
+                <p class="page-header">상세 운동 프로그램</p>
+
+                {{#each program}}
+                    {{exercise_title}}<br />
+                    {{body_pos}}<br />
+                    {{image_url}}<br />
+                    {{video_url}}<br />
+                    {{description}}
+                {{/each}}
+
+
             {{/each}}
         {{/if}}
     </div>
