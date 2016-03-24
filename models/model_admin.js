@@ -11,9 +11,13 @@ Meteor.methods({
             program_title: data.program_title,
             customer_target: data.customer_target,
             program: data.program,
-            status: data.status,
+            activate: false,
             createdAt: new Date(),
-            creator: Meteor.userId()
+            creator: {
+                id: Meteor.user().id,
+                username: Meteor.user().username
+            }
+
         }, function (err) {
             if(err){
                 alert('Error Occurred.');
@@ -23,9 +27,16 @@ Meteor.methods({
         });
     },
 
-    //queryProgram: function (id) {
-    //
-    //},
+    queryProgram: function (size, offset) {
+        return Programs.find(
+            {},
+            {sort:{activate: -1, created_dt:-1, _id: -1}, skip: offset, limit: size},
+            function (err) {
+                if(err){
+                    alert('Error Occurred.');
+                }
+            })
+    },
 
     updateProgram: function (id, data) {
         Programs.update(id,{
@@ -33,7 +44,7 @@ Meteor.methods({
                 program_title: data.program_title,
                 customer_target: data.customer_target,
                 program: data.program,
-                status: data.status
+                activate: data.activate
             }
         }, function (err) {
             if(err){
@@ -46,6 +57,14 @@ Meteor.methods({
         Programs.remove({_id: id}, function (err) {
             if(err){
                 alert('Error Occurred.');
+            }
+        });
+    },
+
+    activateProgram: function (id, data) {
+        Programs.update(id, {
+            $set: {
+                activate: data
             }
         });
     }

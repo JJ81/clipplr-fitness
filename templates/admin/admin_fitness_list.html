@@ -25,15 +25,29 @@
                 <td><a href="/admin/fitness-test/content/{{_id}}">{{program_title}}</a></td>
                 <td>{{customer_target}}</td>
                 <td>
-                    {{creator}}
+                    {{creator.username}}
                 </td>
                 <td>
-                    <!--연결중 or 대기중-->
-                    {{status}}
+                    {{#if isEqual activate false}}
+                        대기중
+                    {{else}}
+                        {{#if isEqual activate true}}
+                            활성화
+                        {{else}}
+                            대기중
+                        {{/if}}
+                    {{/if}}
                 </td>
                 <td>
-                    <a href="#" class="btn btn-success btn-sm">활성화</a>
-                    <!--<a href="#" class="btn btn-default btn-sm">비활성화</a>-->
+                    {{#if isEqual activate false}}
+                        <a href="#" class="btn btn-success btn-sm activate-btn" data-id="{{_id}}">활성화</a>
+                    {{else}}
+                        {{#if isEqual activate true}}
+                            <a href="#" class="btn btn-default btn-sm inactivate-btn" data-id="{{_id}}">비활성화</a>
+                        {{else}}
+                            <a href="#" class="btn btn-success btn-sm activate-btn" data-id="{{_id}}">활성화</a>
+                        {{/if}}
+                    {{/if}}
                 </td>
             </tr>
             {{/each}}

@@ -12,8 +12,13 @@
                 프로그램: {{program_title}}<br />
                 대상: {{customer_target}}<br />
                 생성일: {{createdAt}}<br />
-                상태: {{status}}<br />
-                생성자: {{creator}}<br />
+                상태:
+                {{#if isEqual activate false}}
+                    비활성화
+                {{else}}
+                    활성화
+                {{/if}}<br />
+                생성자: {{creator.username}}<br />
 
                 <p class="page-header">상세 운동 프로그램</p>
 

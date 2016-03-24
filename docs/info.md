@@ -220,3 +220,9 @@ modify로 들어와서 추가버튼을 누를 경우 어느 폼을 복사해와�
 75. meteor add jiku:bootstrap-toggle 설치함
 
 76. meteor add momentjs:moment
+
+77. user가 만약 자신의 username을 수정한다고 하면 해당 유저가 활동한 모든 흔적에서 username을 수정해야 하는데..
+이건 한순간에 업데이트한다면 디비에 부하가 커질 것이다. 따라서 이전에 사용하던 username은 그대로 두고
+업데이트한 username으로 새로 활동한 부분에만 업데이트 될 수 있도록 한다.
+
+78. 

@@ -41,7 +41,21 @@
                         </optgroup>
                     </select>
                     <a href="#" class="btn btn-default">대상 추가</a>
-                    <a href="#" class="btn btn-info activate-btn">활성화</a>
+
+                    상태:
+                    {{#if isEqual activate false}}
+                        비활성화
+                    {{else}}
+                        활성화
+                    {{/if}}
+
+                    {{#if isEqual activate false}}
+                        <a href="#" class="btn btn-success btn-sm activate-btn" data-id="{{_id}}">활성화</a>
+                    {{else}}
+                        <a href="#" class="btn btn-default btn-sm inactivate-btn" data-id="{{_id}}">비활성화</a>
+                    {{/if}}
+
+                    <!--<input type="hidden" name="activate" class="activate" value="{{activate}}" />-->
                     <!--<a href="#" class="btn btn-default inactivate-btn">비활성화</a>-->
                 </span>
                 <a href="#" class="btn btn-danger delete-whole-program-btn" data-id="{{_id}}">삭제</a>

@@ -31,7 +31,6 @@ if(Meteor.isClient){
             var form = event.target;
             var program_title = form.program_title.value;
             var customer_target = form.target.value;
-            var status = false; // 비활성화
             var program = [];
             var form2 = $('form')[1];
             var size = parseInt(form2.length/5);
@@ -60,8 +59,7 @@ if(Meteor.isClient){
             Meteor.call('createProgram', {
                 program_title: program_title,
                 customer_target: customer_target,
-                program: program,
-                status: status
+                program: program
             }, function (){
                 alert('save successfully');
                 Router.go('/admin/fitness-test/list/10/0');
@@ -81,7 +79,6 @@ if(Meteor.isClient){
             var id = form.id.value;
             var program_title = form.program_title.value;
             var customer_target = form.target.value;
-            var status = '대기중';
             var program = [];
             var form2 = document.forms[1];
             var size = parseInt(form2.length/5);
@@ -111,8 +108,7 @@ if(Meteor.isClient){
             Meteor.call('updateProgram', id, {
                 program_title: program_title,
                 customer_target: customer_target,
-                program: program,
-                status: status
+                program: program
             }, function (){
                 alert('update successfully');
                 Router.go('/admin/fitness-test/content/'+ id);
@@ -133,6 +129,14 @@ if(Meteor.isClient){
                 alert('Deleted it successfully.');
                 Router.go('/admin/fitness-test/list/10/0');
             });
+        },
+
+        'click .activate-btn': function (event) {
+            Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), true);
+        },
+
+        'click .inactivate-btn': function (event) {
+            Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), false);
         }
     });
 
@@ -142,18 +146,16 @@ if(Meteor.isClient){
         window.onbeforeunload = confirmOnPageExit;
     };
 
-    Template.admin_fitness_create.helpers({
-        // editor template에서 사용하고 있는 부분과 동일하여 공통으로 사용할 수 있도록 변경할 수 있어야 할 것이다
-        isEqual: function (a,b) {
-            return (a === b);
-        }
-
-    });
-
     // 뒤로 가기 버튼과 같은 공통 기능은 어디로 유틸로 사용할 수 없을까?
     Template.admin_fitness_content.events({
         'click .back-btn': function () {
             window.history.back(-1);
+        }
+    });
+
+    Template.admin_fitness_content.helpers({
+        isEqual: function (a, b) {
+            return (a === b);
         }
     });
 
@@ -162,4 +164,27 @@ if(Meteor.isClient){
         return moment(date).format('YYYY-MM-DD');
     });
 
+    Template.admin_fitness_create.helpers({
+        // editor template에서 사용하고 있는 부분과 동일하여 공통으로 사용할 수 있도록 변경할 수 있어야 할 것이다
+        isEqual: function (a,b) {
+            return (a === b);
+        }
+
+    });
+
+    Template.admin_fitness_test.helpers({
+        isEqual: function (a, b) {
+            return (a === b);
+        }
+    });
+
+    Template.admin_fitness_test.events({
+        'click .activate-btn': function (event) {
+            Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), true);
+        },
+
+        'click .inactivate-btn': function (event) {
+            Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), false);
+        }
+    });
 }
