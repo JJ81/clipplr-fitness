@@ -217,4 +217,6 @@ modify로 들어와서 추가버튼을 누를 경우 어느 폼을 복사해와�
 
 74. Blaze -> React으로 변경할 것.
 
-75. 
+75. meteor add jiku:bootstrap-toggle 설치함
+
+76. meteor add momentjs:moment

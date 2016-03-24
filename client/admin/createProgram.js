@@ -31,7 +31,7 @@ if(Meteor.isClient){
             var form = event.target;
             var program_title = form.program_title.value;
             var customer_target = form.target.value;
-            var status = '대기중';
+            var status = false; // 비활성화
             var program = [];
             var form2 = $('form')[1];
             var size = parseInt(form2.length/5);
@@ -155,6 +155,11 @@ if(Meteor.isClient){
         'click .back-btn': function () {
             window.history.back(-1);
         }
+    });
+
+    // 공통으로 사용할 부분은 이와 같이 등록할 수 있을 것 같다.
+    Template.registerHelper('formatDate', function(date) {
+        return moment(date).format('YYYY-MM-DD');
     });
 
 }

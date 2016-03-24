@@ -10,27 +10,30 @@
         <table class="table table-bordered table-hover text-center table-condensed">
             <thead>
             <tr>
-                <th>#</th>
+                <th>날짜</th>
                 <th>프로그램</th>
                 <th>대상</th>
-                <th>날짜</th>
-                <th>상태</th>
                 <th>생성자</th>
+                <th>상태</th>
+                <th>액션</th>
             </tr>
             </thead>
             <tbody>
             {{#each list}}
             <tr>
-                <td>{{_id}}</td>
+                <td>{{formatDate createdAt}}</td>
                 <td><a href="/admin/fitness-test/content/{{_id}}">{{program_title}}</a></td>
                 <td>{{customer_target}}</td>
-                <td>{{createdAt}}</td>
+                <td>
+                    {{creator}}
+                </td>
                 <td>
                     <!--연결중 or 대기중-->
                     {{status}}
                 </td>
                 <td>
-                    {{creator}}
+                    <a href="#" class="btn btn-success btn-sm">활성화</a>
+                    <!--<a href="#" class="btn btn-default btn-sm">비활성화</a>-->
                 </td>
             </tr>
             {{/each}}
@@ -38,7 +41,6 @@
         </table>
         {{/if}}
     </div>
-
 
 </template>
 

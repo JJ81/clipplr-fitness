@@ -5,27 +5,14 @@
         {{#each content}}
         <form class="form-group program-modify-form" role="form">
             <h3 class="page-header clearfix">
-                운동 프로그램 생성하기
-                <p class="pull-right">
-                    <a href="#" class="btn btn-danger delete-whole-program-btn" data-id="{{_id}}">삭제</a>
-                    <a href="/admin/fitness-test/list/10/0" class="btn btn-warning">취소</a>
-                    <a href="#" class="btn btn-success">미리보기</a>
-                    <button type="submit" class="btn btn-primary">저장</button>
-                </p>
+                운동 프로그램 (수정)
             </h3>
 
-            <div class="fitness-program">
-                <div>
-                    <label for="program_title">프로그램 이름</label>
-                    <input type="text" name="program_title" id="program_title" class="form-control" value="{{program_title}}" placeholder="한 번에 알아보기 쉽게 프로그램 이름을 등록해주세요." />
-                </div>
-
-                <div style="margin:25px 0 20px 0">
-                    <label for="program_target">프로그램 대상</label>
-
+            <div class="text-right clearfix">
+                <span class="pull-left">
                     <select name="target">
                         <optgroup label="대상">
-                            <option value="">--대상선택--</option>
+                            <option value="">---운동 대상--</option>
                             {{#if isEqual customer_target '초급자용'}}
                                 <option value="초급자용" selected>초급자용</option>
                             {{else}}
@@ -53,7 +40,20 @@
                             {{/if}}
                         </optgroup>
                     </select>
-                    <a href="#" class="btn btn-success btn-xs">대상 추가</a>
+                    <a href="#" class="btn btn-default">대상 추가</a>
+                    <a href="#" class="btn btn-info activate-btn">활성화</a>
+                    <!--<a href="#" class="btn btn-default inactivate-btn">비활성화</a>-->
+                </span>
+                <a href="#" class="btn btn-danger delete-whole-program-btn" data-id="{{_id}}">삭제</a>
+                <a href="/admin/fitness-test/list/10/0" class="btn btn-warning">취소</a>
+                <!--<a href="#" class="btn btn-success">미리보기</a>-->
+                <button type="submit" class="btn btn-success">저장</button>
+            </div>
+
+            <div class="fitness-program">
+                <div>
+                    <label for="program_title">프로그램 이름</label>
+                    <input type="text" name="program_title" id="program_title" class="form-control" value="{{program_title}}" placeholder="한 번에 알아보기 쉽게 프로그램 이름을 등록해주세요." />
                 </div>
             </div>
             <input type="hidden" name="id" value="{{_id}}" />
@@ -77,17 +77,7 @@
                 <a href="#" class="btn btn-danger btn-ms delete-program-btn">삭제</a>
             </div>
             {{/each}}
-            <!--
-                수정버튼을 누르면 해당 데이터를 하단의 입력폼에 써주고 수정하고 완료버튼을 누르면 업데이트가 된다.
-                최초로 운동 프로그램을 저장하고 modify모드로 redirect한다.
-                완료버튼을 누르면 추가버튼이 활성화된다.
-                TODO 수정 모드에서 추가 버튼을 누르면 빈 데이터를 집어 넣어서 필드가 하나 더 생성될 수 있도록 한다.
-            -->
-
-            <!-- 데이터가 없을 경우를 체크하여 필드를 추가할 수 있다. -->
-            <!--{{> program_form}}-->
-
-            <a href="#" class="btn btn-default pull-right add-program-btn">+프로그램 추가</a>
+            <a href="#" class="btn btn-primary pull-right add-program-btn">+프로그램 추가</a>
         </form>
         <!--
             TODO 1. 수정이 바로 가능하다록 입력폼에 루프를 돌면서 데이터를 입력해준다. 수정 후에 최종 등록 버튼을 누르지 않으면 업데이트 되지 않는다.
@@ -98,35 +88,34 @@
         <!-- Create -->
         {{else}}
         <form class="form-group program-form" role="form">
-            <h3 class="page-header clearfix">
-                운동 프로그램 생성하기
-                <p class="pull-right">
-                    <a href="/admin/fitness-test/list/10/0" class="btn btn-warning">취소</a>
-                    <a href="#" class="btn btn-success">미리보기</a>
-                    <button type="submit" class="btn btn-primary">저장</button>
-                </p>
+            <h3 class="page-header">
+                운동 프로그램 (생성)
             </h3>
+
+            <div class="text-right">
+                <span class="pull-left">
+                    <select name="target">
+                        <optgroup label="대상">
+                            <option value="">--프로그램 대상--</option>
+                            <option value="초급자용">초급자용</option>
+                            <option value="중급자용">중급자용</option>
+                            <option value="고급자용">고급자용</option>
+                            <option value="운동선수용">운동선수용</option>
+                            <option value="체대입시용">체대입시용</option>
+                        </optgroup>
+                    </select>
+                    <a href="#" class="btn btn-default">대상 추가</a>
+                </span>
+                <a href="/admin/fitness-test/list/10/0" class="btn btn-warning">취소</a>
+                <!--<a href="#" class="btn btn-success">미리보기</a>-->
+                <button type="submit" class="btn btn-success">저장</button>
+                <!-- TODO 저장을 하고 나서 미리보기가 가능하다 -->
+            </div>
 
             <div class="fitness-program">
                 <div>
                     <label for="program_title">프로그램 이름</label>
                     <input type="text" name="program_title" id="program_title" class="form-control" value="" placeholder="한 번에 알아보기 쉽게 프로그램 이름을 등록해주세요." />
-                </div>
-
-                <div style="margin:25px 0 20px 0">
-                    <label for="program_target">프로그램 대상</label>
-
-                    <select name="target">
-                        <optgroup label="대상">
-                            <option value="">--대상선택--</option>
-                                <option value="초급자용">초급자용</option>
-                                <option value="중급자용">중급자용</option>
-                                <option value="고급자용">고급자용</option>
-                                <option value="운동선수용">운동선수용</option>
-                                <option value="체대입시용">체대입시용</option>
-                        </optgroup>
-                    </select>
-                    <a href="#" class="btn btn-success btn-xs">대상 추가</a>
                 </div>
             </div>
         </form>
