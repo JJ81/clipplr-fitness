@@ -52,10 +52,12 @@
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_dialogs.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_session.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/mrt_bootstrap-select/1.5.4/web.browser/packages/mrt:bootstrap-select/bootstrap-select.min.css" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_single.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-meetup/1.0.6/web.browser/meetup_login_button.css" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-meetup/1.0.6/web.browser/meetup.js" />
         <item url="file://$USER_HOME$/.meteor/packages/meetup/1.6.0/web.browser/meetup_configure.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tsega_bootstrap3-datetimepicker/4.17.37_1/web.browser/lib/js/bootstrap-datetimepicker.js" />
         <item url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
         <item url="file://$USER_HOME$/.meteor/packages/meetup/1.6.0/web.browser/meetup_client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/sha256.js" />
@@ -147,7 +149,9 @@
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/namespace.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/utils.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/heartbeat.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/rajit_bootstrap3-datepicker/1.5.1/web.browser/lib/css/bootstrap-datepicker3.css" />
         <item url="file://$USER_HOME$/.meteor/packages/diff-sequence/1.0.1/web.browser/diff.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/rajit_bootstrap3-datepicker/1.5.1/web.browser/lib/js/bootstrap-datepicker.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ejson/1.0.7/web.browser/stringify.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ejson/1.0.7/web.browser/ejson.js" />
@@ -182,6 +186,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/launch-screen/1.0.4/web.browser/mobile-launch-screen.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.0.8/web.browser/logging.js" />
         <item url="file://$USER_HOME$/.meteor/packages/mongo-id/1.0.1/web.browser/id.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/mrt_bootstrap-select/1.5.4/web.browser/packages/mrt:bootstrap-select.js" />
         <item url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.12.0/web.browser/meteor/export.js" />
         <item url="file://$USER_HOME$/.meteor/packages/observe-sequence/1.0.7/web.browser/observe_sequence.js" />
         <item url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.12.0/web.browser/moment.js" />
@@ -196,6 +201,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/reload/1.1.4/web.browser/reload.js" />
         <item url="file://$USER_HOME$/.meteor/packages/retry/1.0.4/web.browser/retry.js" />
         <item url="file://$USER_HOME$/.meteor/packages/session/1.1.1/web.browser/session.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tsega_bootstrap3-datetimepicker/4.17.37_1/web.browser/lib/css/bootstrap-datetimepicker.css" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars/1.0.7/web.browser/spacebars-runtime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/react.js" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/compiler.js" />
@@ -256,10 +262,12 @@
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_dialogs.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_session.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/mrt_bootstrap-select/1.5.4/web.browser/packages/mrt:bootstrap-select/bootstrap-select.min.css" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_single.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-meetup/1.0.6/web.browser/meetup_login_button.css" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-meetup/1.0.6/web.browser/meetup.js" />
       <root url="file://$USER_HOME$/.meteor/packages/meetup/1.6.0/web.browser/meetup_configure.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tsega_bootstrap3-datetimepicker/4.17.37_1/web.browser/lib/js/bootstrap-datetimepicker.js" />
       <root url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
       <root url="file://$USER_HOME$/.meteor/packages/meetup/1.6.0/web.browser/meetup_client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/sha256.js" />
@@ -351,7 +359,9 @@
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/namespace.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/utils.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-common/1.2.2/web.browser/heartbeat.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/rajit_bootstrap3-datepicker/1.5.1/web.browser/lib/css/bootstrap-datepicker3.css" />
       <root url="file://$USER_HOME$/.meteor/packages/diff-sequence/1.0.1/web.browser/diff.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/rajit_bootstrap3-datepicker/1.5.1/web.browser/lib/js/bootstrap-datepicker.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ejson/1.0.7/web.browser/stringify.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ejson/1.0.7/web.browser/ejson.js" />
@@ -386,6 +396,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/launch-screen/1.0.4/web.browser/mobile-launch-screen.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.0.8/web.browser/logging.js" />
       <root url="file://$USER_HOME$/.meteor/packages/mongo-id/1.0.1/web.browser/id.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/mrt_bootstrap-select/1.5.4/web.browser/packages/mrt:bootstrap-select.js" />
       <root url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.12.0/web.browser/meteor/export.js" />
       <root url="file://$USER_HOME$/.meteor/packages/observe-sequence/1.0.7/web.browser/observe_sequence.js" />
       <root url="file://$USER_HOME$/.meteor/packages/momentjs_moment/2.12.0/web.browser/moment.js" />
@@ -400,6 +411,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/reload/1.1.4/web.browser/reload.js" />
       <root url="file://$USER_HOME$/.meteor/packages/retry/1.0.4/web.browser/retry.js" />
       <root url="file://$USER_HOME$/.meteor/packages/session/1.1.1/web.browser/session.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tsega_bootstrap3-datetimepicker/4.17.37_1/web.browser/lib/css/bootstrap-datetimepicker.css" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars/1.0.7/web.browser/spacebars-runtime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/react.js" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/compiler.js" />

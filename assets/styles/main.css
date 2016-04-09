@@ -205,4 +205,51 @@ div.program-unit:nth(0) {
 .fitness-program {
   margin-top: 40px; }
 
+.bodyPart {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px; }
+
+.page-header-fix {
+  margin-top: 10px; }
+
+.container-fix {
+  margin-top: 70px;
+  z-index: 500; }
+
+.footer-fix {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  background: #cccccc;
+  z-index: 1000; }
+
+.nav-fix {
+  z-index: 1000; }
+
+.nav-logo {
+  color: #444;
+  font-size: 20px;
+  margin-top: 8px;
+  display: inline-block; }
+
+.navbar-header {
+  text-align: center; }
+
+.spacer {
+  height: 50px; }
+
+.navbar-header-fix {
+  position: relative; }
+  .navbar-header-fix .link-save {
+    position: absolute;
+    right: 10px;
+    top: 8px; }
+  .navbar-header-fix .link-cancel {
+    position: absolute;
+    left: 10px;
+    top: 8px; }
+
 /*# sourceMappingURL=main.css.map */

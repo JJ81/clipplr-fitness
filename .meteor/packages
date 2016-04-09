@@ -32,3 +32,6 @@ spectrum:accounts-kakao
 twbs:bootstrap
 anonyfox:scrape
 momentjs:moment
+rajit:bootstrap3-datepicker
+tsega:bootstrap3-datetimepicker
+mrt:bootstrap-select

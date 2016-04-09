@@ -1,0 +1,21 @@
+<template name="scheduler_layout">
+  <nav class="navbar navbar-default nav-fix" role="navigation">
+    <div class="navbar-header navbar-header-fix">
+      <!-- 하단에 여러 경우에 필요한 템플릿을 갖추어 놓은 후에 교환하여 보여준다.  -->
+      <a href="#" class="nav-logo">운동 일지</a>
+      <a href="#" class="btn btn-sm btn-primary link-save">save</a>
+      <a href="#" class="btn btn-sm btn-danger link-cancel">cancel</a>
+
+    </div>
+  </nav>
+
+  <div class="container container-fix">
+    {{> yield}}
+  </div>
+
+  <div class="spacer"></div>
+
+  <footer class="footer footer-fix">
+    <div class="container">cloud navigation area</div>
+  </footer>
+</template>
