@@ -1,4 +1,4 @@
-
+# Hey, My Coach
 
 
 meteor add rajit:bootstrap3-datepicker
@@ -42,19 +42,13 @@ http://www.angular-meteor.com/tutorials/socially/angular2/bootstrapping
 
 
 TODO 
-1. remove tpl 현재 배열 위치를 찾아낸 후에 해당 배열 데이터 지우기 (진행중)
 
-3. save record
-4. cancel button on the left-top
 5. escape page or load, view alert
-6. fetch data by body part
-7. aggregate all workout each body part
 8. how to apply traslate
 9. set up AWS for meteor project
 10. how to deploy on the AWS
 11. how to make test code in meteor
-
-13. meteor로 개발한 사항을 현재것은 그냥 웹버전으로 보내고 앱버전은 아이오닉을 사용하여 배포해보자.
+13. meteor로 개발한 사항을 현재 것은 그냥 웹버전으로 보내고 앱버전은 아이오닉을 사용하여 배포해보자.
 14. 일단 기본웹을 위한 개발을 모두 마친 후에 코르도바와 아이오닉 인테그레이션을 진행해보자.
 15. 횟수는 범위 기록이 가능해야 한다.
 16. 운동 종류를 선택하면 선택된 운동방법 리스트를 서버로부터 가져온다.
@@ -77,5 +71,20 @@ TODO
 31. 운동한 데이터를 기반을 통계를 내줄 수 있어야 한다 이를 위한 디비 설계가 필요하다.
 32. meteor daemon for the linux AMI ??
 33. meteor에서 log는 어떻게 남기는가?
-34. 
+34. 운동 추가하기 요청기능
+35. ReactiveVar 를 사용해볼 것.
+36. 웜업 체크박스를 넣는다 웜업을 체크하면 set1 -> warmup을 변경되고 아래에 추가하면 set1부터 시작한다
+37. 유산소 운동 추가 (이 경우 뛴 시간 속도를 넣는 필드 보여준다.)
+38. 가장 하단에 몸무게와 복부둘레 등을 입력할 수 있다.
+39. 몸사이즈 입력시 정상여부나 어떤 점을 개선해야 하는지 정보를 알려준다.
+40. 인바디 수치를 입력하는 폼을 만들고 입력하면 그 변화 추이를 볼 수 있다
+근육량 변화, 지방 변화, 체중 변화 등등..
+41. 
 
+
+# MVP
+1. 디비에 데이터를 저장할 수 있다
+2. 디비에서 데이터를 가져올 수 있다
+3. 디비에서 데이터를 수정할 수 있다.
+4. 디비에서 데이터 리스트를 가져올 수 있다.
+5. 각 운동에 대해서 

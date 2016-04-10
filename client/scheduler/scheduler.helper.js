@@ -38,7 +38,7 @@ if(Meteor.isClient){
 				for(var i= 0,size=selected.length;i<size;i++){
 					exercise.push({
 						body: selected[i].innerText,
-						sets: [{}]
+						record: [{}]
 					});
 				}
 
@@ -47,6 +47,7 @@ if(Meteor.isClient){
 
 				console.log(Session.get('exercise'));
 
+				// TODO 공통영역으로 변경하여 적용하도록 한다.
 				setTimeout(function () {
 					$('.workout_wrapper #workout_method').selectpicker({
 						style: 'btn-default'

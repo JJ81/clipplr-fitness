@@ -26,6 +26,7 @@
       <option value="가슴">가슴</option>
       <option value="팔">팔</option>
       <option value="엉덩이">엉덩이</option>
+      <!--<option value="유산소">유산소</option>-->
     </select>
   </div>
 </template>
@@ -36,43 +37,44 @@
       <div class="bodyPart clearfix">
         <!-- h3태그는 당분간 변경 금지(데이터를 가져가기 위한 통로이므로) -->
         <h3 class="page-header page-header-fix" data-exercise-id="{{@index}}">{{body}}</h3>
-        {{#each sets}}
+        {{#each record}}
         <form class="contents">
           <h4 class="clearfix">
             Set {{incremented @index}}
+            <input type="hidden" value="{{incremented @index}}" name="setOrder" id="setOrder" />
             <a href="#none" class="btn btn-xs btn-warning pull-right btn-sm delete-set-btn" data-set-id="{{@index}}">Delete</a>
           </h4>
           <label>운동종류</label>
           <select name="workout_method" class="form-control" id="workout_method" title="운동기구를 선택하세요.">
-            <option value="">workout1</option>
-            <option value="">workout2</option>
-            <option value="">workout3</option>
-            <option value="">workout4</option>
-            <option value="">workout5</option>
+            <option value="workout1">workout1</option>
+            <option value="workout2">workout2</option>
+            <option value="workout3">workout3</option>
+            <option value="workout4">workout4</option>
+            <option value="workout5">workout5</option>
           </select>
           <br />
 
           <label>중량(kg)</label>
           <div class="input-group">
-            <input type="number" id="weight" class="form-control" placeholder="중량" aria-describedby="basic-addon2">
+            <input type="number" name="weight" id="weight" class="form-control" placeholder="중량" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">kg</span>
           </div>
 
           <label>횟수(count)</label>
           <div class="input-group">
-            <input type="number" id="count" class="form-control" placeholder="횟수" aria-describedby="basic-addon2">
+            <input type="number" name="count" id="count" class="form-control" placeholder="횟수" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">회</span>
           </div>
 
           <label>휴식</label>
           <div class="input-group">
-            <input type="number" id="interval" class="form-control" placeholder="세트간 휴식(초)" aria-describedby="basic-addon2">
+            <input type="number" name="interval" id="interval" class="form-control" placeholder="세트간 휴식(초)" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">초</span>
           </div>
 
           <div class="form-group">
             <label>메모:</label>
-            <textarea class="form-control" rows="5" id="memo"></textarea>
+            <textarea name="memo" class="form-control" rows="5" id="memo"></textarea>
           </div>
 
         </form>
@@ -80,10 +82,7 @@
         {{/each}}
         <a href="#none" class="btn btn-info pull-right btn-sm add-set-btn" data-exercise-id="{{@index}}">Add Set</a>
 
-
-
       </div>
-
     </div>
   {{/each}}
 </template>

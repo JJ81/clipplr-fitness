@@ -1,6 +1,12 @@
 <template name="fitness_main">
-  <a href="/mycoach/mybody" class="btn btn-default">Check My Body</a><br/>
-  <a href="/mycoach/bodytest" class="btn btn-default">Test My Body</a><br/>
+  <!-- test를 제외하고는 모두 페이스북 로그인을 해야 진입이 가능하다. -->
+  <a href="/mycoach/mybody" class="btn btn-default">Check My Body(History)</a><br/>
+  <a href="/mycoach/bodytest" class="btn btn-default">Test My Body (TEST logic)</a><br/>
   <a href="/mycoach/history" class="btn btn-default">Check My History</a><br/>
   <a href="/mycoach/record" class="btn btn-default">Record My workout</a>
+  <!--
+    이메일을 통해서 요청을 받을 수 있도록 한다. info@clipplr.com
+    로그인을 하였을 경우,
+    텍스트 입력 폼을 제공하고 클라이언트가 전송하면 info@clipplr.com으로 전송되도록 한다
+  -->
 </template>

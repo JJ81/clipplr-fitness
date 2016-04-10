@@ -1,0 +1,90 @@
+<template name="scheduler_modify">
+  <div class="form-group">
+    modify view
+    <!--{{> datetimepicker}}<br />-->
+    <!--{{> selectBody}}-->
+    <!--{{> writeSchedule}}-->
+  </div>
+</template>
+
+<!--<template name="datetimepicker">-->
+  <!--<label for="startTime">운동 시작 시각</label>-->
+  <!--<div class="input-group datetimepicker">-->
+    <!--<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>-->
+    <!--<input class="set-due-date form-control startTime" name="startTime" type="text" id="startTime" />-->
+  <!--</div>-->
+<!--</template>-->
+
+<!--<template name="selectBody">-->
+  <!--<div class="selectBody">-->
+    <!--<label for="bodyPart">운동할 부위 (다중선택/해제)</label>-->
+    <!--<select name="bodyPart" id="bodyPart" class="form-control" multiple="multiple" title="운동할 부위를 선택하세요.">-->
+      <!--<option value="배">배</option>-->
+      <!--<option value="허리">허리</option>-->
+      <!--<option value="등">등</option>-->
+      <!--<option value="다리">다리</option>-->
+      <!--<option value="어깨">어깨</option>-->
+      <!--<option value="가슴">가슴</option>-->
+      <!--<option value="팔">팔</option>-->
+      <!--<option value="엉덩이">엉덩이</option>-->
+    <!--</select>-->
+  <!--</div>-->
+<!--</template>-->
+
+<!--<template name="writeSchedule">-->
+  <!--{{#each exercise}}-->
+    <!--<div class="workout_wrapper">-->
+      <!--<div class="bodyPart clearfix">-->
+        <!--&lt;!&ndash; h3태그는 당분간 변경 금지(데이터를 가져가기 위한 통로이므로) &ndash;&gt;-->
+        <!--<h3 class="page-header page-header-fix" data-exercise-id="{{@index}}">{{body}}</h3>-->
+        <!--{{#each sets}}-->
+          <!--<form class="contents">-->
+            <!--<h4 class="clearfix">-->
+              <!--Set {{incremented @index}}-->
+              <!--<a href="#none" class="btn btn-xs btn-warning pull-right btn-sm delete-set-btn" data-set-id="{{@index}}">Delete</a>-->
+            <!--</h4>-->
+            <!--<label>운동종류</label>-->
+            <!--<select name="workout_method" class="form-control" id="workout_method" title="운동기구를 선택하세요.">-->
+              <!--<option value="">workout1</option>-->
+              <!--<option value="">workout2</option>-->
+              <!--<option value="">workout3</option>-->
+              <!--<option value="">workout4</option>-->
+              <!--<option value="">workout5</option>-->
+            <!--</select>-->
+            <!--<br />-->
+
+            <!--<label>중량(kg)</label>-->
+            <!--<div class="input-group">-->
+              <!--<input type="number" id="weight" class="form-control" placeholder="중량" aria-describedby="basic-addon2">-->
+              <!--<span class="input-group-addon" id="basic-addon2">kg</span>-->
+            <!--</div>-->
+
+            <!--<label>횟수(count)</label>-->
+            <!--<div class="input-group">-->
+              <!--<input type="number" id="count" class="form-control" placeholder="횟수" aria-describedby="basic-addon2">-->
+              <!--<span class="input-group-addon" id="basic-addon2">회</span>-->
+            <!--</div>-->
+
+            <!--<label>휴식</label>-->
+            <!--<div class="input-group">-->
+              <!--<input type="number" id="interval" class="form-control" placeholder="세트간 휴식(초)" aria-describedby="basic-addon2">-->
+              <!--<span class="input-group-addon" id="basic-addon2">초</span>-->
+            <!--</div>-->
+
+            <!--<div class="form-group">-->
+              <!--<label>메모:</label>-->
+              <!--<textarea class="form-control" rows="5" id="memo"></textarea>-->
+            <!--</div>-->
+
+          <!--</form>-->
+          <!--<hr />-->
+        <!--{{/each}}-->
+        <!--<a href="#none" class="btn btn-info pull-right btn-sm add-set-btn" data-exercise-id="{{@index}}">Add Set</a>-->
+
+
+
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--{{/each}}-->
+<!--</template>-->

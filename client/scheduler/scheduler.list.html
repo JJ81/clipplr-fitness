@@ -1,4 +1,32 @@
 <template name="scheduler_list">
-  <div>workout history view</div>
   <a href="/mycoach/record" class="btn btn-default">Go Record</a>
+
+  <hr />
+
+  {{#if list}}
+    {{#each list}}
+      <div>
+
+        <!--{{_id}}<br />-->
+        <!--시작시각: {{startDt}}<br />-->
+        <!--끝난 시각: {{endDt}}<br />-->
+        기록일: {{createdAt}}<br />
+        촣운동시간: ?? <br />
+        총들어올린 중량: ?? <br />
+        체중: ??  <br /> <!-- 입력이 되어 있을 경우만 -->
+        허리둘레: ?? <br />
+        <!-- 총 운동 시간을 출력한다 -->
+        운동부위:
+        {{#each body}}
+          {{this}}<br />
+        {{/each}}
+        <!--
+          운동 부위에 맞는 운동에 관련된 이미지를 자동으로 랜덤하게 썸네일로 출력한다.
+          현재 목적 표시 : 몸짱, 체중감량 (셀렉트박스로 제공한다 not required)
+        -->
+        <a href="/mycoach/history/{{_id}}" class="btn">View</a>
+      </div>
+      <hr />
+    {{/each}}
+  {{/if}}
 </template>
