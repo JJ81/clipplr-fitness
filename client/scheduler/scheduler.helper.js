@@ -24,6 +24,9 @@ if(Meteor.isClient){
 			style: 'btn-success'
 		});
 
+		/**
+		 * 자동생성된 li 드롭박스 메뉴에서 특정 li를 선택했을 경우
+		 */
 		$('.selectBody .selectpicker a').bind('click', function () {
 			var
 			exercise = []
@@ -34,7 +37,8 @@ if(Meteor.isClient){
 
 				for(var i= 0,size=selected.length;i<size;i++){
 					exercise.push({
-						bodyPart: selected[i].innerText
+						body: selected[i].innerText,
+						sets: [{}]
 					});
 				}
 
@@ -54,11 +58,16 @@ if(Meteor.isClient){
 		});
 	};
 
-
+	/**
+	 * 운동할 부위가 선택되지 않았을 경우 세션에서 데이터를 지운다.
+	 */
 	Template.writeSchedule.rendered = function () {
 		delete Session.keys.exercise;
 	};
 
+	/**
+	 * 운동 기록 부분 데이터 세팅
+	 */
 	Template.writeSchedule.helpers({
 		exercise: function () {
 			return Session.get('exercise');

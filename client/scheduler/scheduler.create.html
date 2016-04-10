@@ -1,10 +1,8 @@
 <template name="scheduler_create">
   <div class="form-group">
-    <form class="scheduler_create" name="scheduler_create">
-      {{> datetimepicker}}
-      {{> selectBody}}
-      {{> writeSchedule}}
-    </form>
+    {{> datetimepicker}}<br />
+    {{> selectBody}}
+    {{> writeSchedule}}
   </div>
 </template>
 
@@ -18,7 +16,7 @@
 
 <template name="selectBody">
   <div class="selectBody">
-    <label for="bodyPart">운동할 부위</label>
+    <label for="bodyPart">운동할 부위 (다중선택/해제)</label>
     <select name="bodyPart" id="bodyPart" class="form-control" multiple="multiple" title="운동할 부위를 선택하세요.">
       <option value="배">배</option>
       <option value="허리">허리</option>
@@ -35,20 +33,16 @@
 <template name="writeSchedule">
   {{#each exercise}}
     <div class="workout_wrapper">
-
-      <!-- Loop block -->
-      <div class="bodyPart">
-        <h3 class="page-header page-header-fix">{{bodyPart}}</h3>
-
-        <div class="contents clearfix">
-          <h4>Set 1</h4><br />
-
-          <!--
-            TODO 운동 종류를 선택하면 선택된 운동방법 리스트를 서버로부터 가져온다.
-            TODO 일단 하드코딩으로 (각 부위별 운동방법을 모두 수집할 것) / 프리웨이트와 머신으로 구분하여 옵션으로 나열한다
-            TODO 모바일에서는 type=number 이어도 숫자만 입력되지는 않는다.
-          -->
-          <label for="workout_method">운동종류</label>
+      <div class="bodyPart clearfix">
+        <!-- h3태그는 당분간 변경 금지(데이터를 가져가기 위한 통로이므로) -->
+        <h3 class="page-header page-header-fix" data-exercise-id="{{@index}}">{{body}}</h3>
+        {{#each sets}}
+        <form class="contents">
+          <h4 class="clearfix">
+            Set {{incremented @index}}
+            <a href="#none" class="btn btn-xs btn-warning pull-right btn-sm delete-set-btn" data-set-id="{{@index}}">Delete</a>
+          </h4>
+          <label>운동종류</label>
           <select name="workout_method" class="form-control" id="workout_method" title="운동기구를 선택하세요.">
             <option value="">workout1</option>
             <option value="">workout2</option>
@@ -58,31 +52,38 @@
           </select>
           <br />
 
-          <label for="weight">중량(kg)</label>
+          <label>중량(kg)</label>
           <div class="input-group">
             <input type="number" id="weight" class="form-control" placeholder="중량" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">kg</span>
           </div>
 
-          <label for="count">횟수(count)</label>
+          <label>횟수(count)</label>
           <div class="input-group">
             <input type="number" id="count" class="form-control" placeholder="횟수" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">회</span>
           </div>
 
-          <label for="interval">휴식</label>
+          <label>휴식</label>
           <div class="input-group">
             <input type="number" id="interval" class="form-control" placeholder="세트간 휴식(초)" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">초</span>
           </div>
 
-          <a href="#none" class="btn btn-info pull-right btn-sm">Add Set</a>
-          <a href="#none" class="btn btn-warning pull-left btn-sm">Remove</a>
-        </div>
+          <div class="form-group">
+            <label>메모:</label>
+            <textarea class="form-control" rows="5" id="memo"></textarea>
+          </div>
+
+        </form>
+        <hr />
+        {{/each}}
+        <a href="#none" class="btn btn-info pull-right btn-sm add-set-btn" data-exercise-id="{{@index}}">Add Set</a>
+
+
+
       </div>
-      <!-- End loop block -->
 
     </div>
   {{/each}}
-
 </template>

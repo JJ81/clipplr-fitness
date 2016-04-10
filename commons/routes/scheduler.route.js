@@ -10,16 +10,41 @@ Router.configure({
 //Router.onBeforeAction('loading');
 
 Router.map(function () {
+
+	this.route('fitnessMain', {
+		path: ['/mycoach', '/mycoach/', '/mycoach/main', '/mycoach/main/'],
+		template: 'fitness_main',
+		layoutTemplate: 'scheduler_layout',
+		data: function (){
+			_data = {
+				title: 'Hey, My Coach'
+			};
+			return _data;
+		}
+	});
+
 	this.route('schedulerList', {
-		path: ['/scheduler', '/scheduler/', '/scheduler/list', '/scheduler/list/'],
+		path: ['/mycoach/history', '/mycoach/history/'],
 		template: 'scheduler_list',
-		layoutTemplate: 'scheduler_layout'
+		layoutTemplate: 'scheduler_layout',
+		data: function (){
+			_data = {
+				title: 'My History'
+			};
+			return _data;
+		}
 	});
 
 	this.route('schedulerCreate', {
-		path: ['/scheduler/create'],
+		path: ['/mycoach/record','/mycoach/record/'],
 		template: 'scheduler_create',
-		layoutTemplate: 'scheduler_layout'
+		layoutTemplate: 'scheduler_layout',
+		data: function (){
+			_data = {
+				title: 'My Record'
+			};
+			return _data;
+		}
 	});
 
 

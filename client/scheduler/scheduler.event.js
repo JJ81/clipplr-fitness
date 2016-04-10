@@ -21,15 +21,38 @@ if(Meteor.isClient){
 
 	});
 
+	Template.writeSchedule.events({
+		/**
+		 * 빈 세트 폼 추가
+		 * @param event
+		 */
+		'click .add-set-btn': function (event) {
+			var
+			exerciseid = $(event.currentTarget).attr('data-exercise-id')
+			,_data = Session.get('exercise');
+
+			_data[exerciseid].sets.push({});
+			Session.set('exercise', _data);
+		},
+
+		/**
+		 * 선택한 세트 기록 제거
+		 * @param event
+		 */
+		'click .delete-set-btn': function (event) {
+
+			var // TODO exerciseid 데이터에 접근하기 위한 다른 아이디어가 필요하다.
+			exerciseid = $(event.currentTarget).parent().parent().parent().find('h3').attr('data-exercise-id')
+			,setid = $(event.currentTarget).attr('data-set-id');
+			//console.log(exerciseid + '/' + setid);
+
+			var _data = Session.get('exercise');
+			_data[exerciseid].sets.splice([setid], 1);
+			Session.set('exercise', _data);
+		}
+	});
 
 
-	/**
-	 * TODO 운동할 부위를 선택하면 세션에 저장하고
-	 * TODO 세션에 저장이 된 것은 바로 view에 그린다.
-	 * TODO 각 부위별로 세트별로 데이터를 설정할 수 있도록 하고
-	 * TODO 운동 완료버튼을 선택했을 때 최종 업데이트가 일어난다
-	 * TODO 운동을 입력할 때마다 중간 저장이 될 수 있도록 한다.
-	 */
 
 
 }
