@@ -1,28 +1,33 @@
 <template name="scheduler_view">
-  <a href="#" class="btn btn-danger delete-record-btn" data-id="{{_id}}">삭제</a>
-  <a href="#" class="btn btn-warning modify-record-btn" data-id="{{_id}}">수정</a>
+  <div class="pull-right">
+    <a href="#" class="btn btn-xs btn-danger delete-record-btn" data-id="{{_id}}">삭제</a>
+    <a href="#" class="btn btn-xs btn-warning modify-record-btn" data-id="{{_id}}">수정</a>
+  </div>
+
+  <div class="clearfix"></div>
 
   <hr />
 
   {{#with content}}
   <div>
-    {{startDt}}<br />
-    {{endDt}}<br />
-    {{createdAt}}<br />
-    {{userId}}<br /><br />
+    <!--{{startDt}}<br />-->
+    <!--{{endDt}}<br />-->
+    기록일: {{createdAt}}<br />
+    <!--{{userId}}<br /><br />-->
+    운동 부위: {{body}}<br />
 
     <hr />
-
     {{#each record}}
-      {{setOrder}}<br />
-      {{type}}<br />
-      {{weight}}<br />
-      {{count}}<br />
-      {{interval}}<br />
-      {{memo}}
+      {{#each workout}}
+        {{setOrder}}<br />
+        {{type}}<br />
+        {{weight}}<br />
+        {{count}}<br />
+        {{interval}}<br />
+        {{memo}}<br />
+        <hr />
+      {{/each}}
     {{/each}}
-
   </div>
   {{/with}}
-
 </template>

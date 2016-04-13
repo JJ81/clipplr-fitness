@@ -3,6 +3,9 @@
  */
 if(Meteor.isServer){ // server 블록이 없어도 서버로 인식하는가?
 	Meteor.methods({
+		getRecordById: function (_id) {
+			return FitnessRecord.findOne({_id: _id});
+		},
 
 		/**
 		 *

@@ -84,7 +84,8 @@ Router.map(function () {
 		},
 		data: function (){
 			_data = {
-				title: 'My Record',
+				id: this.params._id,
+				title: 'Modify Record',
 				content: FitnessRecord.findOne({_id: this.params._id})
 			};
 			return _data;

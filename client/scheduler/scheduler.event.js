@@ -12,7 +12,25 @@ if(Meteor.isClient){
 		},
 
 		/**
-		 * prevent input field from writint by key-down event.
+		 * prevent input field from writing by key-down event.
+		 * @returns {boolean}
+		 */
+		'keydown #startTime': function () {
+			return false;
+		}
+
+	});
+
+	Template.datetimepicker_modify.events({
+		/**
+		 * proxy to show calendar widget
+		 */
+		'click #startTime': function () {
+			$('.input-group-addon').click();
+		},
+
+		/**
+		 * prevent input field from writing by key-down event.
 		 * @returns {boolean}
 		 */
 		'keydown #startTime': function () {
@@ -135,9 +153,17 @@ if(Meteor.isClient){
 	});
 
 	Template.scheduler_view.events({
+		// Delete record
 		'click .delete-record-btn': function (e) {
 			e.preventDefault();
-			var _id = $(e.currentTarget).attr('data-id');
+
+			var
+			_id = $(e.currentTarget).attr('data-id')
+			,res = window.confirm('정말로 삭제하시겠습니까?');
+
+			if(!res)
+				return;
+
 			Meteor.call('deleteRecord', _id, function (error, result) {
 				if(error){
 					console.error('Something went wrong');
@@ -147,7 +173,9 @@ if(Meteor.isClient){
 			});
 		},
 
+		// Go to modify record
 		'click .modify-record-btn': function (e) {
+			e.preventDefault();
 			Router.go('/mycoach/modify/' + $(e.currentTarget).attr('data-id'));
 		}
 	});
