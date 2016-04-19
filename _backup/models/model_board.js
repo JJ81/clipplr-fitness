@@ -1,7 +1,7 @@
 /**
  * Created by yijaejun on 2016. 3. 8..
  */
-Boards = new Mongo.Collection('clips');
+//Boards = new Mongo.Collection('clips');
 
 // 이를 모두 서버쪽으로 옮겨보자
 Meteor.methods({

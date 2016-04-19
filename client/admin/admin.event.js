@@ -132,11 +132,11 @@ if(Meteor.isClient){
         },
 
         'click .activate-btn': function (event) {
-            Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), true);
+          Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), true);
         },
 
         'click .inactivate-btn': function (event) {
-            Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), false);
+          Meteor.call('activateProgram', $(event.currentTarget).attr('data-id'), false);
         }
     });
 

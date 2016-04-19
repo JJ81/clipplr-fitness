@@ -20,20 +20,21 @@ Router.route('/admin/dashboard', function (){
     });
 });
 
-Router.route('/admin/fitness-test/list/:_size/:_offset', function () {
-    this.layout('admin_layout');
-    var size = parseInt(this.params._size);
-    var offset = parseInt(this.params._offset);
-
-    this.render('admin_fitness_test', {
-        data : function (){
-            return {
-                list : Programs.find({},{sort:{activate: -1, created_dt:-1, _id: -1}, skip: offset, limit: size})
-                //list : [{'_id': 'asdf', 'program_title': 'test', 'creator': 'asdf'}]
-            }
-        }
-    });
-}); // {where: 'server'}를 사용할 경우 예상치 못한 에러가 발생한다.
+//Router.route('/admin/workout-register/list/:_size/:_offset', function () {
+//    this.layout('admin_layout');
+//    var size = parseInt(this.params._size);
+//    var offset = parseInt(this.params._offset);
+//
+//    this.render('admin_fitness_test', {
+//        data : function (){
+//            return {
+//              list : Programs.find({},{sort:{activate: -1, created_dt:-1, _id: -1}, skip: offset, limit: size}),
+//              title: '훈련 등록'
+//              //list : [{'_id': 'asdf', 'program_title': 'test', 'creator': 'asdf'}]
+//            }
+//        }
+//    });
+//}); // {where: 'server'}를 사용할 경우 예상치 못한 에러가 발생한다.
 
 Router.route('/admin/fitness-test/create', function (){
     this.layout('admin_layout');
@@ -76,5 +77,5 @@ Router.route('/admin/fitness-test/modify/:_id', function (){
 * */
 
 // 로딩시 적용되는지 여부를 어떻게 알 수 있지?
-Router.onBeforeAction('loading');
+// Router.onBeforeAction('loading');
 

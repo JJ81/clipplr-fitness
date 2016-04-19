@@ -7,7 +7,10 @@ Router.configure({
 	loadingTemplate: 'loadingSignal'
 });
 
-//Router.onBeforeAction('loading');
+Router.onBeforeAction('loading');
+
+// 위의 공통적인 부분은 별도로 빼서 처리한다
+// 템플릿도 마찬가지로 처리한다.
 
 Router.map(function () {
 

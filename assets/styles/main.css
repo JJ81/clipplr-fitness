@@ -176,6 +176,9 @@ body {
   width: 200px;
   text-align: center; }
 
+.fitness-admin {
+  margin-top: 70px; }
+
 .fitness-admin .table th {
   text-align: center; }
 

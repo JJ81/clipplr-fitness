@@ -7,4 +7,10 @@ if(Meteor.isClient){
 		index++;
 		return index;
 	});
+
+
+	Template.registerHelper('isEqual', function (first, second) {
+		return (first === second);
+	});
+
 }
