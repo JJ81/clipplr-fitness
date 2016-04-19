@@ -1,0 +1,38 @@
+<template name="admin-exercise-register-list">
+
+  <div class="container fitness-admin">
+    <h3 class="clearfix page-header">
+      {{title}}
+      <a href="/admin/exercise-register/write" class="btn btn-primary pull-right">생성하기</a>
+    </h3>
+
+    <table class="table table-bordered table-hover text-center table-condensed">
+      <thead>
+      <tr>
+        <th>타겟머슬</th>
+        <th>운동명</th>
+        <th>타입</th>
+        <th>난이도(레벨)</th>
+        <th>생성일</th>
+        <th>생성자</th>
+        <th>상태</th>
+        <th>액션</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>등</td>
+        <td><a href="/admin/exercise-register/content/1">스미스머신 데드리프트</a></td>
+        <td>머신</td>
+        <td>1</td>
+        <td>2016-12-12</td>
+        <td>jaejun</td>
+        <td>활성화</td>
+        <td><a href="#" class="btn btn-success">활성화</a></td>
+      </tr>
+      </tbody>
+    </table>
+    <!--// End Table -->
+
+  </div>
+</template>

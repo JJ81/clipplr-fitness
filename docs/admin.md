@@ -11,6 +11,7 @@
 2. meteor add iron:middleware-stack
 3. meteor 1.3.1로 업데이트되면서 iron router 사용상에 문제가 없는지 확인해볼 것.
 
+
 # Bug
 1. 폼이 들어간 페이지에서만 dialogue alert이 뜰 수 있도록 수정할 것.
 2.
