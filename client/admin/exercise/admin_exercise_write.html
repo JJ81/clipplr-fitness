@@ -1,12 +1,75 @@
 <template name="admin-exercise-register">
   <div class="container fitness-admin">
     <form class="admin-exercise-write">
-      <!--
-        TODO 1. 입력폼 타겟머슬, 운동명+영문명, 타입, 레벨, 운동 방법 설명, 운동 관련 사진 업로드 혹은 링크 제공, 유튜브ID 등록
-        TODO 2. view페이지의 경우 등록한 이미지와 비디오가 보여질 수 있도록 한다.
-        TODO 3. 하단에 페이징 처리할 것.
-       -->
-      운동 등록 입력폼
+      <fieldset class="form-group">
+
+        <label for="target">타겟머슬</label>
+        <select name="target_muscle" id="target_muscle" class="form-control">
+          <option value="허리">허리</option>
+          <option value="다리">다리</option>
+        </select>
+
+        <br />
+
+        <label for="name">운동명</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="운동명을 입력해주세요." />
+
+        <br />
+
+        <label for="type">타입</label>
+        <select name="type" id="type" class="form-control">
+          <option value="프리웨이트">프리웨이트</option>
+          <option value="머신">머신</option>
+        </select>
+
+        <br />
+
+        <label for="type">타입을 선택하세요.</label>
+        <div class="radio">
+          <label><input type="radio" name="type" value="프리웨이트" checked>프리웨이트</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="type" value="머신">머신</label>
+        </div>
+
+        <br />
+
+        <label for="level">난이도</label>
+        <select name="level" id="level" class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+
+        <br />
+
+        <label for="photo">대표 사진 (택1)</label>
+        <input type="text" name="photo" id="photo" class="form-control" placeholder="링크를 연결해주세요." />
+        <input type="file" name="photo" id="file" class="form-control" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
+
+        <br />
+
+        <label for="video">운동 영상 (택1)</label>
+        <input type="text" name="video" id="video" class="form-control" placeholder="유튜브영상 ID를 올려주세요." />
+        <input type="file" name="video" id="file" class="form-control" placeholder="제작한 영상이 있다면 업로드해주세요." />
+
+        <br />
+
+        <label for="desc">운동 방법 및 설명</label>
+        <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
+
+        <hr />
+
+        <button type="submit" class="btn btn-primary">저장</button>
+        <a href="#" class="btn btn-default">취소</a>
+
+      </fieldset>
     </form>
   </div>
 </template>
