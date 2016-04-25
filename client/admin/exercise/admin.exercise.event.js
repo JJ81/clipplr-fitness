@@ -2,6 +2,7 @@
  * Created by yijaejun on 2016. 4. 21..
  */
 if(Meteor.isClient){
+
 	Template['admin-exercise-register'].events({
 		'submit .admin-exercise-write': function (e) {
 			e.preventDefault();
@@ -18,9 +19,16 @@ if(Meteor.isClient){
 
 			// 메서드단에서 한 번 더 검사를 하고
 
+
 			// 최종 디비에 저장한다.
 
-			alert('test');
+			alert('저장');
+		},
+
+		'click .register-cancel-btn': function (e) {
+			window.location.href = '/admin/exercise-register/list/20/0';
+			// Router.go('login'); // this is not workking...weird..
+			// Router.redirect('/admin/exercise-register/list/20');
 		}
 	});
 
