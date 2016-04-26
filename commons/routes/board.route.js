@@ -2,12 +2,26 @@
  * Created by yijaejun on 2016. 3. 7..
  */
 Router.configure({
-    layoutTemplate: 'layout'
+    //layoutTemplate: 'layout'
+    layoutTemplate: 'mainNav'
 });
 
+/** *
+ * 임시 주석처리
+ */
+// Router.route('/', function () {
+//     this.redirect('/list/10/0');
+// });
 
+// root route
 Router.route('/', function () {
-    this.redirect('/list/10/0');
+    this.render('main');
+    this.layout(Meteor.user()? 'mainSide' : 'MainNav');
+});
+
+Router.route('/side', function () {
+    this.render('side');
+    this.layout(Meteor.user()? 'mainSide' : 'MainNav');
 });
 
 /**
