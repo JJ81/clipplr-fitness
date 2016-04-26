@@ -20,24 +20,39 @@
       </tr>
       </thead>
       <tbody>
-
+      {{#if list}}
+      {{#each list}}
       <tr>
-        <td>등</td>
-        <td><a href="/admin/exercise-register/content/1">스미스머신 데드리프트</a></td>
-        <td>머신</td>
-        <td>1</td>
-        <td>2016-12-12</td>
-        <td>jaejun</td>
-        <td>비활성화</td>
+        <td>{{target}}</td>
+        <td><a href="/admin/exercise-register/content/{{_id}}">{{name}}</a></td>
+        <td>{{type}}</td>
+        <td>{{level}}</td>
+        <td>{{formatDate createdAt}}</td>
+        <td>{{creator.username}}</td>
         <td>
-          <!--<a href="#" class="btn btn-success">활성화</a>-->
-          <a href="#" class="btn btn-default">비활성화</a>
+          {{#if isEqual activate false}}
+            비활성화
+          {{else}}
+            활성화
+          {{/if}}
+        </td>
+        <td>
+          {{#if isEqual activate false}}
+            <a href="#" class="btn btn-success">활성화</a>
+          {{else}}
+            <a href="#" class="btn btn-default">비활성화</a>
+          {{/if}}
         </td>
       </tr>
-
+      {{/each}}
+      {{else}} <!-- TODO 출력이 잘 안됨. -->
+      <tr><td colspan="8">등록된 운동이 없습니다.</td></tr>
+      {{/if}}
       </tbody>
     </table>
     <!--// End Table -->
+
+
 
   </div>
 </template>
