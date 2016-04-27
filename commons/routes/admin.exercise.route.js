@@ -13,11 +13,11 @@ Router.map(function () {
 		waitOn: function () {
 			Meteor.subscribe('Exercise');
 		},
-		data: function(){
+		data: function() {
 			return {
 				title: '운동 등록',
-				list : Exercise.find({})
-				//list : Exercise.find({}, {sort: {activate: -1}})
+				// list : Exercise.find({})
+				list : Exercise.find({}, {sort: {activate: -1}})
 			};
 		}
 	});
