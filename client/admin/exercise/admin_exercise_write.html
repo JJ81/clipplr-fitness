@@ -7,20 +7,17 @@
         <select name="target_muscle" id="target_muscle" class="form-control">
           <option value="허리">허리</option>
           <option value="다리">다리</option>
+          <option value="등">등</option>
+          <option value="가슴">가슴</option>
+          <option value="가슴">복부</option>
+          <option value="가슴">어깨</option>
+          <option value="가슴">팔</option>
         </select>
 
         <br />
 
         <label for="name">운동명</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="운동명을 입력해주세요." />
-
-        <br />
-
-        <label for="type">타입</label>
-        <select name="type" id="type" class="form-control">
-          <option value="프리웨이트">프리웨이트</option>
-          <option value="머신">머신</option>
-        </select>
+        <input type="text" name="name" id="name" class="form-control" placeholder="운동명을 입력해주세요." required />
 
         <br />
 
@@ -50,24 +47,34 @@
         <br />
 
         <label for="photo">대표 사진 (택1)</label>
-        <input type="text" name="photo" id="photo" class="form-control" placeholder="링크를 연결해주세요." />
-        <input type="file" name="photo" id="file" class="form-control" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
+        <input type="text" name="photo_link" id="photo" class="form-control" placeholder="링크를 연결해주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+        <br /><br />
 
-        <br />
+        <input type="file" name="photo_file" id="file" class="form-control" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+        <br /><br />
+
+
 
         <label for="video">운동 영상 (택1)</label>
-        <input type="text" name="video" id="video" class="form-control" placeholder="유튜브영상 ID를 올려주세요." />
-        <input type="file" name="video" id="file" class="form-control" placeholder="제작한 영상이 있다면 업로드해주세요." />
+        <input type="text" name="video_link" id="video" class="form-control" placeholder="유튜브영상 ID를 올려주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+        <br /><br />
 
-        <br />
+
+        <input type="file" name="video_file" id="file" class="form-control" placeholder="제작한 영상이 있다면 업로드해주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+
+        <br /><br />
 
         <label for="desc">운동 방법 및 설명</label>
-        <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="desc" id="desc" cols="30" rows="10" class="form-control" required placeholder="등록하신 운동에 대한 설명을 입력해주세요."></textarea>
 
         <hr />
 
         <button type="submit" class="btn btn-primary">저장</button>
-        <a href="#" class="btn btn-default">취소</a>
+        <a href="#" class="btn btn-default register-cancel-btn">취소</a>
 
       </fieldset>
     </form>

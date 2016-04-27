@@ -10,11 +10,15 @@ Router.map(function () {
 		path: ['/admin/exercise-register/list/:size/:offset'],
 		template: 'admin-exercise-register-list',
 		layoutTemplate: 'admin_layout',
-		data: function(){
-			_data = {
-				title: '운동 등록'
+		waitOn: function () {
+			Meteor.subscribe('Exercise');
+		},
+		data: function() {
+			return {
+				title: '운동 등록',
+				// list : Exercise.find({})
+				list : Exercise.find({}, {sort: {activate: -1}})
 			};
-			return _data;
 		}
 	});
 
