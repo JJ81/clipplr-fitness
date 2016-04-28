@@ -8,7 +8,7 @@ Router.map(function () {
 	 */
 	this.route('AdminExerciseList' , {
 		path: ['/admin/exercise-register/list/:size/:offset'],
-		template: 'admin-exercise-register-list',
+		template: 'admin_exercise_register',
 		layoutTemplate: 'admin_layout',
 		waitOn: function () {
 			Meteor.subscribe('Exercise');

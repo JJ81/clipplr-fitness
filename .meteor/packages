@@ -37,3 +37,5 @@ standard-minifier-css
 standard-minifier-js
 iron:middleware-stack
 momentjs:moment
+tomi:upload-server
+tomi:upload-jquery

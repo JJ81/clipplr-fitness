@@ -2,8 +2,7 @@
  * Created by yijaejun on 2016. 4. 21..
  */
 if(Meteor.isClient){
-
-	Template['admin-exercise-register'].events({
+	Template['admin_exercise_register'].events({
 		'submit .admin-exercise-write': function (e) {
 			e.preventDefault();
 			var form = e.target;
