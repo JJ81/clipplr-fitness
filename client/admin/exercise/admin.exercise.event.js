@@ -82,6 +82,15 @@ if(Meteor.isClient){
 					Router.go('/admin/exercise-register/list/20/0');
 				}
 			});
+		},
+
+		'click .back-exercise-btn': function () {
+			history.back();
+		},
+
+		'click .modify-exercise-btn': function (e) {
+			e.preventDefault();
+			Router.go('/admin/exercise-register/modify/' + $(e.currentTarget).attr('data-id'));
 		}
 	});
 
