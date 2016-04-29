@@ -42,7 +42,13 @@ if(Meteor.isServer){
 		},
 
 		deleteExercise: function (_id) {
-
+			return Exercise.remove(_id, function (error, result) {
+				if(error){
+					throw Meteor.Error("Failed to delete " + _id);
+				}else{
+					console.info(result);
+				}
+			});
 		}
 	});
 

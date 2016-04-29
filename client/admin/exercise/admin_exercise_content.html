@@ -15,6 +15,14 @@
       creator: {{creator.username}}<br />
       creator_id: {{creator.id}}<br />
       created_at: {{createdAt}}<br />
+
+      <hr />
+
+      <a href="#" class="btn btn-default">뒤로</a>
+      <a href="#" class="btn btn-primary">목록</a>
+      <a href="#" class="btn btn-warning">수정</a>
+      <a href="#" data-id="{{_id}}" class="btn btn-danger delete-exercise-btn">삭제</a>
     {{/with}}
+
   </div>
 </template>

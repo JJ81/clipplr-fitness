@@ -60,8 +60,30 @@ if(Meteor.isClient){
 			// Router.go('login'); // this is not workking...weird..
 			// Router.redirect('/admin/exercise-register/list/20');
 		}
+
+
 	});
 
+	Template['admin-exercise-content'].events({
+		'click .delete-exercise-btn': function (e) {
+			e.preventDefault();
+
+			var
+				_id = $(e.currentTarget).attr('data-id')
+				,res = window.confirm('정말로 삭제하시겠습니까?');
+
+			if(!res)
+				return;
+
+			Meteor.call('deleteExercise', _id, function (error, result) {
+				if(error){
+					console.error('Something went wrong');
+				}else{
+					Router.go('/admin/exercise-register/list/20/0');
+				}
+			});
+		}
+	});
 
 
 }
