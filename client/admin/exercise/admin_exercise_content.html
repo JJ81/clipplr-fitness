@@ -1,5 +1,20 @@
 <template name="admin-exercise-content">
   <div class="container fitness-admin">
-    등록한 운동 콘텐츠 내용보기
+    {{#with content}}
+      id: {{_id}}<br />
+      target: {{target}}<br />
+      name: {{name}}<br />
+      type: {{type}}<br />
+      level: {{level}}<br />
+      photo_link: {{photo_link}}<br />
+      photo_file: {{photo_file}}<br />
+      video_link: {{video_link}}<br />
+      video_file: {{video_link}}<br />
+      description: {{desc}}<br />
+      activate: {{activate}} <br />
+      creator: {{creator.username}}<br />
+      creator_id: {{creator.id}}<br />
+      created_at: {{createdAt}}<br />
+    {{/with}}
   </div>
 </template>
