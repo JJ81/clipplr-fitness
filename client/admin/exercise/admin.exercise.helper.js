@@ -2,30 +2,57 @@
  * Created by yijaejun on 2016. 4. 21..
  */
 
-Meteor.subscribe('uploads');
+Meteor.subscribe('imageFileUploads');
+Meteor.subscribe('movieFileUploads');
 
 Template.admin_exercise_register.helpers({
-    theUploads: function () {
-        return Uploads.find({}, {sort: {"name": 1}});
+    theImageFiles: function () {
+        return Images.find();
     },
-    myCallbacks: function () {
-        return {
-            finished: function (index, fileInfo, context) {
-                // This function will execute after each fileupload is finished on the client'
-                console.log("index : " + index);
-                console.log("fileInfo : " + fileInfo);
-                console.log("context : " + context);
-            }
-        }
-    },
-    someStuff: function () {
-        // this is data that will be passed to the server with the upload
-        return {someData: "hello", otherData: "goodbye"}
+    theMovieFiles: function () {
+        return Movies.find();
     }
 });
 
 Template.admin_exercise_register.events({
-    'click #deleteFileButton ': function (event) {
-        Meteor.call('deleteFile', this._id);
+    'click #deleteImageFileButton ': function (event) {
+        console.log("deleteImageFile button ", this);
+        Images.remove({_id: this._id});
+    },
+    'change .upload-image-file': function (event, template) {
+        console.log("uploading..");
+        FS.Utility.eachFile(event, function (file) {
+            console.log("each file...");
+            var imageFile = new FS.File(file);
+            Images.insert(imageFile, function (err, fileObj) {
+                console.log("call back for the insert, err: ", err);
+                if (!err) {
+                    console.log("inserted without error.");
+                }
+                else {
+                    console.log("there was an error.", err);
+                }
+            });
+        });
+    },
+    'click #deleteMovieFileButton ': function (event) {
+        console.log("deleteMovieFile button ", this);
+        Images.remove({_id: this._id});
+    },
+    'change .upload-movie-file': function (event, template) {
+        console.log("uploading..");
+        FS.Utility.eachFile(event, function (file) {
+            console.log("each file...");
+            var movieFile = new FS.File(file);
+            Movies.insert(movieFile, function (err, fileObj) {
+                console.log("call back for the insert, err: ", err);
+                if (!err) {
+                    console.log("inserted without error.");
+                }
+                else {
+                    console.log("there was an error.", err);
+                }
+            });
+        });
     }
 });

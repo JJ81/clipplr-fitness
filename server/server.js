@@ -55,16 +55,15 @@ if (Meteor.isServer) {
         }
     });
 
+    // 이미지 파일 업로드
+    Meteor.publish("imageFileUploads", function () {
+        console.log("publishing imageFileUploads..");
+        return Images.find();
+    });
 
-
-
-
-
-    //Meteor.Allow({
-    //
-    //});
-    //
-    //Meteor.Deny({
-    //
-    //});
+    // 동영상 파일 업로드
+    Meteor.publish("movieFileUploads", function () {
+        console.log("publishing movieFileUploads..");
+        return Movies.find();
+    });
 }
