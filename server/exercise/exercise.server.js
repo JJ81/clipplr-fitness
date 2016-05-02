@@ -49,7 +49,23 @@ if(Meteor.isServer){
 					console.info(result);
 				}
 			});
+		},
+
+		updateExerciseActivate: function (_id, status) {
+			return Exercise.update(_id, {
+				$set: {
+					'activate': status
+				}
+			}, function (error, result) {
+				if(error){
+					throw Meteor.Error("Failed to delete " + _id);
+				}else{
+					console.info(result);
+				}
+			});
 		}
+
+
 	});
 
 	Meteor.publish('Exercise', function () {

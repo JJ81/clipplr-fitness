@@ -94,5 +94,25 @@ if(Meteor.isClient){
 		}
 	});
 
+	Template['admin-exercise-register-list'].events({
+		'click .activate-exercise-btn': function (e) {
+			e.preventDefault();
+			Meteor.call('updateExerciseActivate', $(e.currentTarget).attr('data-id'), true, function (error, result) {
+				if(error){
+					console.error('activate failed');
+				}
+			});
+
+		},
+
+		'click .inactivate-exercise-btn': function (e) {
+			e.preventDefault();
+			Meteor.call('updateExerciseActivate', $(e.currentTarget).attr('data-id'), false, function (error, result) {
+				if(error){
+					console.error('inactivate failed');
+				}
+			});
+		}
+	});
 
 }

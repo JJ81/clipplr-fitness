@@ -39,9 +39,9 @@
         </td>
         <td>
           {{#if isEqual activate false}}
-            <a href="#" class="btn btn-success">활성화</a>
+            <a href="#" class="btn btn-success activate-exercise-btn" data-id="{{_id}}">활성화</a>
           {{else}}
-            <a href="#" class="btn btn-default">비활성화</a>
+            <a href="#" class="btn btn-default inactivate-exercise-btn" data-id="{{_id}}">비활성화</a>
           {{/if}}
         </td>
       </tr>
