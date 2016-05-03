@@ -2,7 +2,7 @@
  * Created by yijaejun on 2016. 4. 21..
  */
 if(Meteor.isClient){
-	Template['admin_exercise_register'].events({
+	Template['admin-exercise-register'].events({
 		'submit .admin-exercise-write': function (e) {
 			e.preventDefault();
 			var form = e.target;
@@ -59,8 +59,59 @@ if(Meteor.isClient){
 			// Router.go('login'); // this is not workking...weird..
 			// Router.redirect('/admin/exercise-register/list/20');
 		}
+
+
 	});
 
+	Template['admin-exercise-content'].events({
+		'click .delete-exercise-btn': function (e) {
+			e.preventDefault();
 
+			var
+				_id = $(e.currentTarget).attr('data-id')
+				,res = window.confirm('정말로 삭제하시겠습니까?');
+
+			if(!res)
+				return;
+
+			Meteor.call('deleteExercise', _id, function (error, result) {
+				if(error){
+					console.error('Something went wrong');
+				}else{
+					Router.go('/admin/exercise-register/list/20/0');
+				}
+			});
+		},
+
+		'click .back-exercise-btn': function () {
+			history.back();
+		},
+
+		'click .modify-exercise-btn': function (e) {
+			e.preventDefault();
+			Router.go('/admin/exercise-register/modify/' + $(e.currentTarget).attr('data-id'));
+		}
+	});
+
+	Template['admin-exercise-register-list'].events({
+		'click .activate-exercise-btn': function (e) {
+			e.preventDefault();
+			Meteor.call('updateExerciseActivate', $(e.currentTarget).attr('data-id'), true, function (error, result) {
+				if(error){
+					console.error('activate failed');
+				}
+			});
+
+		},
+
+		'click .inactivate-exercise-btn': function (e) {
+			e.preventDefault();
+			Meteor.call('updateExerciseActivate', $(e.currentTarget).attr('data-id'), false, function (error, result) {
+				if(error){
+					console.error('inactivate failed');
+				}
+			});
+		}
+	});
 
 }

@@ -1,5 +1,28 @@
 <template name="admin-exercise-content">
   <div class="container fitness-admin">
-    등록한 운동 콘텐츠 내용보기
+    {{#with content}}
+      id: {{_id}}<br />
+      target: {{target}}<br />
+      name: {{name}}<br />
+      type: {{type}}<br />
+      level: {{level}}<br />
+      photo_link: {{photo_link}}<br />
+      photo_file: {{photo_file}}<br />
+      video_link: {{video_link}}<br />
+      video_file: {{video_link}}<br />
+      description: {{desc}}<br />
+      activate: {{activate}} <br />
+      creator: {{creator.username}}<br />
+      creator_id: {{creator.id}}<br />
+      created_at: {{createdAt}}<br />
+
+      <hr />
+
+      <a href="#" class="btn btn-default back-exercise-btn">뒤로</a>
+      <a href="/admin/exercise-register/list/20/0" class="btn btn-primary">목록</a>
+      <a href="#" data-id="{{_id}}" class="btn btn-warning modify-exercise-btn">수정</a>
+      <a href="#" data-id="{{_id}}" class="btn btn-danger delete-exercise-btn">삭제</a>
+    {{/with}}
+
   </div>
 </template>

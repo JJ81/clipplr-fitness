@@ -1,5 +1,5 @@
-# Created by .ignore support plugin (hsz.mobi)
 .DS_Store
+<<<<<<< HEAD
 .idea/workspace.xml
 .idea/meteor-todo.iml
 
@@ -46,3 +46,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+=======
+.idea/
+.meteor/
+>>>>>>> develop-heymycoach-admin

@@ -5,7 +5,7 @@
 Meteor.subscribe('imageFileUploads');
 Meteor.subscribe('movieFileUploads');
 
-Template.admin_exercise_register.helpers({
+Template['admin_exercise_register'].helpers({
     theImageFiles: function () {
         return Images.find();
     },
@@ -14,7 +14,7 @@ Template.admin_exercise_register.helpers({
     }
 });
 
-Template.admin_exercise_register.events({
+Template['admin_exercise_register'].events({
     'click #deleteImageFileButton ': function (event) {
         console.log("deleteImageFile button ", this);
         Images.remove({_id: this._id});

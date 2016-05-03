@@ -3,12 +3,13 @@
  */
 
 // 유저의 운동 기록
-// FitnessRecord = new Meteor.Collection('fitnessRecord');
+FitnessRecord = new Meteor.Collection('fitnessRecord');
 // 운동 등록
 Exercise = new Mongo.Collection('admin_create_exercise');
 // 프로그램, 훈련 등록
 Programs = new Mongo.Collection('admin_create_program');
-// admin_exercise_regist 이미지 파일 업로드
+
+// admin-exercise-regist 이미지 파일 업로드
 Images = new FS.Collection("images", {
     stores: [new FS.Store.FileSystem("images", {path: "D:/meteor_image_uploads"})]
 });
