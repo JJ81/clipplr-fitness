@@ -51,9 +51,16 @@
         <!--<input type="file" name="photo" id="file" class="form-control" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />-->
           <input class="upload-image-file" type="file" name="photo" id="file" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
           <br />
-          <table border="1">
+          <table class="table table-bordered" border="1">
               <tbody>
-              {{#each theImageFiles}}
+                  <tr>
+                      <th>uploadedAt</th>
+                      <th>original.name</th>
+                      <th>url</th>
+                      <th>isUploaded</th>
+                      <th>action</th>
+                  </tr>
+                {{#each theImageFiles}}
                   <tr>
                       <td>{{uploadedAt}}</td>
                       <td>{{original.name}}</td>
@@ -61,17 +68,24 @@
                       <td>{{#if isUploaded}}uploaded{{else}}uploading...{{/if}}</td>
                       <td><button id="deleteImageFileButton">delete</button></td>
                   </tr>
-              {{/each}}
+                {{/each}}
               </tbody>
           </table>
 
         <label for="video">운동 영상 (택1)</label>
         <input type="text" name="video" id="video" class="form-control" placeholder="유튜브영상 ID를 올려주세요." />
         <!--<input type="file" name="video" id="file" class="form-control" placeholder="제작한 영상이 있다면 업로드해주세요." />-->
-        <input class="upload-movie-file" type="file" name="photo" id="file" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
+        <input class="upload-movie-file" type="file" name="video" id="file" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
         <br />
-        <table border="1">
+        <table class="table table-bordered" border="1">
           <tbody>
+              <tr>
+                  <th>uploadedAt</th>
+                  <th>original.name</th>
+                  <th>url</th>
+                  <th>isUploaded</th>
+                  <th>action</th>
+              </tr>
           {{#each theMovieFiles}}
               <tr>
                   <td>{{uploadedAt}}</td>

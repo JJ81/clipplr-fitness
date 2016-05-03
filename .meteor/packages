@@ -39,3 +39,4 @@ iron:middleware-stack
 momentjs:moment
 cfs:filesystem
 cfs:standard-packages
+cfs:graphicsmagick

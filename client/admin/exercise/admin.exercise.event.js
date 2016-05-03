@@ -8,7 +8,6 @@ if(Meteor.isClient){
 			var form = e.target;
 			var _data = {};
 
-
 			// TODO 1 각 데이터에 접근하여 _data에 저장하고
 			var target_muscle = form.target_muscle.options[form.target_muscle.selectedIndex].value;
 			var name = form.name.value;
