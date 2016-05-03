@@ -1,5 +1,255 @@
 <template name="admin-exercise-modify">
   <div class="container fitness-admin">
-    수정페이지 진행중..
+    {{#with content}}
+    <form class="admin-exercise-modify">
+      <fieldset class="form-group">
+        <label for="target">타겟머슬</label>
+        <select name="target_muscle" id="target_muscle" class="form-control">
+          {{#if isEqual target "허리"}}
+            <option value="허리" selected>허리</option>
+            <option value="다리">다리</option>
+            <option value="등">등</option>
+            <option value="가슴">가슴</option>
+            <option value="복부">복부</option>
+            <option value="어깨">어깨</option>
+            <option value="팔">팔</option>
+          {{/if}}
+
+          {{#if isEqual target "다리"}}
+            <option value="허리">허리</option>
+            <option value="다리" selected>다리</option>
+            <option value="등">등</option>
+            <option value="가슴">가슴</option>
+            <option value="복부">복부</option>
+            <option value="어깨">어깨</option>
+            <option value="팔">팔</option>
+          {{/if}}
+
+          {{#if isEqual target "등"}}
+            <option value="허리">허리</option>
+            <option value="다리">다리</option>
+            <option value="등" selected>등</option>
+            <option value="가슴">가슴</option>
+            <option value="복부">복부</option>
+            <option value="어깨">어깨</option>
+            <option value="팔">팔</option>
+          {{/if}}
+
+          {{#if isEqual target "가슴"}}
+            <option value="허리">허리</option>
+            <option value="다리">다리</option>
+            <option value="등">등</option>
+            <option value="가슴" selected>가슴</option>
+            <option value="복부">복부</option>
+            <option value="어깨">어깨</option>
+            <option value="팔">팔</option>
+          {{/if}}
+
+          {{#if isEqual target "복부"}}
+            <option value="허리">허리</option>
+            <option value="다리">다리</option>
+            <option value="등">등</option>
+            <option value="가슴">가슴</option>
+            <option value="복부" selected>복부</option>
+            <option value="어깨">어깨</option>
+            <option value="팔">팔</option>
+          {{/if}}
+
+          {{#if isEqual target "어깨"}}
+            <option value="허리">허리</option>
+            <option value="다리">다리</option>
+            <option value="등">등</option>
+            <option value="가슴">가슴</option>
+            <option value="복부">복부</option>
+            <option value="어깨" selected>어깨</option>
+            <option value="팔">팔</option>
+          {{/if}}
+
+          {{#if isEqual target "팔"}}
+            <option value="허리">허리</option>
+            <option value="다리">다리</option>
+            <option value="등">등</option>
+            <option value="가슴">가슴</option>
+            <option value="복부">복부</option>
+            <option value="어깨">어깨</option>
+            <option value="팔" selected>팔</option>
+          {{/if}}
+        </select>
+
+        <br />
+
+        <label for="name">운동명</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="운동명을 입력해주세요." required value="{{name}}" />
+
+        <br />
+
+        <label for="type">타입을 선택하세요.</label>
+        {{#if isEqual type "프리웨이트"}}
+        <div class="radio">
+          <label><input type="radio" name="type" value="프리웨이트" checked>프리웨이트</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="type" value="머신">머신</label>
+        </div>
+        {{/if}}
+
+        {{#if isEqual type "머신"}}
+          <div class="radio">
+            <label><input type="radio" name="type" value="프리웨이트">프리웨이트</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="type" value="머신" checked>머신</label>
+          </div>
+        {{/if}}
+
+        <br />
+
+        <label for="level">난이도</label>
+        <select name="level" id="level" class="form-control">
+          {{#if isEqual level "1"}}
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "2"}}
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "3"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "4"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "5"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "6"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected>6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "7"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7" selected>7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "8"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8" selected>8</option>
+            <option value="9">9</option>
+          {{/if}}
+
+          {{#if isEqual level "9"}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9" selected>9</option>
+          {{/if}}
+        </select>
+
+        <br />
+
+        <!-- TODO 사진을 업로드 하는 기능이 완료되어야 수정 기능이 완료될 수 있음 -->
+        <label for="photo">대표 사진 (택1)</label>
+        <input type="text" name="photo_link" id="photo" class="form-control" placeholder="링크를 연결해주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+        <br /><br />
+
+        <input type="file" name="photo_file" id="file" class="form-control" placeholder="운동이미지를 가지고 있다면 파일을 업로드해주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+        <br /><br />
+
+
+
+        <label for="video">운동 영상 (택1)</label>
+        <input type="text" name="video_link" id="video" class="form-control" placeholder="유튜브영상 ID를 올려주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+        <br /><br />
+
+
+        <input type="file" name="video_file" id="file" class="form-control" placeholder="제작한 영상이 있다면 업로드해주세요." />
+        <a href="#" class="btn btn-default btn-xs add-pic-btn">+추가</a>
+
+        <br /><br />
+
+        <label for="desc">운동 방법 및 설명</label>
+        <textarea name="desc" id="desc" cols="30" rows="10" class="form-control" required placeholder="등록하신 운동에 대한 설명을 입력해주세요.">{{desc}}</textarea>
+
+        <hr />
+
+        <button type="submit" class="btn btn-danger">수정</button>
+        <a href="#" class="btn btn-default register-cancel-btn">취소</a>
+
+      </fieldset>
+    </form>
+    {{/with}}
   </div>
 </template>

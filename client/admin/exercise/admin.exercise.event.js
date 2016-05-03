@@ -115,4 +115,11 @@ if(Meteor.isClient){
 		}
 	});
 
+	Template['admin-exercise-modify'].events({
+		'submit .admin-exercise-modify': function (e) {
+			e.preventDefault();
+			var _form = e.target;
+			alert('수정하기!');
+		}
+	});
 }
