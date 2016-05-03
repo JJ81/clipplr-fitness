@@ -55,7 +55,11 @@
               <tbody>
               {{#each theImageFiles}}
                   <tr>
-                      <td>{{uploadedAt}}</td><td>{{original.name}}</td><td><a href="{{url}}">link</a></td><td>{{#if isUploaded}}uploaded{{else}}uploading...{{/if}}</td><td><button id="deleteImageFileButton">delete</button></td>
+                      <td>{{uploadedAt}}</td>
+                      <td>{{original.name}}</td>
+                      <td><a href="{{url}}">link</a></td>
+                      <td>{{#if isUploaded}}uploaded{{else}}uploading...{{/if}}</td>
+                      <td><button id="deleteImageFileButton">delete</button></td>
                   </tr>
               {{/each}}
               </tbody>
@@ -70,7 +74,11 @@
           <tbody>
           {{#each theMovieFiles}}
               <tr>
-                  <td>{{uploadedAt}}</td><td>{{original.name}}</td><td><a href="{{url}}">link</a></td><td>{{#if isUploaded}}uploaded{{else}}uploading...{{/if}}</td><td><button id="deleteMovieFileButton">delete</button></td>
+                  <td>{{uploadedAt}}</td>
+                  <td>{{original.name}}</td>
+                  <td><a href="{{url}}">link</a>
+                  </td><td>{{#if isUploaded}}uploaded{{else}}uploading...{{/if}}</td>
+                  <td><button id="deleteMovieFileButton">delete</button></td>
               </tr>
           {{/each}}
           </tbody>

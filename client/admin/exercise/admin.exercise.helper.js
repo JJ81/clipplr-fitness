@@ -36,7 +36,7 @@ Template.admin_exercise_register.events({
         });
     },
     'click #deleteMovieFileButton ': function (event) {
-        console.log("deleteMovieFile button ", this);
+        console.log("deleteMovieFileButton ", this);
         Images.remove({_id: this._id});
     },
     'change .upload-movie-file': function (event, template) {
