@@ -7,7 +7,7 @@ Router.map(function () {
 	 * 등록한 운동 리스트
 	 */
 	this.route('AdminExerciseList' , {
-		path: ['/admin/exercise-register/list/:size/:offset'],
+		path: ['/admin/exercise-register/list/:size/:offset', '/admin/exercise-register/'],
 		template: 'admin-exercise-register-list',
 		layoutTemplate: 'admin_layout',
 		waitOn: function () {

@@ -1,0 +1,19 @@
+<template name="admin-exercise-register">
+    <div class="container fitness-admin">
+        {{#autoForm id="admin-exercise-write" type="insert" collection="Exercise"}}
+            <fieldset>
+            {{> afQuickField name="target"}}
+            {{> afQuickField name="name"}}
+            {{> afQuickField name="weight" options="allowed" noselect=true}}
+            {{> afQuickField name="level"}}
+            {{> afQuickField name="image_link"}}
+            {{> afQuickField name="image_file" type="cfs-file" collection="files"}}
+            {{> afQuickField name="video_link"}}
+            {{> afQuickField name="video_file" type="cfs-file" collection="files"}}
+            {{> afQuickField name="description" row=6}}
+            </fieldset>
+            <button type="submit">Submit</button>
+        {{/autoForm}}
+        <a class="btn" href="#">Back</a>
+    </div>
+</template>

@@ -3,6 +3,11 @@
  */
 if(Meteor.isClient){
 	Template['admin-exercise-register'].events({
+		'change input': function (ev) {
+			_.each(ev.srcElement.files, function(file) {
+				Meteor.saveFile(file, file.name);
+			});
+		},
 		'submit .admin-exercise-write': function (e) {
 			e.preventDefault();
 			var form = e.target;
