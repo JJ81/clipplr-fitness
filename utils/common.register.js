@@ -13,4 +13,8 @@ if(Meteor.isClient){
 		return (first === second);
 	});
 
+  Template.registerHelper('formatDate', function(date) {
+    return moment(date).format('YYYY-MM-DD');
+  });
+
 }

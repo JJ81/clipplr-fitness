@@ -67,7 +67,7 @@ Router.map(function () {
 		},
 		data: function () {
 			return {
-				title: '운동 등록',
+				title: '운동 수정',
 				_id: this.params._id,
 				content: Exercise.findOne({_id: this.params._id})
 			};
