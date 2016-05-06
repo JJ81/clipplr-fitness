@@ -177,7 +177,8 @@ body {
   text-align: center; }
 
 .fitness-admin {
-  margin-top: 70px; }
+  margin-top: 70px;
+  margin-bottom: 100px; }
 
 .fitness-admin .table th {
   text-align: center; }
@@ -207,6 +208,10 @@ div.program-unit:nth(0) {
 
 .fitness-program {
   margin-top: 40px; }
+
+/* admin content */
+.notReadOnly {
+  background: #ffffff !important; }
 
 .bodyPart {
   border: 1px solid #ccc;

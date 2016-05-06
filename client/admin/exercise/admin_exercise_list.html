@@ -45,8 +45,10 @@
         </td>
       </tr>
       {{/each}}
-      {{else}} <!-- TODO 출력이 잘 안됨. -->
-      <tr><td colspan="8">등록된 운동이 없습니다.</td></tr>
+      {{/if}}
+
+      {{#if isEmpty list}} <!-- TODO 출력이 잘 안됨. -->
+      <tr><td colspan="8"><strong>등록된 운동이 없습니다.</strong></td></tr>
       {{/if}}
       </tbody>
     </table>

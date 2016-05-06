@@ -1,22 +1,59 @@
 <template name="admin-exercise-content">
   <div class="container fitness-admin">
     {{#with content}}
-      id: {{_id}}<br />
-      target: {{target}}<br />
-      name: {{name}}<br />
-      type: {{type}}<br />
-      level: {{level}}<br />
-      photo_link: {{photo_link}}<br />
-      photo_file: {{photo_file}}<br />
-      video_link: {{video_link}}<br />
-      video_file: {{video_link}}<br />
-      description: {{desc}}<br />
-      activate: {{activate}} <br />
-      creator: {{creator.username}}<br />
-      creator_id: {{creator.id}}<br />
-      created_at: {{createdAt}}<br />
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">ID</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{_id}}" readonly />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">운동 부위</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{target}}" readonly />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">운동 이름</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{name}}" readonly />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">운동 타입</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{type}}" readonly />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">레벨</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{level}}" readonly />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">생성자</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{creator.username}}" readonly />
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">생성일</span>
+        <input type="text" class="form-control notReadOnly" aria-describedby="basic-addon1" value="{{formatDate createdAt}}" readonly />
+      </div>
 
       <hr />
+
+    <h4 class="page-header">참고 이미지</h4>
+    <img src="{{photo_link}}" alt="" width="100%" />
+    <!-- TODO 이미지 링크를 여러개 올릴 수 있도록 한다.(배열로 저장) 걸어놓은 링크를 등록시 바로 볼 수 있고 등록후 보는 것은 모바일용으로 수직으로 나열이 될 수 있도록 한다. -->
+    <!--참고 이미지 파일: {{photo_file}}<br />-->
+    <h4 class="page-header">비디오 링크</h4>
+
+    <iframe width="100%" height="640" src="https://www.youtube.com/embed/{{video_link}}" frameborder="0" allowfullscreen></iframe>
+
+      <!--비디오 업로드 링크: {{video_link}}<br />-->
+    <!-- TODO  비디오를 업로드한 것을 플레이하려고 할 경우, HTML5로 플레이할 수 있는 포맷만 올릴 수 있도록 해야 한다. -->
+    <h4 class="page-header">운동 방법 설명</h4>
+    <div>{{desc}}</div>
+
+
+
+      <hr /><hr />
 
       <a href="#" class="btn btn-default back-exercise-btn">뒤로</a>
       <a href="/admin/exercise-register/list/20/0" class="btn btn-primary">목록</a>

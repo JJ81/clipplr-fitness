@@ -17,4 +17,9 @@ if(Meteor.isClient){
     return moment(date).format('YYYY-MM-DD');
   });
 
+	Template.registerHelper("isEmpty", function (object) {
+		// TODO Fix! isEmpty is not a function.
+		return jQuery.isEmpty(object);
+	});
+
 }
